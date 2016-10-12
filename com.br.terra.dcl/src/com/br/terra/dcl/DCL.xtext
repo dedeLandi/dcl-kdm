@@ -1,0 +1,64 @@
+grammar com.br.terra.dcl.DCL with org.eclipse.xtext.common.Terminals
+
+generate dCL "http://www.br.com/terra/dcl/DCL"
+
+Model:
+	  'architeturalElements' '{' structureElements += DCLStructureElement+ '}'
+	  'restrictions' '{' (dCDecl += DCDecl*) '}';
+ 
+ DCLStructureElement: DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface;
+ 
+ DCLLayer:
+ 	'layer' name=ID ',' 'level' level=INT ((',' 'inLayer: ' layer=[DCLStructureElement]) | (',''inSubSystem: ' subSystem=[DCLStructureElement])| (',''inComponent: ' component=[DCLStructureElement]))? ';';
+ 
+ DCLComponent:
+'component' name=ID ((',' 'inLayer: ' layer=[DCLStructureElement]) | (',''inSubSystem: ' subSystem=[DCLStructureElement]))? ';';
+ 	
+ DCLComponentInterface:
+ 	'interface' name=ID 'ofComponent ' component=[DCLStructureElement] (',' 'type: ' interfaceType=InterfaceType ) ';'
+ ;
+ 
+ InterfaceType:
+ 	interfaceTypeName = ('provided' | 'required')
+ ;
+ 
+ DCLSubSystem:
+ 	'subSystem' name=ID (',' 'inSubSystem: ' subSystem=[DCLStructureElement])? ';' ;
+ 
+ 
+ DCLModule:
+ 	'module' name=ID ';'
+ ;
+ 
+ DCDecl: (only=Only t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') | 
+ 	     (t=[DCLStructureElement] cannot=Cannot elementType=ElementType type = [DCLStructureElement] ';') |
+ 	     (t=[DCLStructureElement] can=Can elementType=ElementType only2=Only2 type = [DCLStructureElement] ';') |
+ 	     (t=[DCLStructureElement] must=Must entityType=EntityType type = [DCLStructureElement] ';');
+ 
+ Only:
+ 	only='only'
+ ;
+ 
+ Can:
+ 	can='can-'
+ ;
+ 
+ Cannot:
+ 	cannot='cannot-'
+ ;
+
+ Only2:
+ 	only2='-only'
+ ;	
+
+  Must:
+  	must='must-'
+  ;
+
+ ElementType:
+         BasicType | EntityType;
+   
+ BasicType:
+     	typeName= ('access' | 'declare' | 'handle' | 'create' | 'depend');
+     
+EntityType: entity=('extend' | 'implement' | 'derive' | 'throw' | 'useannotation');

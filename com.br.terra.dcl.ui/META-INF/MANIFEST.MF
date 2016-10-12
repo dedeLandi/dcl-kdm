@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.br.terra.dcl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.br.terra.dcl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.br.terra.dcl;visibility:=reexport,
+ org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
+ org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types.ui,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.compare
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: com.br.terra.dcl.ui.quickfix,
+ com.br.terra.dcl.ui.contentassist,
+ com.br.terra.dcl.ui.contentassist.antlr,
+ com.br.terra.dcl.ui.internal
+Bundle-Activator: com.br.terra.dcl.ui.internal.DCLActivator

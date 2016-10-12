@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.br.terra.dcl/src-gen" editDirectory="/com.br.terra.dcl.edit/src"
+    editorDirectory="/com.br.terra.dcl.editor/src" modelPluginID="com.br.terra.dcl"
+    forceOverwrite="true" modelName="DCL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.br.terra.dcl.edit"
+    editorPluginID="com.br.terra.dcl.editor" runtimeVersion="2.10">
+  <genPackages prefix="DCL" basePackage="com.br.terra.dcl" disposableProviderFactory="true"
+      fileExtensions="dcl" ecorePackage="DCL.ecore#/">
+    <genClasses ecoreClass="DCL.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//Model/structureElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//Model/dCDecl"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCLStructureElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//DCLStructureElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCLLayer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//DCLLayer/level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLLayer/layer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLLayer/subSystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLLayer/component"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCLComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponent/layer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponent/subSystem"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCLComponentInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponentInterface/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponentInterface/interfaceType"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//InterfaceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//InterfaceType/interfaceTypeName"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCLSubSystem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLSubSystem/subSystem"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCLModule"/>
+    <genClasses ecoreClass="DCL.ecore#//DCDecl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/only"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/t"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/can"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/elementType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/cannot"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/only2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/must"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/entityType"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//Only">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//Only/only"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//Can">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//Can/can"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//Cannot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//Cannot/cannot"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//Only2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//Only2/only2"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//Must">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//Must/must"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//ElementType"/>
+    <genClasses ecoreClass="DCL.ecore#//BasicType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//BasicType/typeName"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//EntityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//EntityType/entity"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
