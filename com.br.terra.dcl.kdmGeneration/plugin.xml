@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.ui.IEditorInput"
+            id="com.br.terra.dcl.kdmGeneration.contribution1">
+         <menu
+         	   icon="icons/ArchKDM-LOGO.png"
+               label="DCL-KDM"
+               path="additions"
+               id="com.br.terra.dcl.kdmGeneration.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Generate KDM file from DCL"
+               class="com.br.terra.dcl.kdmGeneration.actions.DCL2KDM"
+               menubarPath="com.br.terra.dcl.kdmGeneration.menu1/group1"
+               enablesFor="1"
+               id="com.br.terra.dcl.kdmGeneration.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Dcl
+Bundle-SymbolicName: com.br.terra.dcl.kdmGeneration;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.br.terra.dcl.kdmGeneration.activators.Activator
+Bundle-Vendor: BR
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ com.br.terra.dcl;bundle-version="1.0.0",
+ org.eclipse.ui.ide;bundle-version="3.10.0",
+ org.eclipse.gmt.modisco.omg.kdm;bundle-version="0.12.0",
+ br.ufscar.KDM-MANAGER.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
