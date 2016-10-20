@@ -65,7 +65,7 @@ public class ArchitecturalGenerator {
 	 * @author Landi
 	 */
 	private void createElementsWithoutHierarchy() {
-		StructureModel structureModel = this.getStructureModelFromKDM(this.kdmSegment, STRUCTURAL_NAME);
+		StructureModel structureModel = ArchitecturalGenerator.getStructureModelFromKDM(this.kdmSegment, STRUCTURAL_NAME);
 
 		for (DCLStructureElement dclStructureElement : this.allStructureElementsFromDCL ) {
 			if(dclStructureElement instanceof DCLLayer){
@@ -100,7 +100,7 @@ public class ArchitecturalGenerator {
 	 * @author Landi
 	 */
 	private void createElementsWithHierarchy() {
-		StructureModel structureModel = this.getStructureModelFromKDM(this.kdmSegment, STRUCTURAL_NAME);
+		StructureModel structureModel = ArchitecturalGenerator.getStructureModelFromKDM(this.kdmSegment, STRUCTURAL_NAME);
 
 		for (DCLStructureElement dclStructureElement : this.allStructureElementsFromDCL) {
 
@@ -298,7 +298,7 @@ public class ArchitecturalGenerator {
 		return element;
 	}
 
-	private StructureModel getStructureModelFromKDM(Segment segment, String nameToSearch) {
+	public static StructureModel getStructureModelFromKDM(Segment segment, String nameToSearch) {
 		StructureModel structureModel = null;
 		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterNameOfKDMFramework(nameToSearch);
 		Map<String, List<StructureModel>> allFromSegment = KDMModelReaderJavaFactory.eINSTANCE.createKDMStructureModelReaderWithFilter(filter).getAllFromSegment(segment);
