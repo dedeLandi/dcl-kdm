@@ -17,15 +17,15 @@ import org.eclipse.ui.IActionDelegate;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 
-import com.br.terra.dcl.kdmGeneration.generators.architecture.ArchitecturalGenerator;
-import com.br.terra.dcl.kdmGeneration.generators.restrictions.RestrictionsGenerator;
+import com.br.terra.dcl.kdmGeneration.generators.impl.architecture.ArchitecturalGenerator;
+import com.br.terra.dcl.kdmGeneration.generators.impl.restrictions.RestrictionsGenerator;
 import com.br.terra.dcl.kdmGeneration.readers.ReaderDCLEditor;
 
 public class DCL2KDM implements IObjectActionDelegate {
 
 	private ReaderDCLEditor readerDCLEditor = null;
 
-	private Segment kdmSegment = null;
+	public static Segment kdmSegment = null;
 
 	/**
 	 * Constructor for Action1.
@@ -59,7 +59,7 @@ public class DCL2KDM implements IObjectActionDelegate {
 	private void clearObjects() {
 		this.readerDCLEditor = null;
 
-		this.kdmSegment = null;
+		DCL2KDM.kdmSegment = null;
 	}
 
 	private void loadDCLFile() throws Exception {
@@ -72,13 +72,13 @@ public class DCL2KDM implements IObjectActionDelegate {
 
 	private void generateArchitecture() {
 		ArchitecturalGenerator architecturalGenerator = new ArchitecturalGenerator(readerDCLEditor.getAllStructureElementsFromDCL());
-		this.kdmSegment = architecturalGenerator.generateArchitecture();
+		architecturalGenerator.generateArchitecture();
 	}
 
 
 	private void generateRestrictions() {
-		RestrictionsGenerator restrictionsGenerator = new RestrictionsGenerator(this.kdmSegment, readerDCLEditor.getAllStructureElementsFromDCL(), readerDCLEditor.getAllRestrictionsFromDCL());
-		this.kdmSegment = restrictionsGenerator.generateRestrictions();
+		RestrictionsGenerator restrictionsGenerator = new RestrictionsGenerator(readerDCLEditor.getAllStructureElementsFromDCL(), readerDCLEditor.getAllRestrictionsFromDCL());
+		restrictionsGenerator.generateRestrictions();
 	}
 
 
@@ -96,7 +96,7 @@ public class DCL2KDM implements IObjectActionDelegate {
 
 			Resource resource = resSet.createResource(URI.createURI(this.readerDCLEditor.getKDMFilePath()));
 
-			resource.getContents().add(this.kdmSegment);
+			resource.getContents().add(DCL2KDM.kdmSegment);
 
 			resource.save(Collections.EMPTY_MAP);
 		} catch (IOException e) {
