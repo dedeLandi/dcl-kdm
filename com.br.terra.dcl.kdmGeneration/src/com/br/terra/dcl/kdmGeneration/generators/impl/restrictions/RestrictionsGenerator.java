@@ -1,8 +1,4 @@
-/**
- * @author Landi
- * 
- */
-package com.br.terra.dcl.kdmGeneration.generators.restrictions;
+package com.br.terra.dcl.kdmGeneration.generators.impl.restrictions;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -16,22 +12,20 @@ import org.eclipse.gmt.modisco.omg.kdm.code.CodeModel;
 import org.eclipse.gmt.modisco.omg.kdm.core.AggregatedRelationship;
 import org.eclipse.gmt.modisco.omg.kdm.core.CoreFactory;
 import org.eclipse.gmt.modisco.omg.kdm.core.KDMRelationship;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.Segment;
 import org.eclipse.gmt.modisco.omg.kdm.structure.AbstractStructureElement;
 import org.eclipse.gmt.modisco.omg.kdm.structure.Layer;
 import org.eclipse.gmt.modisco.omg.kdm.structure.StructureModel;
 
-import com.br.terra.dcl.dCL.BasicType;
-import com.br.terra.dcl.dCL.Cannot;
 import com.br.terra.dcl.dCL.DCDecl;
 import com.br.terra.dcl.dCL.DCLLayer;
 import com.br.terra.dcl.dCL.DCLStructureElement;
-import com.br.terra.dcl.dCL.EntityType;
-import com.br.terra.dcl.kdmGeneration.generators.architecture.ArchitecturalGenerator;
-
-import br.ufscar.kdm_manager.core.filters.validateFilter.factory.ValidateFilterJavaFactory;
-import br.ufscar.kdm_manager.core.filters.validateFilter.interfaces.ValidateFilter;
-import br.ufscar.kdm_manager.core.readers.modelReader.factory.KDMModelReaderJavaFactory;
+import com.br.terra.dcl.kdmGeneration.actions.DCL2KDM;
+import com.br.terra.dcl.kdmGeneration.generators.enums.RelationshipGeneratorTypes;
+import com.br.terra.dcl.kdmGeneration.generators.impl.architecture.ArchitecturalGenerator;
+import com.br.terra.dcl.kdmGeneration.generators.impl.relationships.RelationshipsGenerator;
+import com.br.terra.dcl.kdmGeneration.generators.impl.restrictions.patterns.CanRestrictionGenerator;
+import com.br.terra.dcl.kdmGeneration.generators.impl.restrictions.patterns.OnlyCanRestrictionGenerator;
+import com.br.terra.dcl.kdmGeneration.util.GenericMethodsArchitecture;
 
 /**
  * @author Landi
@@ -41,15 +35,12 @@ public class RestrictionsGenerator {
 
 	public static final String CODE_NAME = "InstancesReferenced";
 
-	private Segment kdmSegment = null;
-
 	private EList<DCLStructureElement> allStructureElementsFromDCL = null;
 
 	private EList<DCDecl> allRestrictionsFromDCL = null;
 
 
-	public RestrictionsGenerator(Segment kdmSegment, EList<DCLStructureElement> allStructureElementsFromDCL, EList<DCDecl> allRestrictionsFromDCL) {
-		this.kdmSegment = kdmSegment;
+	public RestrictionsGenerator(EList<DCLStructureElement> allStructureElementsFromDCL, EList<DCDecl> allRestrictionsFromDCL) {
 		this.allStructureElementsFromDCL = allStructureElementsFromDCL;
 		this.allRestrictionsFromDCL = allRestrictionsFromDCL;
 	}
@@ -58,7 +49,7 @@ public class RestrictionsGenerator {
 	 * @author Landi
 	 * @return
 	 */
-	public Segment generateRestrictions() {
+	public void generateRestrictions() {
 
 		this.createCodeToSegment();
 
@@ -68,18 +59,17 @@ public class RestrictionsGenerator {
 
 		this.generateDefinedRestrictions();
 
-		return this.kdmSegment;
 	}
 
 	private void createCodeToSegment() {
 		CodeModel codeModel = CodeFactory.eINSTANCE.createCodeModel();
 		codeModel.setName(CODE_NAME);
 
-		this.kdmSegment.getModel().add(codeModel);	
+		DCL2KDM.kdmSegment.getModel().add(codeModel);	
 	}
 
 	private void generateHierarquicalRestrictions() {
-		StructureModel structureModel = ArchitecturalGenerator.getStructureModelFromKDM(this.kdmSegment, ArchitecturalGenerator.STRUCTURAL_NAME);
+		StructureModel structureModel = GenericMethodsArchitecture.getStructureModelFromKDM(DCL2KDM.kdmSegment, ArchitecturalGenerator.STRUCTURAL_NAME);
 
 		for (AbstractStructureElement abstractStructureElement : structureModel.getStructureElement()) {
 			this.createHierarquicalRelationshipWithChild(abstractStructureElement);
@@ -95,7 +85,7 @@ public class RestrictionsGenerator {
 
 			String moduleName = "HierarquicalDependBetween " + parent.getName() + " to " + child.getName();
 
-			List<KDMRelationship> relations = RelationshipsGenerator.createDependRelations(this.kdmSegment, moduleName); 
+			List<KDMRelationship> relations = RelationshipsGenerator.createRelationsToAggregated(RelationshipGeneratorTypes.DEPEND, DCL2KDM.kdmSegment, moduleName); 
 
 			AggregatedRelationship aggregatedRelationship = CoreFactory.eINSTANCE.createAggregatedRelationship();
 			aggregatedRelationship.setDensity(relations.size());
@@ -112,7 +102,7 @@ public class RestrictionsGenerator {
 	}
 
 	private void generateLayerRestrictions() {
-		StructureModel structureModel = ArchitecturalGenerator.getStructureModelFromKDM(this.kdmSegment, ArchitecturalGenerator.STRUCTURAL_NAME);
+		StructureModel structureModel = GenericMethodsArchitecture.getStructureModelFromKDM(DCL2KDM.kdmSegment, ArchitecturalGenerator.STRUCTURAL_NAME);
 
 		for (AbstractStructureElement abstractStructureElement : structureModel.getStructureElement()) {
 			this.createLayerLevelRelationshipWithSameLevel(abstractStructureElement);
@@ -144,7 +134,7 @@ public class RestrictionsGenerator {
 				for (Layer layerBelow : allLayersLevel.get(level-1)) {
 					String moduleName = "LayerDependLevelBetween " + layer.getName() + " to " + layerBelow.getName();
 
-					List<KDMRelationship> relations = RelationshipsGenerator.createDependRelations(this.kdmSegment, moduleName); 
+					List<KDMRelationship> relations = RelationshipsGenerator.createRelationsToAggregated(RelationshipGeneratorTypes.DEPEND, DCL2KDM.kdmSegment, moduleName); 
 
 					AggregatedRelationship aggregatedRelationship = CoreFactory.eINSTANCE.createAggregatedRelationship();
 					aggregatedRelationship.setDensity(relations.size());
@@ -209,51 +199,84 @@ public class RestrictionsGenerator {
 	}
 
 	private void generateDefinedRestrictions() {
+		StructureModel structureModel = GenericMethodsArchitecture.getStructureModelFromKDM(DCL2KDM.kdmSegment, ArchitecturalGenerator.STRUCTURAL_NAME);
+		
+		List<DCDecl> allCanRestrictions = new ArrayList<DCDecl>();
+		List<DCDecl> allOnlyCanRestrictions = new ArrayList<DCDecl>();
+		List<DCDecl> allCanOnlyRestrictions = new ArrayList<DCDecl>();
+		List<DCDecl> allCannotRestrictions = new ArrayList<DCDecl>();
+		List<DCDecl> allMustRestrictions = new ArrayList<DCDecl>();
+		
 		for (DCDecl dcDecl : allRestrictionsFromDCL) {
-			System.out.println("-------------------------------------------------------");
-			System.out.println("T(to) name: " + dcDecl.getT().getName());
-			System.out.println("Type(from) name: " + dcDecl.getType().getName());
-
-			if(dcDecl.getElementType() != null){
-				if (dcDecl.getElementType() instanceof BasicType) {
-					System.out.println("BasicType name: " + ((BasicType)dcDecl.getElementType()).getTypeName());
-				} 
-				if (dcDecl.getElementType() instanceof EntityType) {
-					System.out.println("EntityType name: " + ((EntityType)dcDecl.getElementType()).getEntity());
-				}
-			}else{
-				System.out.println("ElementType name: null");
+			
+			if(dcDecl.getOnly() == null && dcDecl.getOnly2() == null && dcDecl.getCan() != null){
+				allCanRestrictions.add(dcDecl);
 			}
-
-			if(dcDecl.getCan() != null){
-				System.out.println("Can name: " + dcDecl.getCan().getCan());
+			if(dcDecl.getOnly() != null && dcDecl.getCan() != null){
+				allOnlyCanRestrictions.add(dcDecl);
 			}
 			if(dcDecl.getCannot() != null){
-				System.out.println("Cannot name: " + dcDecl.getCannot().getCannot());
+				allCannotRestrictions.add(dcDecl);
 			}
-			if(dcDecl.getOnly() != null){
-				System.out.println("Only name: " + dcDecl.getOnly().getOnly());
-			}
-			if(dcDecl.getOnly2() != null){
-				System.out.println("Only2 name: " + dcDecl.getOnly2().getOnly2());
+			if(dcDecl.getOnly2() != null && dcDecl.getCan() != null){
+				allCanOnlyRestrictions.add(dcDecl);
 			}
 			if(dcDecl.getMust() != null){
-				System.out.println("Must name: " + dcDecl.getMust().getMust());
+				allMustRestrictions.add(dcDecl);
 			}
-
+			
 		}
+		
+		
+		new CanRestrictionGenerator().generateRestrictions(structureModel, allCanRestrictions);
+		
+		new OnlyCanRestrictionGenerator().generateRestrictions(structureModel, allOnlyCanRestrictions);
+		
+//		new CanOnlyRestrictionGenerator().generateRestrictions(structureModel, allOnlyCanRestrictions);
+//		
+//		new MustRestrictionGenerator().generateRestrictions(structureModel, allOnlyCanRestrictions);
+//
+//		new CannotRestrictionGenerator().generateRestrictions(structureModel, allOnlyCanRestrictions);
+//		
+//		GenericMethodsRestrictions.removeAggregatedRelationshipWithDensityEquals(0);
 	}
 
-	public static CodeModel getCodeModelFromKDM(Segment segment, String nameToSearch) {
-		CodeModel codeModel = null;
-		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterNameOfKDMFramework(nameToSearch);
-		Map<String, List<CodeModel>> allFromSegment = KDMModelReaderJavaFactory.eINSTANCE.createKDMCodeModelReaderWithFilter(filter).getAllFromSegment(segment);
-		for (String key : allFromSegment.keySet()) {
-			if(allFromSegment.get(key).size() == 1){
-				codeModel = allFromSegment.get(key).get(0);
-				break;
-			}
-		}
-		return codeModel;
-	}
+//	private void printDCDecl(DCDecl dcDecl) {
+//		System.out.println("-------------------------------------------------------");
+//		System.out.println("T(from) name: " + dcDecl.getT().getName());
+//		System.out.println("Type(to) name: " + dcDecl.getType().getName());
+//
+//		if(dcDecl.getElementType() != null){
+//			if (dcDecl.getElementType() instanceof BasicType) {
+//				System.out.println("ElementType(BasicType) name: " + ((BasicType)dcDecl.getElementType()).getTypeName());
+//			} 
+//			if (dcDecl.getElementType() instanceof EntityType) {
+//				System.out.println("ElementType(EntityType) name: " + ((EntityType)dcDecl.getElementType()).getEntity());
+//			}
+//		}else{
+//			System.out.println("ElementType name: null");
+//		}
+//
+//		if(dcDecl.getCan() != null){
+//			System.out.println("Can name: " + dcDecl.getCan().getCan());
+//		}
+//		if(dcDecl.getCannot() != null){
+//			System.out.println("Cannot name: " + dcDecl.getCannot().getCannot());
+//		}
+//		if(dcDecl.getOnly() != null){
+//			System.out.println("Only name: " + dcDecl.getOnly().getOnly());
+//		}
+//		if(dcDecl.getOnly2() != null){
+//			System.out.println("Only2 name: " + dcDecl.getOnly2().getOnly2());
+//		}
+//		if(dcDecl.getMust() != null){
+//			System.out.println("Must name: " + dcDecl.getMust().getMust());
+//		}
+//
+//		if(dcDecl.getEntityType() != null){
+//			System.out.println("EntityType name: " + ((EntityType)dcDecl.getEntityType()).getEntity());
+//		}else{
+//			System.out.println("EntityType name: null");
+//		}
+//	}
 }
