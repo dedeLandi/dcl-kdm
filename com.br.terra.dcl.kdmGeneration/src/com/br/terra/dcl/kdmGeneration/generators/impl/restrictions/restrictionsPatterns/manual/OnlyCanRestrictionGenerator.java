@@ -2,7 +2,7 @@
  * @author Landi
  * 
  */
-package com.br.terra.dcl.kdmGeneration.generators.impl.restrictions.patterns;
+package com.br.terra.dcl.kdmGeneration.generators.impl.restrictions.restrictionsPatterns.manual;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ import com.br.terra.dcl.kdmGeneration.util.GenericMethodsRestrictions;
  * @author Landi
  *
  */
-public class OnlyCanRestrictionGenerator implements PatternRestrictionGenerator {
+public class OnlyCanRestrictionGenerator implements PatternRestrictionGenerator<DCDecl> {
 
 	/* (non-Javadoc)
 	 * regra do tipo: somente A pode B com C 
@@ -77,7 +77,9 @@ public class OnlyCanRestrictionGenerator implements PatternRestrictionGenerator 
 		
 		if(aggregatedsWithTo.size() > 0){
 			for (AggregatedRelationship aggregatedRelationship : aggregatedsWithTo) {
-				GenericMethodsRestrictions.pullRelationOfAggregated(aggregatedRelationship, relation);
+				if(!aggregatedRelationship.getFrom().equals(from)){
+					GenericMethodsRestrictions.pullRelationOfAggregated(aggregatedRelationship, relation);
+				}
 			}
 		}
 		
