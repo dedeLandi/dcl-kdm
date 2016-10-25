@@ -46,11 +46,11 @@ public class MustRestrictionGenerator implements PatternRestrictionGenerator<DCD
 			List<AggregatedRelationship> aggregatedsWithToFrom = GenericMethodsRestrictions.findAggregatedWithToFrom(structureModel, to, from);
 			
 			RelationshipGeneratorTypes relation = null;
-			if(dcDecl.getElementType() != null){
-				if (dcDecl.getElementType() instanceof BasicType) {
-					relation = RelationshipGeneratorTypes.getRelationshipGeneratorTypesByDclText(((BasicType)dcDecl.getElementType()).getTypeName());
-				} else if(dcDecl.getElementType() instanceof EntityType) {
-					relation = RelationshipGeneratorTypes.getRelationshipGeneratorTypesByDclText(((EntityType)dcDecl.getElementType()).getEntity());
+			if(dcDecl.getEntityType() != null){
+				if (dcDecl.getEntityType() instanceof BasicType) {
+					relation = RelationshipGeneratorTypes.getRelationshipGeneratorTypesByDclText(((BasicType)dcDecl.getEntityType()).getTypeName());
+				} else if(dcDecl.getEntityType() instanceof EntityType) {
+					relation = RelationshipGeneratorTypes.getRelationshipGeneratorTypesByDclText(((EntityType)dcDecl.getEntityType()).getEntity());
 				}
 			}
 			
