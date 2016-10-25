@@ -4,6 +4,7 @@
  */
 package com.br.terra.dcl.kdmGeneration.util;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -64,7 +65,7 @@ public class GenericMethodsRestrictions {
 			AbstractStructureElement to, AbstractStructureElement from) {
 		KDMEntity[] toFrom = {to, from};
 		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterAggregatedRelationshipToFromOfKDMEntity(toFrom);
-		
+
 		return KDMStructureReaderJavaFactory.eINSTANCE.createKDMAggregatedRelationshipReaderWithFilter(filter).getAllFrom(structureModel);
 	}
 
@@ -75,10 +76,10 @@ public class GenericMethodsRestrictions {
 	 */
 	public static List<AggregatedRelationship> findAggregatedWithTo(StructureModel structureModel, AbstractStructureElement to) {
 		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterAggregatedRelationshipToOfKDMEntity(to);
-		
+
 		return KDMStructureReaderJavaFactory.eINSTANCE.createKDMAggregatedRelationshipReaderWithFilter(filter).getAllFrom(structureModel);
 	}
-	
+
 	/**
 	 * @author Landi
 	 * @param structureModel 
@@ -103,35 +104,37 @@ public class GenericMethodsRestrictions {
 	/**
 	 * @author Landi
 	 * @param aggregatedRelationship
-	 * @param relations
+	 * @param relation
 	 */
-	public static void removeAggreagatedWith(AggregatedRelationship aggregatedRelationship,
-			KDMRelationship relationToRemove) {
-		
-		for (KDMRelationship relation : aggregatedRelationship.getRelation()) {
-			if(relation.eClass() == relationToRemove.eClass()){
-				aggregatedRelationship.getRelation().remove(relation);
-				int newDensity = aggregatedRelationship.getDensity() - 1;
-				aggregatedRelationship.setDensity(newDensity);
-				return;
+	public static void pullRelationOfAggregated(AggregatedRelationship aggregatedRelationship,
+			RelationshipGeneratorTypes relation) {
+		for (Class<?> classRelation : relation.getRelationshipsClass()) {
+
+			for (Iterator<KDMRelationship> iterator = aggregatedRelationship.getRelation().iterator(); iterator.hasNext();) {
+				KDMRelationship relationship = (KDMRelationship) iterator.next();
+
+				if(validateClassType(relationship.getClass().getInterfaces(), classRelation)){
+					iterator.remove();
+					int newDensity = aggregatedRelationship.getDensity() - 1;
+					aggregatedRelationship.setDensity(newDensity);
+				}
 			}
 		}
 	}
 
 	/**
 	 * @author Landi
-	 * @param aggregatedRelationship
-	 * @param relation
+	 * @param interfaces
+	 * @param classRelation
+	 * @return
 	 */
-	public static void pullRelationOfAggregated(AggregatedRelationship aggregatedRelationship,
-			RelationshipGeneratorTypes relation) {
-		for (Class<?> classRelation : relation.getRelationshipsClass()) {
-			for (KDMRelationship relationship : aggregatedRelationship.getRelation()) {
-				if(relationship.getClass() == classRelation){
-					GenericMethodsRestrictions.removeAggreagatedWith(aggregatedRelationship, relationship);
-				}
+	public static boolean validateClassType(Class<?>[] setOfClasses, Class<?> classToSearch) {
+		for (Class<?> classTest : setOfClasses) {
+			if(classTest == classToSearch){
+				return true;
 			}
 		}
+		return false;
 	}
 
 	/**
@@ -158,16 +161,22 @@ public class GenericMethodsRestrictions {
 	public static boolean allRelationsShouldBePutOrPull(AggregatedRelationship aggregatedRelationship,
 			RelationshipGeneratorTypes relation) {
 		int cont = 0;
-		
-		for (Class<?> classToCompare : relation.getRelationshipsClass()) {
-			for (KDMRelationship relationship : aggregatedRelationship.getRelation()) {
-				if(relationship.getClass() == classToCompare){
-					cont++;
+		boolean found = false;
+
+		for (KDMRelationship relationship : aggregatedRelationship.getRelation()) {
+			found = false;
+			for (Class<?> classToCompare : relation.getRelationshipsClass()) {
+
+				if(validateClassType(relationship.getClass().getInterfaces(), classToCompare)){
+					found = true;
 					break;
 				}
 			}
+			if(found == false){
+				cont++;
+			}
 		}
-		
+
 		return cont == relation.getRelationshipsClass().size() ? true : false;
 	}
 
@@ -178,7 +187,7 @@ public class GenericMethodsRestrictions {
 	 */
 	public static void completeAggreagatedWith(AggregatedRelationship aggregatedRelationship,
 			List<KDMRelationship> relations) {
-		
+
 		int newDensity = aggregatedRelationship.getDensity() + relations.size();
 		aggregatedRelationship.setDensity(newDensity);
 		aggregatedRelationship.getRelation().addAll(relations);
@@ -205,13 +214,13 @@ public class GenericMethodsRestrictions {
 	 */
 	public static void createAggreagatedWith(AbstractStructureElement to, AbstractStructureElement from, RelationshipGeneratorTypes relation, String moduleName) {
 		List<KDMRelationship> relations = RelationshipsGenerator.createRelationsToAggregated(relation, DCL2KDM.kdmSegment, moduleName); 
-	
+
 		AggregatedRelationship aggregatedRelationship = CoreFactory.eINSTANCE.createAggregatedRelationship();
 		aggregatedRelationship.setDensity(relations.size());
 		aggregatedRelationship.setFrom(from);
 		aggregatedRelationship.setTo(to);
 		aggregatedRelationship.getRelation().addAll(relations);
-		
+
 		from.getAggregated().add(aggregatedRelationship);
 	}
 
@@ -223,13 +232,17 @@ public class GenericMethodsRestrictions {
 	 */
 	public static void putRelationInAggregated(AggregatedRelationship aggregatedRelationship,
 			RelationshipGeneratorTypes relation, String moduleName) {
-		
+
 		List<KDMRelationship> relations = RelationshipsGenerator.createRelationsToAggregated(relation, DCL2KDM.kdmSegment, moduleName); 
-	
+
 		if(GenericMethodsRestrictions.allRelationsShouldBePutOrPull(aggregatedRelationship, relation)){
+			System.out.println(">>>"+aggregatedRelationship.getFrom().getName());
+			System.out.println(">>>"+aggregatedRelationship.getTo().getName());
+			System.out.println(">>>"+aggregatedRelationship.getRelation().size());
 			GenericMethodsRestrictions.completeAggreagatedWith(aggregatedRelationship, relations);
 		}else{
 			for (KDMRelationship relationToPut : relations) {
+
 				if(GenericMethodsRestrictions.thisRelationShouldBePut(relationToPut, aggregatedRelationship.getRelation())){
 					GenericMethodsRestrictions.addAggreagatedWith(aggregatedRelationship, relationToPut);
 				}
@@ -237,4 +250,45 @@ public class GenericMethodsRestrictions {
 		}
 	}
 
+	/**
+	 * @author Landi
+	 * @param structureModel 
+	 * @param i
+	 */
+	public static void removeAggregatedRelationshipWithDensityEquals(StructureModel structureModel, int density) {
+
+		for (AbstractStructureElement abstractStructureElement : structureModel.getStructureElement()) {
+
+			removeAggregatedRelationshipWithDensityEquals(abstractStructureElement, density);
+			
+		}
+	}
+
+	/**
+	 * @author Landi
+	 * @param abstractStructureElement
+	 * @param density
+	 */
+	private static void removeAggregatedRelationshipWithDensityEquals(AbstractStructureElement abstractStructureElement,
+			int density) {
+		
+		for (Iterator<AggregatedRelationship> iterator = abstractStructureElement.getInAggregated().iterator(); iterator.hasNext();) {
+			AggregatedRelationship aggregatedRelationship = (AggregatedRelationship) iterator.next();
+			if(aggregatedRelationship.getDensity() == density){
+				iterator.remove();
+			}
+		}
+		for (Iterator<AggregatedRelationship> iterator = abstractStructureElement.getOutAggregated().iterator(); iterator.hasNext();) {
+			AggregatedRelationship aggregatedRelationship = (AggregatedRelationship) iterator.next();
+			if(aggregatedRelationship.getDensity() == density){
+				iterator.remove();
+			}
+		}
+		
+		if(abstractStructureElement.getStructureElement().size() > 0){
+			for (AbstractStructureElement abstractStructureElementChild : abstractStructureElement.getStructureElement()) {
+				removeAggregatedRelationshipWithDensityEquals(abstractStructureElementChild, density);
+			}
+		}
+	}
 }
