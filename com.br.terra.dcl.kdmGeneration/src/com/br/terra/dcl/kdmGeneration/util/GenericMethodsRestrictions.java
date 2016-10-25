@@ -284,6 +284,12 @@ public class GenericMethodsRestrictions {
 				iterator.remove();
 			}
 		}
+		for (Iterator<AggregatedRelationship> iterator = abstractStructureElement.getAggregated().iterator(); iterator.hasNext();) {
+			AggregatedRelationship aggregatedRelationship = (AggregatedRelationship) iterator.next();
+			if(aggregatedRelationship.getDensity() == density){
+				iterator.remove();
+			}
+		}
 		
 		if(abstractStructureElement.getStructureElement().size() > 0){
 			for (AbstractStructureElement abstractStructureElementChild : abstractStructureElement.getStructureElement()) {
