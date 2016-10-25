@@ -8,13 +8,11 @@ import java.util.List;
 
 import org.eclipse.gmt.modisco.omg.kdm.structure.StructureModel;
 
-import com.br.terra.dcl.dCL.DCDecl;
-
 /**
  * @author Landi
  *
  */
-public interface PatternRestrictionGenerator {
+public interface PatternRestrictionGenerator<T> {
 
 	/**
 	 *  
@@ -23,6 +21,6 @@ public interface PatternRestrictionGenerator {
 	 * @param structureModel 
 	 * @param allDCLRestrictions
 	 */
-	void generateRestrictions(StructureModel structureModel, List<DCDecl> allDCLRestrictions);
+	void generateRestrictions(StructureModel structureModel, List<T> allDCLElements);
 
 }
