@@ -2,7 +2,7 @@
  * @author Landi
  * 
  */
-package com.br.terra.dcl.kdmGeneration.generators.impl.restrictions.patterns;
+package com.br.terra.dcl.kdmGeneration.generators.impl.restrictions.restrictionsPatterns.manual;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ import com.br.terra.dcl.kdmGeneration.util.GenericMethodsRestrictions;
  * @author Landi
  *
  */
-public class CanRestrictionGenerator implements PatternRestrictionGenerator {
+public class CanRestrictionGenerator implements PatternRestrictionGenerator<DCDecl> {
 
 	/* (non-Javadoc)
 	 * regra do tipo: A pode B com C 
