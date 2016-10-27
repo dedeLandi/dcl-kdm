@@ -40,6 +40,7 @@ public class LayerRestrictionGenerator implements PatternRestrictionGenerator<DC
 		this.allStructureElementsFromDCL  = allDCLStructureElements;
 		for (AbstractStructureElement abstractStructureElement : structureModel.getStructureElement()) {
 			this.createLayerLevelRelationshipWithSameLevel(abstractStructureElement);
+			//TODO implementar pra quando as layers estão no primeiro nivel
 		}
 	}
 	
