@@ -20,8 +20,8 @@ import com.br.terra.dcl.dCL.DCLModule;
 import com.br.terra.dcl.dCL.DCLStructureElement;
 import com.br.terra.dcl.dCL.DCLSubSystem;
 
-import br.ufscar.kdm_manager.core.filters.validateFilter.factory.ValidateFilterJavaFactory;
-import br.ufscar.kdm_manager.core.filters.validateFilter.interfaces.ValidateFilter;
+import br.ufscar.kdm_manager.core.filters.validateFilter.factory.KDMValidateFilterJavaFactory;
+import br.ufscar.kdm_manager.core.filters.validateFilter.interfaces.KDMValidateFilter;
 import br.ufscar.kdm_manager.core.readers.modelReader.factory.KDMModelReaderJavaFactory;
 import br.ufscar.kdm_manager.core.readers.structureReader.factory.KDMStructureReaderJavaFactory;
 
@@ -39,7 +39,7 @@ public class GenericMethodsArchitecture {
 	 */
 	public static AbstractStructureElement findArchitecturaElement(StructureModel structureModel, DCLStructureElement elementToSearch) {
 	
-		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterNameOfKDMEntity(elementToSearch.getName());
+		KDMValidateFilter<?, ?> filter = KDMValidateFilterJavaFactory.eINSTANCE.createValidateFilterNameOfKDMEntity(elementToSearch.getName());
 	
 		if(elementToSearch instanceof DCLLayer){
 	
@@ -99,7 +99,7 @@ public class GenericMethodsArchitecture {
 	 */
 	public static StructureModel getStructureModelFromKDM(Segment segment, String nameToSearch) {
 		StructureModel structureModel = null;
-		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterNameOfKDMFramework(nameToSearch);
+		KDMValidateFilter<?, ?> filter = KDMValidateFilterJavaFactory.eINSTANCE.createValidateFilterNameOfKDMFramework(nameToSearch);
 		Map<String, List<StructureModel>> allFromSegment = KDMModelReaderJavaFactory.eINSTANCE.createKDMStructureModelReaderWithFilter(filter).getAllFromSegment(segment);
 		for (String key : allFromSegment.keySet()) {
 			if(allFromSegment.get(key).size() == 1){

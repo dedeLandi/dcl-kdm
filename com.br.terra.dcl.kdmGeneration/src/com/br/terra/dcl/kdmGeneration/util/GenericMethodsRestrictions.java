@@ -23,8 +23,8 @@ import com.br.terra.dcl.kdmGeneration.actions.DCL2KDM;
 import com.br.terra.dcl.kdmGeneration.generators.enums.RelationshipGeneratorTypes;
 import com.br.terra.dcl.kdmGeneration.generators.impl.relationships.RelationshipsGenerator;
 
-import br.ufscar.kdm_manager.core.filters.validateFilter.factory.ValidateFilterJavaFactory;
-import br.ufscar.kdm_manager.core.filters.validateFilter.interfaces.ValidateFilter;
+import br.ufscar.kdm_manager.core.filters.validateFilter.factory.KDMValidateFilterJavaFactory;
+import br.ufscar.kdm_manager.core.filters.validateFilter.interfaces.KDMValidateFilter;
 import br.ufscar.kdm_manager.core.readers.modelReader.factory.KDMModelReaderJavaFactory;
 import br.ufscar.kdm_manager.core.readers.structureReader.factory.KDMStructureReaderJavaFactory;
 
@@ -43,7 +43,7 @@ public class GenericMethodsRestrictions {
 	 */
 	public static CodeModel getCodeModelFromKDM(Segment segment, String nameToSearch) {
 		CodeModel codeModel = null;
-		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterNameOfKDMFramework(nameToSearch);
+		KDMValidateFilter<?, ?> filter = KDMValidateFilterJavaFactory.eINSTANCE.createValidateFilterNameOfKDMFramework(nameToSearch);
 		Map<String, List<CodeModel>> allFromSegment = KDMModelReaderJavaFactory.eINSTANCE.createKDMCodeModelReaderWithFilter(filter).getAllFromSegment(segment);
 		for (String key : allFromSegment.keySet()) {
 			if(allFromSegment.get(key).size() == 1){
@@ -64,7 +64,7 @@ public class GenericMethodsRestrictions {
 	public static List<AggregatedRelationship> findAggregatedWithToFrom(StructureModel structureModel,
 			AbstractStructureElement to, AbstractStructureElement from) {
 		KDMEntity[] toFrom = {to, from};
-		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterAggregatedRelationshipToFromOfKDMEntity(toFrom);
+		KDMValidateFilter<?, ?> filter = KDMValidateFilterJavaFactory.eINSTANCE.createValidateFilterAggregatedRelationshipToFromOfKDMEntity(toFrom);
 
 		return KDMStructureReaderJavaFactory.eINSTANCE.createKDMAggregatedRelationshipReaderWithFilter(filter).getAllFrom(structureModel);
 	}
@@ -75,7 +75,7 @@ public class GenericMethodsRestrictions {
 	 * @param to
 	 */
 	public static List<AggregatedRelationship> findAggregatedWithTo(StructureModel structureModel, AbstractStructureElement to) {
-		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterAggregatedRelationshipToOfKDMEntity(to);
+		KDMValidateFilter<?, ?> filter = KDMValidateFilterJavaFactory.eINSTANCE.createValidateFilterAggregatedRelationshipToOfKDMEntity(to);
 
 		return KDMStructureReaderJavaFactory.eINSTANCE.createKDMAggregatedRelationshipReaderWithFilter(filter).getAllFrom(structureModel);
 	}
@@ -86,7 +86,7 @@ public class GenericMethodsRestrictions {
 	 * @param to
 	 */
 	public static List<AggregatedRelationship> findAggregatedWithFrom(StructureModel structureModel, AbstractStructureElement from) {
-		ValidateFilter<?, ?> filter = ValidateFilterJavaFactory.eINSTANCE.createValidateFilterAggregatedRelationshipFromOfKDMEntity(from);
+		KDMValidateFilter<?, ?> filter = KDMValidateFilterJavaFactory.eINSTANCE.createValidateFilterAggregatedRelationshipFromOfKDMEntity(from);
 
 		return KDMStructureReaderJavaFactory.eINSTANCE.createKDMAggregatedRelationshipReaderWithFilter(filter).getAllFrom(structureModel);
 	}
