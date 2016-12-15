@@ -215,10 +215,18 @@ public class GenericMethodsRestrictions {
 	public static void createAggreagatedWith(AbstractStructureElement to, AbstractStructureElement from, RelationshipGeneratorTypes relation, String moduleName) {
 		List<KDMRelationship> relations = RelationshipsGenerator.createRelationsToAggregated(relation, DCL2KDM.kdmSegment, moduleName); 
 
-		AggregatedRelationship aggregatedRelationship = CoreFactory.eINSTANCE.createAggregatedRelationship();
+//		AggregatedRelationship aggregatedRelationship = CoreFactory.eINSTANCE.createAggregatedRelationship();
+//		aggregatedRelationship.setDensity(relations.size());
+//		aggregatedRelationship.setFrom(from);
+//		aggregatedRelationship.setTo(to);
+//		aggregatedRelationship.getRelation().addAll(relations);
+//
+//		from.getAggregated().add(aggregatedRelationship);
+		
+		AggregatedRelationship aggregatedRelationship = from.createAggregation(to);;
 		aggregatedRelationship.setDensity(relations.size());
-		aggregatedRelationship.setFrom(from);
-		aggregatedRelationship.setTo(to);
+//		aggregatedRelationship.setFrom(from);
+//		aggregatedRelationship.setTo(to);
 		aggregatedRelationship.getRelation().addAll(relations);
 
 		from.getAggregated().add(aggregatedRelationship);
