@@ -14,6 +14,7 @@ import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 import org.eclipse.gmt.modisco.omg.kdm.code.CodeElement;
 import org.eclipse.gmt.modisco.omg.kdm.code.CodeFactory;
 import org.eclipse.gmt.modisco.omg.kdm.code.Extends;
+import org.eclipse.gmt.modisco.omg.kdm.code.HasType;
 import org.eclipse.gmt.modisco.omg.kdm.code.HasValue;
 import org.eclipse.gmt.modisco.omg.kdm.code.Implements;
 import org.eclipse.gmt.modisco.omg.kdm.code.Imports;
@@ -114,7 +115,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			UsesType relation2 = ActionFactory.eINSTANCE.createUsesType();
 			lisfOfRelationshipsToAdd.add(relation2);
 			actionElementForRelations.getActionRelation().add(relation2);
-
+			
 			return lisfOfRelationshipsToAdd;
 		}
 
@@ -180,6 +181,10 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			Imports relation7 = CodeFactory.eINSTANCE.createImports();
 			lisfOfRelationshipsToAdd.add(relation7);
 			codeElementForRelations.getCodeRelation().add(relation7);
+			
+			HasType relation8 = CodeFactory.eINSTANCE.createHasType();
+			lisfOfRelationshipsToAdd.add(relation8);
+			codeElementForRelations.getCodeRelation().add(relation8);
 
 			return lisfOfRelationshipsToAdd;
 		}
@@ -194,6 +199,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			relationshipClasses.add(Implements.class);
 			relationshipClasses.add(HasValue.class);
 			relationshipClasses.add(Imports.class);
+			relationshipClasses.add(HasType.class);
 			return relationshipClasses;
 		}
 
@@ -207,6 +213,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			relationshipNames.add("Implements");
 			relationshipNames.add("HasValue");
 			relationshipNames.add("Imports");
+			relationshipNames.add("HasType");
 			return relationshipNames;
 		}
 
