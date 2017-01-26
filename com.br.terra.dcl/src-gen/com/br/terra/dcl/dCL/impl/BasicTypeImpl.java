@@ -17,10 +17,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.impl.BasicTypeImpl#getTypeName <em>Type Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.Model#getStructureElements <em>Structure Elements</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.Model#getDCDecl <em>DC Decl</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.br.terra.dcl.dCL.DCLPackage#getModel()
  * @model

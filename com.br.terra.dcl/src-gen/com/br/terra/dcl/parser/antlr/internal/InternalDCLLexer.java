@@ -12,48 +12,48 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalDCLLexer extends Lexer {
-    public static final int RULE_ID=4;
-    public static final int T__29=29;
-    public static final int T__28=28;
-    public static final int T__27=27;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int T__21=21;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int T__20=20;
-    public static final int EOF=-1;
     public static final int T__19=19;
-    public static final int T__16=16;
     public static final int T__15=15;
-    public static final int T__18=18;
+    public static final int T__16=16;
     public static final int T__17=17;
-    public static final int T__12=12;
+    public static final int T__18=18;
     public static final int T__11=11;
-    public static final int T__14=14;
+    public static final int T__12=12;
     public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int RULE_ID=4;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
     public static final int RULE_INT=5;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__44=44;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int T__29=29;
+    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
     public static final int RULE_STRING=6;
+    public static final int RULE_SL_COMMENT=8;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_WS=9;
+    public static final int RULE_ANY_OTHER=10;
+    public static final int T__44=44;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -66,15 +66,15 @@ public class InternalDCLLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g"; }
+    public String getGrammarFileName() { return "InternalDCL.g"; }
 
     // $ANTLR start "T__11"
     public final void mT__11() throws RecognitionException {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:11:7: ( 'architeturalElements' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:11:9: 'architeturalElements'
+            // InternalDCL.g:11:7: ( 'architeturalElements' )
+            // InternalDCL.g:11:9: 'architeturalElements'
             {
             match("architeturalElements"); 
 
@@ -94,8 +94,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:12:7: ( '{' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:12:9: '{'
+            // InternalDCL.g:12:7: ( '{' )
+            // InternalDCL.g:12:9: '{'
             {
             match('{'); 
 
@@ -114,8 +114,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:13:7: ( '}' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:13:9: '}'
+            // InternalDCL.g:13:7: ( '}' )
+            // InternalDCL.g:13:9: '}'
             {
             match('}'); 
 
@@ -134,8 +134,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:14:7: ( 'restrictions' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:14:9: 'restrictions'
+            // InternalDCL.g:14:7: ( 'restrictions' )
+            // InternalDCL.g:14:9: 'restrictions'
             {
             match("restrictions"); 
 
@@ -155,8 +155,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:15:7: ( 'layer' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:15:9: 'layer'
+            // InternalDCL.g:15:7: ( 'layer' )
+            // InternalDCL.g:15:9: 'layer'
             {
             match("layer"); 
 
@@ -176,8 +176,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:16:7: ( ',' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:16:9: ','
+            // InternalDCL.g:16:7: ( ',' )
+            // InternalDCL.g:16:9: ','
             {
             match(','); 
 
@@ -196,8 +196,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:17:7: ( 'level' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:17:9: 'level'
+            // InternalDCL.g:17:7: ( 'level' )
+            // InternalDCL.g:17:9: 'level'
             {
             match("level"); 
 
@@ -217,8 +217,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:18:7: ( 'inLayer: ' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:18:9: 'inLayer: '
+            // InternalDCL.g:18:7: ( 'inLayer: ' )
+            // InternalDCL.g:18:9: 'inLayer: '
             {
             match("inLayer: "); 
 
@@ -238,8 +238,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:19:7: ( 'inSubSystem: ' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:19:9: 'inSubSystem: '
+            // InternalDCL.g:19:7: ( 'inSubSystem: ' )
+            // InternalDCL.g:19:9: 'inSubSystem: '
             {
             match("inSubSystem: "); 
 
@@ -259,8 +259,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:20:7: ( 'inComponent: ' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:20:9: 'inComponent: '
+            // InternalDCL.g:20:7: ( 'inComponent: ' )
+            // InternalDCL.g:20:9: 'inComponent: '
             {
             match("inComponent: "); 
 
@@ -280,8 +280,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:21:7: ( ';' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:21:9: ';'
+            // InternalDCL.g:21:7: ( ';' )
+            // InternalDCL.g:21:9: ';'
             {
             match(';'); 
 
@@ -300,8 +300,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:22:7: ( 'component' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:22:9: 'component'
+            // InternalDCL.g:22:7: ( 'component' )
+            // InternalDCL.g:22:9: 'component'
             {
             match("component"); 
 
@@ -321,8 +321,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:23:7: ( 'interface' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:23:9: 'interface'
+            // InternalDCL.g:23:7: ( 'interface' )
+            // InternalDCL.g:23:9: 'interface'
             {
             match("interface"); 
 
@@ -342,8 +342,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:24:7: ( 'ofComponent ' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:24:9: 'ofComponent '
+            // InternalDCL.g:24:7: ( 'ofComponent ' )
+            // InternalDCL.g:24:9: 'ofComponent '
             {
             match("ofComponent "); 
 
@@ -363,8 +363,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:25:7: ( 'type: ' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:25:9: 'type: '
+            // InternalDCL.g:25:7: ( 'type: ' )
+            // InternalDCL.g:25:9: 'type: '
             {
             match("type: "); 
 
@@ -384,8 +384,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:26:7: ( 'provided' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:26:9: 'provided'
+            // InternalDCL.g:26:7: ( 'provided' )
+            // InternalDCL.g:26:9: 'provided'
             {
             match("provided"); 
 
@@ -405,8 +405,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:27:7: ( 'required' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:27:9: 'required'
+            // InternalDCL.g:27:7: ( 'required' )
+            // InternalDCL.g:27:9: 'required'
             {
             match("required"); 
 
@@ -426,8 +426,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:28:7: ( 'subSystem' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:28:9: 'subSystem'
+            // InternalDCL.g:28:7: ( 'subSystem' )
+            // InternalDCL.g:28:9: 'subSystem'
             {
             match("subSystem"); 
 
@@ -447,8 +447,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:29:7: ( 'module' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:29:9: 'module'
+            // InternalDCL.g:29:7: ( 'module' )
+            // InternalDCL.g:29:9: 'module'
             {
             match("module"); 
 
@@ -468,8 +468,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:30:7: ( 'only' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:30:9: 'only'
+            // InternalDCL.g:30:7: ( 'only' )
+            // InternalDCL.g:30:9: 'only'
             {
             match("only"); 
 
@@ -489,8 +489,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:31:7: ( 'can-' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:31:9: 'can-'
+            // InternalDCL.g:31:7: ( 'can-' )
+            // InternalDCL.g:31:9: 'can-'
             {
             match("can-"); 
 
@@ -510,8 +510,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:32:7: ( 'cannot-' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:32:9: 'cannot-'
+            // InternalDCL.g:32:7: ( 'cannot-' )
+            // InternalDCL.g:32:9: 'cannot-'
             {
             match("cannot-"); 
 
@@ -531,8 +531,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:33:7: ( '-only' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:33:9: '-only'
+            // InternalDCL.g:33:7: ( '-only' )
+            // InternalDCL.g:33:9: '-only'
             {
             match("-only"); 
 
@@ -552,8 +552,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:34:7: ( 'must-' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:34:9: 'must-'
+            // InternalDCL.g:34:7: ( 'must-' )
+            // InternalDCL.g:34:9: 'must-'
             {
             match("must-"); 
 
@@ -573,8 +573,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:35:7: ( 'access' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:35:9: 'access'
+            // InternalDCL.g:35:7: ( 'access' )
+            // InternalDCL.g:35:9: 'access'
             {
             match("access"); 
 
@@ -594,8 +594,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:36:7: ( 'declare' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:36:9: 'declare'
+            // InternalDCL.g:36:7: ( 'declare' )
+            // InternalDCL.g:36:9: 'declare'
             {
             match("declare"); 
 
@@ -615,8 +615,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:37:7: ( 'handle' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:37:9: 'handle'
+            // InternalDCL.g:37:7: ( 'handle' )
+            // InternalDCL.g:37:9: 'handle'
             {
             match("handle"); 
 
@@ -636,8 +636,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:38:7: ( 'create' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:38:9: 'create'
+            // InternalDCL.g:38:7: ( 'create' )
+            // InternalDCL.g:38:9: 'create'
             {
             match("create"); 
 
@@ -657,8 +657,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:39:7: ( 'depend' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:39:9: 'depend'
+            // InternalDCL.g:39:7: ( 'depend' )
+            // InternalDCL.g:39:9: 'depend'
             {
             match("depend"); 
 
@@ -678,8 +678,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:40:7: ( 'extend' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:40:9: 'extend'
+            // InternalDCL.g:40:7: ( 'extend' )
+            // InternalDCL.g:40:9: 'extend'
             {
             match("extend"); 
 
@@ -699,8 +699,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:41:7: ( 'implement' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:41:9: 'implement'
+            // InternalDCL.g:41:7: ( 'implement' )
+            // InternalDCL.g:41:9: 'implement'
             {
             match("implement"); 
 
@@ -720,8 +720,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:42:7: ( 'derive' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:42:9: 'derive'
+            // InternalDCL.g:42:7: ( 'derive' )
+            // InternalDCL.g:42:9: 'derive'
             {
             match("derive"); 
 
@@ -741,8 +741,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:43:7: ( 'throw' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:43:9: 'throw'
+            // InternalDCL.g:43:7: ( 'throw' )
+            // InternalDCL.g:43:9: 'throw'
             {
             match("throw"); 
 
@@ -762,8 +762,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:44:7: ( 'useannotation' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:44:9: 'useannotation'
+            // InternalDCL.g:44:7: ( 'useannotation' )
+            // InternalDCL.g:44:9: 'useannotation'
             {
             match("useannotation"); 
 
@@ -783,10 +783,10 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1419:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1419:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalDCL.g:1486:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalDCL.g:1486:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1419:11: ( '^' )?
+            // InternalDCL.g:1486:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -795,7 +795,7 @@ public class InternalDCLLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1419:11: '^'
+                    // InternalDCL.g:1486:11: '^'
                     {
                     match('^'); 
 
@@ -813,7 +813,7 @@ public class InternalDCLLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1419:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalDCL.g:1486:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -826,7 +826,7 @@ public class InternalDCLLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:
+            	    // InternalDCL.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -862,10 +862,10 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1421:10: ( ( '0' .. '9' )+ )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1421:12: ( '0' .. '9' )+
+            // InternalDCL.g:1488:10: ( ( '0' .. '9' )+ )
+            // InternalDCL.g:1488:12: ( '0' .. '9' )+
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1421:12: ( '0' .. '9' )+
+            // InternalDCL.g:1488:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -879,7 +879,7 @@ public class InternalDCLLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1421:13: '0' .. '9'
+            	    // InternalDCL.g:1488:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -911,10 +911,10 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalDCL.g:1490:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalDCL.g:1490:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalDCL.g:1490:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -932,10 +932,10 @@ public class InternalDCLLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalDCL.g:1490:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalDCL.g:1490:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -951,7 +951,7 @@ public class InternalDCLLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:21: '\\\\' .
+                    	    // InternalDCL.g:1490:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -959,7 +959,7 @@ public class InternalDCLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalDCL.g:1490:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -984,10 +984,10 @@ public class InternalDCLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalDCL.g:1490:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalDCL.g:1490:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1003,7 +1003,7 @@ public class InternalDCLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:54: '\\\\' .
+                    	    // InternalDCL.g:1490:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1011,7 +1011,7 @@ public class InternalDCLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1423:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalDCL.g:1490:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1054,12 +1054,12 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1425:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1425:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalDCL.g:1492:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalDCL.g:1492:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1425:24: ( options {greedy=false; } : . )*
+            // InternalDCL.g:1492:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1084,7 +1084,7 @@ public class InternalDCLLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1425:52: .
+            	    // InternalDCL.g:1492:52: .
             	    {
             	    matchAny(); 
 
@@ -1114,12 +1114,12 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1427:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1427:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalDCL.g:1494:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalDCL.g:1494:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1427:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalDCL.g:1494:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1132,7 +1132,7 @@ public class InternalDCLLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1427:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalDCL.g:1494:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1152,7 +1152,7 @@ public class InternalDCLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1427:40: ( ( '\\r' )? '\\n' )?
+            // InternalDCL.g:1494:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1161,9 +1161,9 @@ public class InternalDCLLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1427:41: ( '\\r' )? '\\n'
+                    // InternalDCL.g:1494:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1427:41: ( '\\r' )?
+                    // InternalDCL.g:1494:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1172,7 +1172,7 @@ public class InternalDCLLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1427:41: '\\r'
+                            // InternalDCL.g:1494:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1204,10 +1204,10 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1429:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1429:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalDCL.g:1496:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalDCL.g:1496:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1429:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalDCL.g:1496:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1221,7 +1221,7 @@ public class InternalDCLLexer extends Lexer {
 
                 switch (alt11) {
             	case 1 :
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:
+            	    // InternalDCL.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -1261,8 +1261,8 @@ public class InternalDCLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1431:16: ( . )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1431:18: .
+            // InternalDCL.g:1498:16: ( . )
+            // InternalDCL.g:1498:18: .
             {
             matchAny(); 
 
@@ -1277,292 +1277,292 @@ public class InternalDCLLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        // InternalDCL.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
         int alt12=41;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:10: T__11
+                // InternalDCL.g:1:10: T__11
                 {
                 mT__11(); 
 
                 }
                 break;
             case 2 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:16: T__12
+                // InternalDCL.g:1:16: T__12
                 {
                 mT__12(); 
 
                 }
                 break;
             case 3 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:22: T__13
+                // InternalDCL.g:1:22: T__13
                 {
                 mT__13(); 
 
                 }
                 break;
             case 4 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:28: T__14
+                // InternalDCL.g:1:28: T__14
                 {
                 mT__14(); 
 
                 }
                 break;
             case 5 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:34: T__15
+                // InternalDCL.g:1:34: T__15
                 {
                 mT__15(); 
 
                 }
                 break;
             case 6 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:40: T__16
+                // InternalDCL.g:1:40: T__16
                 {
                 mT__16(); 
 
                 }
                 break;
             case 7 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:46: T__17
+                // InternalDCL.g:1:46: T__17
                 {
                 mT__17(); 
 
                 }
                 break;
             case 8 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:52: T__18
+                // InternalDCL.g:1:52: T__18
                 {
                 mT__18(); 
 
                 }
                 break;
             case 9 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:58: T__19
+                // InternalDCL.g:1:58: T__19
                 {
                 mT__19(); 
 
                 }
                 break;
             case 10 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:64: T__20
+                // InternalDCL.g:1:64: T__20
                 {
                 mT__20(); 
 
                 }
                 break;
             case 11 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:70: T__21
+                // InternalDCL.g:1:70: T__21
                 {
                 mT__21(); 
 
                 }
                 break;
             case 12 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:76: T__22
+                // InternalDCL.g:1:76: T__22
                 {
                 mT__22(); 
 
                 }
                 break;
             case 13 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:82: T__23
+                // InternalDCL.g:1:82: T__23
                 {
                 mT__23(); 
 
                 }
                 break;
             case 14 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:88: T__24
+                // InternalDCL.g:1:88: T__24
                 {
                 mT__24(); 
 
                 }
                 break;
             case 15 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:94: T__25
+                // InternalDCL.g:1:94: T__25
                 {
                 mT__25(); 
 
                 }
                 break;
             case 16 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:100: T__26
+                // InternalDCL.g:1:100: T__26
                 {
                 mT__26(); 
 
                 }
                 break;
             case 17 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:106: T__27
+                // InternalDCL.g:1:106: T__27
                 {
                 mT__27(); 
 
                 }
                 break;
             case 18 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:112: T__28
+                // InternalDCL.g:1:112: T__28
                 {
                 mT__28(); 
 
                 }
                 break;
             case 19 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:118: T__29
+                // InternalDCL.g:1:118: T__29
                 {
                 mT__29(); 
 
                 }
                 break;
             case 20 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:124: T__30
+                // InternalDCL.g:1:124: T__30
                 {
                 mT__30(); 
 
                 }
                 break;
             case 21 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:130: T__31
+                // InternalDCL.g:1:130: T__31
                 {
                 mT__31(); 
 
                 }
                 break;
             case 22 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:136: T__32
+                // InternalDCL.g:1:136: T__32
                 {
                 mT__32(); 
 
                 }
                 break;
             case 23 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:142: T__33
+                // InternalDCL.g:1:142: T__33
                 {
                 mT__33(); 
 
                 }
                 break;
             case 24 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:148: T__34
+                // InternalDCL.g:1:148: T__34
                 {
                 mT__34(); 
 
                 }
                 break;
             case 25 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:154: T__35
+                // InternalDCL.g:1:154: T__35
                 {
                 mT__35(); 
 
                 }
                 break;
             case 26 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:160: T__36
+                // InternalDCL.g:1:160: T__36
                 {
                 mT__36(); 
 
                 }
                 break;
             case 27 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:166: T__37
+                // InternalDCL.g:1:166: T__37
                 {
                 mT__37(); 
 
                 }
                 break;
             case 28 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:172: T__38
+                // InternalDCL.g:1:172: T__38
                 {
                 mT__38(); 
 
                 }
                 break;
             case 29 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:178: T__39
+                // InternalDCL.g:1:178: T__39
                 {
                 mT__39(); 
 
                 }
                 break;
             case 30 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:184: T__40
+                // InternalDCL.g:1:184: T__40
                 {
                 mT__40(); 
 
                 }
                 break;
             case 31 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:190: T__41
+                // InternalDCL.g:1:190: T__41
                 {
                 mT__41(); 
 
                 }
                 break;
             case 32 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:196: T__42
+                // InternalDCL.g:1:196: T__42
                 {
                 mT__42(); 
 
                 }
                 break;
             case 33 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:202: T__43
+                // InternalDCL.g:1:202: T__43
                 {
                 mT__43(); 
 
                 }
                 break;
             case 34 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:208: T__44
+                // InternalDCL.g:1:208: T__44
                 {
                 mT__44(); 
 
                 }
                 break;
             case 35 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:214: RULE_ID
+                // InternalDCL.g:1:214: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 36 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:222: RULE_INT
+                // InternalDCL.g:1:222: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
             case 37 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:231: RULE_STRING
+                // InternalDCL.g:1:231: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 38 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:243: RULE_ML_COMMENT
+                // InternalDCL.g:1:243: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
             case 39 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:259: RULE_SL_COMMENT
+                // InternalDCL.g:1:259: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 40 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:275: RULE_WS
+                // InternalDCL.g:1:275: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 41 :
-                // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1:283: RULE_ANY_OTHER
+                // InternalDCL.g:1:283: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1576,79 +1576,19 @@ public class InternalDCLLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\36\2\uffff\2\36\1\uffff\1\36\1\uffff\6\36\1\33\4\36"+
-        "\1\33\2\uffff\3\33\2\uffff\2\36\3\uffff\3\36\1\uffff\2\36\1\uffff"+
-        "\13\36\1\uffff\4\36\5\uffff\50\36\1\uffff\3\36\1\u0085\20\36\1\u0096"+
-        "\1\u0097\11\36\2\uffff\1\u00a1\3\36\1\uffff\7\36\1\u00ac\2\36\2"+
-        "\uffff\7\36\1\u00b6\1\36\1\uffff\2\36\1\u00ba\1\36\1\u00bc\1\u00bd"+
-        "\1\u00be\1\u00bf\2\36\1\uffff\10\36\2\uffff\3\36\1\uffff\1\u00cd"+
-        "\4\uffff\3\36\1\u00d1\1\uffff\6\36\1\u00d8\1\36\1\uffff\3\36\1\uffff"+
-        "\2\36\1\u00df\1\u00e0\1\u00e1\1\36\1\uffff\1\u00e3\5\36\3\uffff"+
-        "\1\36\1\uffff\10\36\1\u00f2\3\uffff\2\36\1\uffff\1\u00f5\1\36\1"+
-        "\uffff\5\36\1\u00fc\1\uffff";
+        "\1\uffff\1\36\2\uffff\2\36\1\uffff\1\36\1\uffff\6\36\1\33\4\36\1\33\2\uffff\3\33\2\uffff\2\36\3\uffff\3\36\1\uffff\2\36\1\uffff\13\36\1\uffff\4\36\5\uffff\50\36\1\uffff\3\36\1\u0085\20\36\1\u0096\1\u0097\11\36\2\uffff\1\u00a1\3\36\1\uffff\7\36\1\u00ac\2\36\2\uffff\7\36\1\u00b6\1\36\1\uffff\2\36\1\u00ba\1\36\1\u00bc\1\u00bd\1\u00be\1\u00bf\2\36\1\uffff\10\36\2\uffff\3\36\1\uffff\1\u00cd\4\uffff\3\36\1\u00d1\1\uffff\6\36\1\u00d8\1\36\1\uffff\3\36\1\uffff\2\36\1\u00df\1\u00e0\1\u00e1\1\36\1\uffff\1\u00e3\5\36\3\uffff\1\36\1\uffff\10\36\1\u00f2\3\uffff\2\36\1\uffff\1\u00f5\1\36\1\uffff\5\36\1\u00fc\1\uffff";
     static final String DFA12_eofS =
         "\u00fd\uffff";
     static final String DFA12_minS =
-        "\1\0\1\143\2\uffff\1\145\1\141\1\uffff\1\155\1\uffff\1\141\1\146"+
-        "\1\150\1\162\1\165\2\157\1\145\1\141\1\170\1\163\1\101\2\uffff\2"+
-        "\0\1\52\2\uffff\2\143\3\uffff\1\161\1\171\1\166\1\uffff\1\103\1"+
-        "\160\1\uffff\1\155\1\156\1\145\1\103\1\154\1\160\1\162\1\157\1\142"+
-        "\1\144\1\163\1\uffff\1\143\1\156\1\164\1\145\5\uffff\1\150\1\145"+
-        "\1\164\1\165\2\145\1\141\1\165\1\157\1\145\1\154\1\160\1\55\1\141"+
-        "\1\157\1\171\1\145\1\157\1\166\1\123\1\165\1\164\1\154\1\145\1\151"+
-        "\1\144\1\145\1\141\1\151\1\163\1\162\1\151\1\162\1\154\1\171\1\142"+
-        "\1\155\1\162\1\145\1\157\1\uffff\1\157\1\164\1\155\1\60\1\72\1\167"+
-        "\1\151\1\171\1\154\1\55\1\141\1\156\1\166\1\154\2\156\1\164\1\163"+
-        "\1\151\1\162\2\60\1\145\1\123\1\160\1\146\1\155\1\156\1\164\1\145"+
-        "\1\160\2\uffff\1\60\1\144\1\163\1\145\1\uffff\1\162\1\144\2\145"+
-        "\1\144\1\156\1\145\1\60\1\143\1\145\2\uffff\1\162\1\171\1\157\1"+
-        "\141\2\145\1\55\1\60\1\157\1\uffff\1\145\1\164\1\60\1\145\4\60\1"+
-        "\157\1\164\1\uffff\1\164\1\144\1\72\1\163\1\156\1\143\2\156\2\uffff"+
-        "\1\156\1\144\1\145\1\uffff\1\60\4\uffff\1\164\1\165\1\151\1\60\1"+
-        "\uffff\1\164\2\145\2\164\1\145\1\60\1\155\1\uffff\1\141\1\162\1"+
-        "\157\1\uffff\1\145\1\156\3\60\1\156\1\uffff\1\60\1\164\1\141\1\156"+
-        "\1\155\1\164\3\uffff\1\164\1\uffff\1\151\1\154\1\163\2\72\1\40\1"+
-        "\157\1\105\1\60\3\uffff\1\156\1\154\1\uffff\1\60\1\145\1\uffff\1"+
-        "\155\1\145\1\156\1\164\1\163\1\60\1\uffff";
+        "\1\0\1\143\2\uffff\1\145\1\141\1\uffff\1\155\1\uffff\1\141\1\146\1\150\1\162\1\165\2\157\1\145\1\141\1\170\1\163\1\101\2\uffff\2\0\1\52\2\uffff\2\143\3\uffff\1\161\1\171\1\166\1\uffff\1\103\1\160\1\uffff\1\155\1\156\1\145\1\103\1\154\1\160\1\162\1\157\1\142\1\144\1\163\1\uffff\1\143\1\156\1\164\1\145\5\uffff\1\150\1\145\1\164\1\165\2\145\1\141\1\165\1\157\1\145\1\154\1\160\1\55\1\141\1\157\1\171\1\145\1\157\1\166\1\123\1\165\1\164\1\154\1\145\1\151\1\144\1\145\1\141\1\151\1\163\1\162\1\151\1\162\1\154\1\171\1\142\1\155\1\162\1\145\1\157\1\uffff\1\157\1\164\1\155\1\60\1\72\1\167\1\151\1\171\1\154\1\55\1\141\1\156\1\166\1\154\2\156\1\164\1\163\1\151\1\162\2\60\1\145\1\123\1\160\1\146\1\155\1\156\1\164\1\145\1\160\2\uffff\1\60\1\144\1\163\1\145\1\uffff\1\162\1\144\2\145\1\144\1\156\1\145\1\60\1\143\1\145\2\uffff\1\162\1\171\1\157\1\141\2\145\1\55\1\60\1\157\1\uffff\1\145\1\164\1\60\1\145\4\60\1\157\1\164\1\uffff\1\164\1\144\1\72\1\163\1\156\1\143\2\156\2\uffff\1\156\1\144\1\145\1\uffff\1\60\4\uffff\1\164\1\165\1\151\1\60\1\uffff\1\164\2\145\2\164\1\145\1\60\1\155\1\uffff\1\141\1\162\1\157\1\uffff\1\145\1\156\3\60\1\156\1\uffff\1\60\1\164\1\141\1\156\1\155\1\164\3\uffff\1\164\1\uffff\1\151\1\154\1\163\2\72\1\40\1\157\1\105\1\60\3\uffff\1\156\1\154\1\uffff\1\60\1\145\1\uffff\1\155\1\145\1\156\1\164\1\163\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\162\2\uffff\2\145\1\uffff\1\156\1\uffff\1\162\1\156"+
-        "\1\171\1\162\2\165\1\157\1\145\1\141\1\170\1\163\1\172\2\uffff\2"+
-        "\uffff\1\57\2\uffff\2\143\3\uffff\1\163\1\171\1\166\1\uffff\1\164"+
-        "\1\160\1\uffff\1\155\1\156\1\145\1\103\1\154\1\160\1\162\1\157\1"+
-        "\142\1\144\1\163\1\uffff\1\162\1\156\1\164\1\145\5\uffff\1\150\1"+
-        "\145\1\164\1\165\2\145\1\141\1\165\1\157\1\145\1\154\1\160\1\156"+
-        "\1\141\1\157\1\171\1\145\1\157\1\166\1\123\1\165\1\164\1\154\1\145"+
-        "\1\151\1\144\1\145\1\141\1\151\1\163\1\162\1\151\1\162\1\154\1\171"+
-        "\1\142\1\155\1\162\1\145\1\157\1\uffff\1\157\1\164\1\155\1\172\1"+
-        "\72\1\167\1\151\1\171\1\154\1\55\1\141\1\156\1\166\1\154\2\156\1"+
-        "\164\1\163\1\151\1\162\2\172\1\145\1\123\1\160\1\146\1\155\1\156"+
-        "\1\164\1\145\1\160\2\uffff\1\172\1\144\1\163\1\145\1\uffff\1\162"+
-        "\1\144\2\145\1\144\1\156\1\145\1\172\1\143\1\145\2\uffff\1\162\1"+
-        "\171\1\157\1\141\2\145\1\55\1\172\1\157\1\uffff\1\145\1\164\1\172"+
-        "\1\145\4\172\1\157\1\164\1\uffff\1\164\1\144\1\72\1\163\1\156\1"+
-        "\143\2\156\2\uffff\1\156\1\144\1\145\1\uffff\1\172\4\uffff\1\164"+
-        "\1\165\1\151\1\172\1\uffff\1\164\2\145\2\164\1\145\1\172\1\155\1"+
-        "\uffff\1\141\1\162\1\157\1\uffff\1\145\1\156\3\172\1\156\1\uffff"+
-        "\1\172\1\164\1\141\1\156\1\155\1\164\3\uffff\1\164\1\uffff\1\151"+
-        "\1\154\1\163\2\72\1\40\1\157\1\105\1\172\3\uffff\1\156\1\154\1\uffff"+
-        "\1\172\1\145\1\uffff\1\155\1\145\1\156\1\164\1\163\1\172\1\uffff";
+        "\1\uffff\1\162\2\uffff\2\145\1\uffff\1\156\1\uffff\1\162\1\156\1\171\1\162\2\165\1\157\1\145\1\141\1\170\1\163\1\172\2\uffff\2\uffff\1\57\2\uffff\2\143\3\uffff\1\163\1\171\1\166\1\uffff\1\164\1\160\1\uffff\1\155\1\156\1\145\1\103\1\154\1\160\1\162\1\157\1\142\1\144\1\163\1\uffff\1\162\1\156\1\164\1\145\5\uffff\1\150\1\145\1\164\1\165\2\145\1\141\1\165\1\157\1\145\1\154\1\160\1\156\1\141\1\157\1\171\1\145\1\157\1\166\1\123\1\165\1\164\1\154\1\145\1\151\1\144\1\145\1\141\1\151\1\163\1\162\1\151\1\162\1\154\1\171\1\142\1\155\1\162\1\145\1\157\1\uffff\1\157\1\164\1\155\1\172\1\72\1\167\1\151\1\171\1\154\1\55\1\141\1\156\1\166\1\154\2\156\1\164\1\163\1\151\1\162\2\172\1\145\1\123\1\160\1\146\1\155\1\156\1\164\1\145\1\160\2\uffff\1\172\1\144\1\163\1\145\1\uffff\1\162\1\144\2\145\1\144\1\156\1\145\1\172\1\143\1\145\2\uffff\1\162\1\171\1\157\1\141\2\145\1\55\1\172\1\157\1\uffff\1\145\1\164\1\172\1\145\4\172\1\157\1\164\1\uffff\1\164\1\144\1\72\1\163\1\156\1\143\2\156\2\uffff\1\156\1\144\1\145\1\uffff\1\172\4\uffff\1\164\1\165\1\151\1\172\1\uffff\1\164\2\145\2\164\1\145\1\172\1\155\1\uffff\1\141\1\162\1\157\1\uffff\1\145\1\156\3\172\1\156\1\uffff\1\172\1\164\1\141\1\156\1\155\1\164\3\uffff\1\164\1\uffff\1\151\1\154\1\163\2\72\1\40\1\157\1\105\1\172\3\uffff\1\156\1\154\1\uffff\1\172\1\145\1\uffff\1\155\1\145\1\156\1\164\1\163\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\3\2\uffff\1\6\1\uffff\1\13\14\uffff\1\43\1\44\3"+
-        "\uffff\1\50\1\51\2\uffff\1\43\1\2\1\3\3\uffff\1\6\2\uffff\1\13\13"+
-        "\uffff\1\27\4\uffff\1\44\1\45\1\46\1\47\1\50\50\uffff\1\25\37\uffff"+
-        "\1\24\1\17\4\uffff\1\30\12\uffff\1\5\1\7\11\uffff\1\41\12\uffff"+
-        "\1\31\10\uffff\1\26\1\34\3\uffff\1\23\1\uffff\1\35\1\40\1\33\1\36"+
-        "\4\uffff\1\10\10\uffff\1\32\3\uffff\1\21\6\uffff\1\20\6\uffff\1"+
-        "\15\1\37\1\14\1\uffff\1\22\11\uffff\1\11\1\12\1\16\2\uffff\1\4\2"+
-        "\uffff\1\42\6\uffff\1\1";
+        "\2\uffff\1\2\1\3\2\uffff\1\6\1\uffff\1\13\14\uffff\1\43\1\44\3\uffff\1\50\1\51\2\uffff\1\43\1\2\1\3\3\uffff\1\6\2\uffff\1\13\13\uffff\1\27\4\uffff\1\44\1\45\1\46\1\47\1\50\50\uffff\1\25\37\uffff\1\24\1\17\4\uffff\1\30\12\uffff\1\5\1\7\11\uffff\1\41\12\uffff\1\31\10\uffff\1\26\1\34\3\uffff\1\23\1\uffff\1\35\1\40\1\33\1\36\4\uffff\1\10\10\uffff\1\32\3\uffff\1\21\6\uffff\1\20\6\uffff\1\15\1\37\1\14\1\uffff\1\22\11\uffff\1\11\1\12\1\16\2\uffff\1\4\2\uffff\1\42\6\uffff\1\1";
     static final String DFA12_specialS =
-        "\1\0\26\uffff\1\2\1\1\u00e4\uffff}>";
+        "\1\1\26\uffff\1\0\1\2\u00e4\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\27\4\33\1\30\4\33\1"+
-            "\6\1\17\1\33\1\31\12\26\1\33\1\10\5\33\32\25\3\33\1\24\1\25"+
-            "\1\33\1\1\1\25\1\11\1\20\1\22\2\25\1\21\1\7\2\25\1\5\1\16\1"+
-            "\25\1\12\1\14\1\25\1\4\1\15\1\13\1\23\5\25\1\2\1\33\1\3\uff82"+
-            "\33",
+            "\11\33\2\32\2\33\1\32\22\33\1\32\1\33\1\27\4\33\1\30\4\33\1\6\1\17\1\33\1\31\12\26\1\33\1\10\5\33\32\25\3\33\1\24\1\25\1\33\1\1\1\25\1\11\1\20\1\22\2\25\1\21\1\7\2\25\1\5\1\16\1\25\1\12\1\14\1\25\1\4\1\15\1\13\1\23\5\25\1\2\1\33\1\3\uff82\33",
             "\1\35\16\uffff\1\34",
             "",
             "",
@@ -1940,6 +1880,16 @@ public class InternalDCLLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_23 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_23>='\u0000' && LA12_23<='\uFFFF')) ) {s = 57;}
+
+                        else s = 27;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -1999,21 +1949,11 @@ public class InternalDCLLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
-                    case 1 : 
+                    case 2 : 
                         int LA12_24 = input.LA(1);
 
                         s = -1;
                         if ( ((LA12_24>='\u0000' && LA12_24<='\uFFFF')) ) {s = 57;}
-
-                        else s = 27;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_23 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_23>='\u0000' && LA12_23<='\uFFFF')) ) {s = 57;}
 
                         else s = 27;
 

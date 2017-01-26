@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.impl.InterfaceTypeImpl#getInterfaceTypeName <em>Interface Type Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

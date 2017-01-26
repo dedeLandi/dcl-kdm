@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.Only2#getOnly2 <em>Only2</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.br.terra.dcl.dCL.DCLPackage#getOnly2()
  * @model

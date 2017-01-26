@@ -23,48 +23,48 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'architeturalElements'", "'{'", "'}'", "'restrictions'", "'layer'", "','", "'level'", "'inLayer: '", "'inSubSystem: '", "'inComponent: '", "';'", "'component'", "'interface'", "'ofComponent '", "'type: '", "'provided'", "'required'", "'subSystem'", "'module'", "'only'", "'can-'", "'cannot-'", "'-only'", "'must-'", "'access'", "'declare'", "'handle'", "'create'", "'depend'", "'extend'", "'implement'", "'derive'", "'throw'", "'useannotation'"
     };
-    public static final int RULE_ID=4;
-    public static final int T__29=29;
-    public static final int T__28=28;
-    public static final int T__27=27;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int EOF=-1;
     public static final int T__19=19;
-    public static final int T__16=16;
     public static final int T__15=15;
-    public static final int T__18=18;
+    public static final int T__16=16;
     public static final int T__17=17;
-    public static final int T__12=12;
+    public static final int T__18=18;
     public static final int T__11=11;
-    public static final int T__14=14;
+    public static final int T__12=12;
     public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int RULE_ID=4;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
     public static final int RULE_INT=5;
-    public static final int T__42=42;
-    public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int T__41=41;
-    public static final int T__44=44;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int T__29=29;
+    public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
     public static final int RULE_STRING=6;
+    public static final int RULE_SL_COMMENT=8;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
     public static final int T__36=36;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_WS=9;
+    public static final int RULE_ANY_OTHER=10;
+    public static final int T__44=44;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -80,7 +80,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         
 
     public String[] getTokenNames() { return InternalDCLParser.tokenNames; }
-    public String getGrammarFileName() { return "../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g"; }
+    public String getGrammarFileName() { return "InternalDCL.g"; }
 
 
 
@@ -105,7 +105,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleModel"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:67:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
+    // InternalDCL.g:67:1: entryRuleModel returns [EObject current=null] : iv_ruleModel= ruleModel EOF ;
     public final EObject entryRuleModel() throws RecognitionException {
         EObject current = null;
 
@@ -113,17 +113,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:68:2: (iv_ruleModel= ruleModel EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:69:2: iv_ruleModel= ruleModel EOF
+            // InternalDCL.g:68:2: (iv_ruleModel= ruleModel EOF )
+            // InternalDCL.g:69:2: iv_ruleModel= ruleModel EOF
             {
              newCompositeNode(grammarAccess.getModelRule()); 
-            pushFollow(FOLLOW_ruleModel_in_entryRuleModel75);
+            pushFollow(FOLLOW_1);
             iv_ruleModel=ruleModel();
 
             state._fsp--;
 
              current =iv_ruleModel; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleModel85); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -141,7 +141,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:76:1: ruleModel returns [EObject current=null] : (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' ) ;
+    // InternalDCL.g:76:1: ruleModel returns [EObject current=null] : (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -159,21 +159,21 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:79:28: ( (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:1: (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' )
+            // InternalDCL.g:79:28: ( (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' ) )
+            // InternalDCL.g:80:1: (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:1: (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:3: otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}'
+            // InternalDCL.g:80:1: (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' )
+            // InternalDCL.g:80:3: otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}'
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleModel122); 
+            otherlv_0=(Token)match(input,11,FOLLOW_3); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getModelAccess().getArchiteturalElementsKeyword_0());
                 
-            otherlv_1=(Token)match(input,12,FOLLOW_12_in_ruleModel134); 
+            otherlv_1=(Token)match(input,12,FOLLOW_4); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_1());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:88:1: ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+
+            // InternalDCL.g:88:1: ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+
             int cnt1=0;
             loop1:
             do {
@@ -187,15 +187,15 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:89:1: (lv_structureElements_2_0= ruleDCLStructureElement )
+            	    // InternalDCL.g:89:1: (lv_structureElements_2_0= ruleDCLStructureElement )
             	    {
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:89:1: (lv_structureElements_2_0= ruleDCLStructureElement )
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:90:3: lv_structureElements_2_0= ruleDCLStructureElement
+            	    // InternalDCL.g:89:1: (lv_structureElements_2_0= ruleDCLStructureElement )
+            	    // InternalDCL.g:90:3: lv_structureElements_2_0= ruleDCLStructureElement
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getModelAccess().getStructureElementsDCLStructureElementParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDCLStructureElement_in_ruleModel155);
+            	    pushFollow(FOLLOW_5);
             	    lv_structureElements_2_0=ruleDCLStructureElement();
 
             	    state._fsp--;
@@ -208,7 +208,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"structureElements",
             	            		lv_structureElements_2_0, 
-            	            		"DCLStructureElement");
+            	            		"com.br.terra.dcl.DCL.DCLStructureElement");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -227,19 +227,19 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                 cnt1++;
             } while (true);
 
-            otherlv_3=(Token)match(input,13,FOLLOW_13_in_ruleModel168); 
+            otherlv_3=(Token)match(input,13,FOLLOW_6); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_3());
                 
-            otherlv_4=(Token)match(input,14,FOLLOW_14_in_ruleModel180); 
+            otherlv_4=(Token)match(input,14,FOLLOW_3); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getModelAccess().getRestrictionsKeyword_4());
                 
-            otherlv_5=(Token)match(input,12,FOLLOW_12_in_ruleModel192); 
+            otherlv_5=(Token)match(input,12,FOLLOW_7); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_5());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:118:1: ( (lv_dCDecl_6_0= ruleDCDecl ) )*
+            // InternalDCL.g:118:1: ( (lv_dCDecl_6_0= ruleDCDecl ) )*
             loop2:
             do {
                 int alt2=2;
@@ -252,15 +252,15 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:119:1: (lv_dCDecl_6_0= ruleDCDecl )
+            	    // InternalDCL.g:119:1: (lv_dCDecl_6_0= ruleDCDecl )
             	    {
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:119:1: (lv_dCDecl_6_0= ruleDCDecl )
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:120:3: lv_dCDecl_6_0= ruleDCDecl
+            	    // InternalDCL.g:119:1: (lv_dCDecl_6_0= ruleDCDecl )
+            	    // InternalDCL.g:120:3: lv_dCDecl_6_0= ruleDCDecl
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getModelAccess().getDCDeclDCDeclParserRuleCall_6_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleDCDecl_in_ruleModel213);
+            	    pushFollow(FOLLOW_7);
             	    lv_dCDecl_6_0=ruleDCDecl();
 
             	    state._fsp--;
@@ -273,7 +273,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"dCDecl",
             	            		lv_dCDecl_6_0, 
-            	            		"DCDecl");
+            	            		"com.br.terra.dcl.DCL.DCDecl");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -288,7 +288,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_7=(Token)match(input,13,FOLLOW_13_in_ruleModel226); 
+            otherlv_7=(Token)match(input,13,FOLLOW_2); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_7());
                 
@@ -313,7 +313,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDCLStructureElement"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:148:1: entryRuleDCLStructureElement returns [EObject current=null] : iv_ruleDCLStructureElement= ruleDCLStructureElement EOF ;
+    // InternalDCL.g:148:1: entryRuleDCLStructureElement returns [EObject current=null] : iv_ruleDCLStructureElement= ruleDCLStructureElement EOF ;
     public final EObject entryRuleDCLStructureElement() throws RecognitionException {
         EObject current = null;
 
@@ -321,17 +321,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:149:2: (iv_ruleDCLStructureElement= ruleDCLStructureElement EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:150:2: iv_ruleDCLStructureElement= ruleDCLStructureElement EOF
+            // InternalDCL.g:149:2: (iv_ruleDCLStructureElement= ruleDCLStructureElement EOF )
+            // InternalDCL.g:150:2: iv_ruleDCLStructureElement= ruleDCLStructureElement EOF
             {
              newCompositeNode(grammarAccess.getDCLStructureElementRule()); 
-            pushFollow(FOLLOW_ruleDCLStructureElement_in_entryRuleDCLStructureElement262);
+            pushFollow(FOLLOW_1);
             iv_ruleDCLStructureElement=ruleDCLStructureElement();
 
             state._fsp--;
 
              current =iv_ruleDCLStructureElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLStructureElement272); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -349,7 +349,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDCLStructureElement"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:157:1: ruleDCLStructureElement returns [EObject current=null] : (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLModule_3= ruleDCLModule | this_DCLComponentInterface_4= ruleDCLComponentInterface ) ;
+    // InternalDCL.g:157:1: ruleDCLStructureElement returns [EObject current=null] : (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLModule_3= ruleDCLModule | this_DCLComponentInterface_4= ruleDCLComponentInterface ) ;
     public final EObject ruleDCLStructureElement() throws RecognitionException {
         EObject current = null;
 
@@ -367,10 +367,10 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:160:28: ( (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLModule_3= ruleDCLModule | this_DCLComponentInterface_4= ruleDCLComponentInterface ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:161:1: (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLModule_3= ruleDCLModule | this_DCLComponentInterface_4= ruleDCLComponentInterface )
+            // InternalDCL.g:160:28: ( (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLModule_3= ruleDCLModule | this_DCLComponentInterface_4= ruleDCLComponentInterface ) )
+            // InternalDCL.g:161:1: (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLModule_3= ruleDCLModule | this_DCLComponentInterface_4= ruleDCLComponentInterface )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:161:1: (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLModule_3= ruleDCLModule | this_DCLComponentInterface_4= ruleDCLComponentInterface )
+            // InternalDCL.g:161:1: (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLModule_3= ruleDCLModule | this_DCLComponentInterface_4= ruleDCLComponentInterface )
             int alt3=5;
             switch ( input.LA(1) ) {
             case 15:
@@ -407,12 +407,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             switch (alt3) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:162:5: this_DCLLayer_0= ruleDCLLayer
+                    // InternalDCL.g:162:5: this_DCLLayer_0= ruleDCLLayer
                     {
                      
                             newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLLayerParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleDCLLayer_in_ruleDCLStructureElement319);
+                    pushFollow(FOLLOW_2);
                     this_DCLLayer_0=ruleDCLLayer();
 
                     state._fsp--;
@@ -425,12 +425,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:172:5: this_DCLComponent_1= ruleDCLComponent
+                    // InternalDCL.g:172:5: this_DCLComponent_1= ruleDCLComponent
                     {
                      
                             newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLComponentParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleDCLComponent_in_ruleDCLStructureElement346);
+                    pushFollow(FOLLOW_2);
                     this_DCLComponent_1=ruleDCLComponent();
 
                     state._fsp--;
@@ -443,12 +443,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:182:5: this_DCLSubSystem_2= ruleDCLSubSystem
+                    // InternalDCL.g:182:5: this_DCLSubSystem_2= ruleDCLSubSystem
                     {
                      
                             newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLSubSystemParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleDCLSubSystem_in_ruleDCLStructureElement373);
+                    pushFollow(FOLLOW_2);
                     this_DCLSubSystem_2=ruleDCLSubSystem();
 
                     state._fsp--;
@@ -461,12 +461,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:192:5: this_DCLModule_3= ruleDCLModule
+                    // InternalDCL.g:192:5: this_DCLModule_3= ruleDCLModule
                     {
                      
                             newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLModuleParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleDCLModule_in_ruleDCLStructureElement400);
+                    pushFollow(FOLLOW_2);
                     this_DCLModule_3=ruleDCLModule();
 
                     state._fsp--;
@@ -479,12 +479,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:202:5: this_DCLComponentInterface_4= ruleDCLComponentInterface
+                    // InternalDCL.g:202:5: this_DCLComponentInterface_4= ruleDCLComponentInterface
                     {
                      
                             newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLComponentInterfaceParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleDCLComponentInterface_in_ruleDCLStructureElement427);
+                    pushFollow(FOLLOW_2);
                     this_DCLComponentInterface_4=ruleDCLComponentInterface();
 
                     state._fsp--;
@@ -517,7 +517,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDCLLayer"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:218:1: entryRuleDCLLayer returns [EObject current=null] : iv_ruleDCLLayer= ruleDCLLayer EOF ;
+    // InternalDCL.g:218:1: entryRuleDCLLayer returns [EObject current=null] : iv_ruleDCLLayer= ruleDCLLayer EOF ;
     public final EObject entryRuleDCLLayer() throws RecognitionException {
         EObject current = null;
 
@@ -525,17 +525,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:219:2: (iv_ruleDCLLayer= ruleDCLLayer EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:220:2: iv_ruleDCLLayer= ruleDCLLayer EOF
+            // InternalDCL.g:219:2: (iv_ruleDCLLayer= ruleDCLLayer EOF )
+            // InternalDCL.g:220:2: iv_ruleDCLLayer= ruleDCLLayer EOF
             {
              newCompositeNode(grammarAccess.getDCLLayerRule()); 
-            pushFollow(FOLLOW_ruleDCLLayer_in_entryRuleDCLLayer462);
+            pushFollow(FOLLOW_1);
             iv_ruleDCLLayer=ruleDCLLayer();
 
             state._fsp--;
 
              current =iv_ruleDCLLayer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLLayer472); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -553,7 +553,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDCLLayer"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:227:1: ruleDCLLayer returns [EObject current=null] : (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';' ) ;
+    // InternalDCL.g:227:1: ruleDCLLayer returns [EObject current=null] : (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';' ) ;
     public final EObject ruleDCLLayer() throws RecognitionException {
         EObject current = null;
 
@@ -576,23 +576,23 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:230:28: ( (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:231:1: (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';' )
+            // InternalDCL.g:230:28: ( (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';' ) )
+            // InternalDCL.g:231:1: (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:231:1: (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:231:3: otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';'
+            // InternalDCL.g:231:1: (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';' )
+            // InternalDCL.g:231:3: otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ',' otherlv_3= 'level' ( (lv_level_4_0= RULE_INT ) ) ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )? otherlv_14= ';'
             {
-            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleDCLLayer509); 
+            otherlv_0=(Token)match(input,15,FOLLOW_8); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDCLLayerAccess().getLayerKeyword_0());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:235:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:236:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:235:1: ( (lv_name_1_0= RULE_ID ) )
+            // InternalDCL.g:236:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:236:1: (lv_name_1_0= RULE_ID )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:237:3: lv_name_1_0= RULE_ID
+            // InternalDCL.g:236:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:237:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLLayer526); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_9); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getDCLLayerAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -604,7 +604,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"ID");
+                    		"org.eclipse.xtext.common.Terminals.ID");
             	    
 
             }
@@ -612,21 +612,21 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleDCLLayer543); 
+            otherlv_2=(Token)match(input,16,FOLLOW_10); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getDCLLayerAccess().getCommaKeyword_2());
                 
-            otherlv_3=(Token)match(input,17,FOLLOW_17_in_ruleDCLLayer555); 
+            otherlv_3=(Token)match(input,17,FOLLOW_11); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getDCLLayerAccess().getLevelKeyword_3());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:261:1: ( (lv_level_4_0= RULE_INT ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:262:1: (lv_level_4_0= RULE_INT )
+            // InternalDCL.g:261:1: ( (lv_level_4_0= RULE_INT ) )
+            // InternalDCL.g:262:1: (lv_level_4_0= RULE_INT )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:262:1: (lv_level_4_0= RULE_INT )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:263:3: lv_level_4_0= RULE_INT
+            // InternalDCL.g:262:1: (lv_level_4_0= RULE_INT )
+            // InternalDCL.g:263:3: lv_level_4_0= RULE_INT
             {
-            lv_level_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleDCLLayer572); 
+            lv_level_4_0=(Token)match(input,RULE_INT,FOLLOW_12); 
 
             			newLeafNode(lv_level_4_0, grammarAccess.getDCLLayerAccess().getLevelINTTerminalRuleCall_4_0()); 
             		
@@ -638,7 +638,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"level",
                     		lv_level_4_0, 
-                    		"INT");
+                    		"org.eclipse.xtext.common.Terminals.INT");
             	    
 
             }
@@ -646,15 +646,15 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:279:2: ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )?
+            // InternalDCL.g:279:2: ( (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) ) | (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) ) | (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) ) )?
             int alt4=4;
             int LA4_0 = input.LA(1);
 
             if ( (LA4_0==16) ) {
                 switch ( input.LA(2) ) {
-                    case 20:
+                    case 18:
                         {
-                        alt4=3;
+                        alt4=1;
                         }
                         break;
                     case 19:
@@ -662,9 +662,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                         alt4=2;
                         }
                         break;
-                    case 18:
+                    case 20:
                         {
-                        alt4=1;
+                        alt4=3;
                         }
                         break;
                 }
@@ -672,31 +672,31 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:279:3: (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalDCL.g:279:3: (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:279:3: (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:279:5: otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) )
+                    // InternalDCL.g:279:3: (otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalDCL.g:279:5: otherlv_5= ',' otherlv_6= 'inLayer: ' ( (otherlv_7= RULE_ID ) )
                     {
-                    otherlv_5=(Token)match(input,16,FOLLOW_16_in_ruleDCLLayer591); 
+                    otherlv_5=(Token)match(input,16,FOLLOW_13); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_0_0());
                         
-                    otherlv_6=(Token)match(input,18,FOLLOW_18_in_ruleDCLLayer603); 
+                    otherlv_6=(Token)match(input,18,FOLLOW_8); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getDCLLayerAccess().getInLayerKeyword_5_0_1());
                         
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:287:1: ( (otherlv_7= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:288:1: (otherlv_7= RULE_ID )
+                    // InternalDCL.g:287:1: ( (otherlv_7= RULE_ID ) )
+                    // InternalDCL.g:288:1: (otherlv_7= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:288:1: (otherlv_7= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:289:3: otherlv_7= RULE_ID
+                    // InternalDCL.g:288:1: (otherlv_7= RULE_ID )
+                    // InternalDCL.g:289:3: otherlv_7= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCLLayerRule());
                     	        }
                             
-                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLLayer623); 
+                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_14); 
 
                     		newLeafNode(otherlv_7, grammarAccess.getDCLLayerAccess().getLayerDCLStructureElementCrossReference_5_0_2_0()); 
                     	
@@ -713,31 +713,31 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:301:6: (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) )
+                    // InternalDCL.g:301:6: (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:301:6: (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:301:8: otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) )
+                    // InternalDCL.g:301:6: (otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) ) )
+                    // InternalDCL.g:301:8: otherlv_8= ',' otherlv_9= 'inSubSystem: ' ( (otherlv_10= RULE_ID ) )
                     {
-                    otherlv_8=(Token)match(input,16,FOLLOW_16_in_ruleDCLLayer643); 
+                    otherlv_8=(Token)match(input,16,FOLLOW_15); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_1_0());
                         
-                    otherlv_9=(Token)match(input,19,FOLLOW_19_in_ruleDCLLayer655); 
+                    otherlv_9=(Token)match(input,19,FOLLOW_8); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getDCLLayerAccess().getInSubSystemKeyword_5_1_1());
                         
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:309:1: ( (otherlv_10= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:310:1: (otherlv_10= RULE_ID )
+                    // InternalDCL.g:309:1: ( (otherlv_10= RULE_ID ) )
+                    // InternalDCL.g:310:1: (otherlv_10= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:310:1: (otherlv_10= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:311:3: otherlv_10= RULE_ID
+                    // InternalDCL.g:310:1: (otherlv_10= RULE_ID )
+                    // InternalDCL.g:311:3: otherlv_10= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCLLayerRule());
                     	        }
                             
-                    otherlv_10=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLLayer675); 
+                    otherlv_10=(Token)match(input,RULE_ID,FOLLOW_14); 
 
                     		newLeafNode(otherlv_10, grammarAccess.getDCLLayerAccess().getSubSystemDCLStructureElementCrossReference_5_1_2_0()); 
                     	
@@ -754,31 +754,31 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:323:6: (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) )
+                    // InternalDCL.g:323:6: (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:323:6: (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:323:8: otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) )
+                    // InternalDCL.g:323:6: (otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) ) )
+                    // InternalDCL.g:323:8: otherlv_11= ',' otherlv_12= 'inComponent: ' ( (otherlv_13= RULE_ID ) )
                     {
-                    otherlv_11=(Token)match(input,16,FOLLOW_16_in_ruleDCLLayer695); 
+                    otherlv_11=(Token)match(input,16,FOLLOW_16); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_2_0());
                         
-                    otherlv_12=(Token)match(input,20,FOLLOW_20_in_ruleDCLLayer707); 
+                    otherlv_12=(Token)match(input,20,FOLLOW_8); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getDCLLayerAccess().getInComponentKeyword_5_2_1());
                         
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:331:1: ( (otherlv_13= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:332:1: (otherlv_13= RULE_ID )
+                    // InternalDCL.g:331:1: ( (otherlv_13= RULE_ID ) )
+                    // InternalDCL.g:332:1: (otherlv_13= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:332:1: (otherlv_13= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:333:3: otherlv_13= RULE_ID
+                    // InternalDCL.g:332:1: (otherlv_13= RULE_ID )
+                    // InternalDCL.g:333:3: otherlv_13= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCLLayerRule());
                     	        }
                             
-                    otherlv_13=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLLayer727); 
+                    otherlv_13=(Token)match(input,RULE_ID,FOLLOW_14); 
 
                     		newLeafNode(otherlv_13, grammarAccess.getDCLLayerAccess().getComponentDCLStructureElementCrossReference_5_2_2_0()); 
                     	
@@ -797,7 +797,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_14=(Token)match(input,21,FOLLOW_21_in_ruleDCLLayer742); 
+            otherlv_14=(Token)match(input,21,FOLLOW_2); 
 
                 	newLeafNode(otherlv_14, grammarAccess.getDCLLayerAccess().getSemicolonKeyword_6());
                 
@@ -822,7 +822,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDCLComponent"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:356:1: entryRuleDCLComponent returns [EObject current=null] : iv_ruleDCLComponent= ruleDCLComponent EOF ;
+    // InternalDCL.g:356:1: entryRuleDCLComponent returns [EObject current=null] : iv_ruleDCLComponent= ruleDCLComponent EOF ;
     public final EObject entryRuleDCLComponent() throws RecognitionException {
         EObject current = null;
 
@@ -830,17 +830,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:357:2: (iv_ruleDCLComponent= ruleDCLComponent EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:358:2: iv_ruleDCLComponent= ruleDCLComponent EOF
+            // InternalDCL.g:357:2: (iv_ruleDCLComponent= ruleDCLComponent EOF )
+            // InternalDCL.g:358:2: iv_ruleDCLComponent= ruleDCLComponent EOF
             {
              newCompositeNode(grammarAccess.getDCLComponentRule()); 
-            pushFollow(FOLLOW_ruleDCLComponent_in_entryRuleDCLComponent778);
+            pushFollow(FOLLOW_1);
             iv_ruleDCLComponent=ruleDCLComponent();
 
             state._fsp--;
 
              current =iv_ruleDCLComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLComponent788); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -858,7 +858,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDCLComponent"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:365:1: ruleDCLComponent returns [EObject current=null] : (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';' ) ;
+    // InternalDCL.g:365:1: ruleDCLComponent returns [EObject current=null] : (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';' ) ;
     public final EObject ruleDCLComponent() throws RecognitionException {
         EObject current = null;
 
@@ -875,23 +875,23 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:368:28: ( (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:369:1: (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';' )
+            // InternalDCL.g:368:28: ( (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';' ) )
+            // InternalDCL.g:369:1: (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:369:1: (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:369:3: otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';'
+            // InternalDCL.g:369:1: (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';' )
+            // InternalDCL.g:369:3: otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )? otherlv_8= ';'
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleDCLComponent825); 
+            otherlv_0=(Token)match(input,22,FOLLOW_8); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDCLComponentAccess().getComponentKeyword_0());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:373:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:374:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:373:1: ( (lv_name_1_0= RULE_ID ) )
+            // InternalDCL.g:374:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:374:1: (lv_name_1_0= RULE_ID )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:375:3: lv_name_1_0= RULE_ID
+            // InternalDCL.g:374:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:375:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLComponent842); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_12); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getDCLComponentAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -903,7 +903,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"ID");
+                    		"org.eclipse.xtext.common.Terminals.ID");
             	    
 
             }
@@ -911,7 +911,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:391:2: ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )?
+            // InternalDCL.g:391:2: ( (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) ) | (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) ) )?
             int alt5=3;
             int LA5_0 = input.LA(1);
 
@@ -927,31 +927,31 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:391:3: (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) )
+                    // InternalDCL.g:391:3: (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:391:3: (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:391:5: otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) )
+                    // InternalDCL.g:391:3: (otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) ) )
+                    // InternalDCL.g:391:5: otherlv_2= ',' otherlv_3= 'inLayer: ' ( (otherlv_4= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleDCLComponent861); 
+                    otherlv_2=(Token)match(input,16,FOLLOW_13); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getDCLComponentAccess().getCommaKeyword_2_0_0());
                         
-                    otherlv_3=(Token)match(input,18,FOLLOW_18_in_ruleDCLComponent873); 
+                    otherlv_3=(Token)match(input,18,FOLLOW_8); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getDCLComponentAccess().getInLayerKeyword_2_0_1());
                         
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:399:1: ( (otherlv_4= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:400:1: (otherlv_4= RULE_ID )
+                    // InternalDCL.g:399:1: ( (otherlv_4= RULE_ID ) )
+                    // InternalDCL.g:400:1: (otherlv_4= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:400:1: (otherlv_4= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:401:3: otherlv_4= RULE_ID
+                    // InternalDCL.g:400:1: (otherlv_4= RULE_ID )
+                    // InternalDCL.g:401:3: otherlv_4= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCLComponentRule());
                     	        }
                             
-                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLComponent893); 
+                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_14); 
 
                     		newLeafNode(otherlv_4, grammarAccess.getDCLComponentAccess().getLayerDCLStructureElementCrossReference_2_0_2_0()); 
                     	
@@ -968,31 +968,31 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:413:6: (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalDCL.g:413:6: (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:413:6: (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:413:8: otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) )
+                    // InternalDCL.g:413:6: (otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) ) )
+                    // InternalDCL.g:413:8: otherlv_5= ',' otherlv_6= 'inSubSystem: ' ( (otherlv_7= RULE_ID ) )
                     {
-                    otherlv_5=(Token)match(input,16,FOLLOW_16_in_ruleDCLComponent913); 
+                    otherlv_5=(Token)match(input,16,FOLLOW_15); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getDCLComponentAccess().getCommaKeyword_2_1_0());
                         
-                    otherlv_6=(Token)match(input,19,FOLLOW_19_in_ruleDCLComponent925); 
+                    otherlv_6=(Token)match(input,19,FOLLOW_8); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getDCLComponentAccess().getInSubSystemKeyword_2_1_1());
                         
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:421:1: ( (otherlv_7= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:422:1: (otherlv_7= RULE_ID )
+                    // InternalDCL.g:421:1: ( (otherlv_7= RULE_ID ) )
+                    // InternalDCL.g:422:1: (otherlv_7= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:422:1: (otherlv_7= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:423:3: otherlv_7= RULE_ID
+                    // InternalDCL.g:422:1: (otherlv_7= RULE_ID )
+                    // InternalDCL.g:423:3: otherlv_7= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCLComponentRule());
                     	        }
                             
-                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLComponent945); 
+                    otherlv_7=(Token)match(input,RULE_ID,FOLLOW_14); 
 
                     		newLeafNode(otherlv_7, grammarAccess.getDCLComponentAccess().getSubSystemDCLStructureElementCrossReference_2_1_2_0()); 
                     	
@@ -1011,7 +1011,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,21,FOLLOW_21_in_ruleDCLComponent960); 
+            otherlv_8=(Token)match(input,21,FOLLOW_2); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getDCLComponentAccess().getSemicolonKeyword_3());
                 
@@ -1036,7 +1036,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDCLComponentInterface"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:446:1: entryRuleDCLComponentInterface returns [EObject current=null] : iv_ruleDCLComponentInterface= ruleDCLComponentInterface EOF ;
+    // InternalDCL.g:446:1: entryRuleDCLComponentInterface returns [EObject current=null] : iv_ruleDCLComponentInterface= ruleDCLComponentInterface EOF ;
     public final EObject entryRuleDCLComponentInterface() throws RecognitionException {
         EObject current = null;
 
@@ -1044,17 +1044,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:447:2: (iv_ruleDCLComponentInterface= ruleDCLComponentInterface EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:448:2: iv_ruleDCLComponentInterface= ruleDCLComponentInterface EOF
+            // InternalDCL.g:447:2: (iv_ruleDCLComponentInterface= ruleDCLComponentInterface EOF )
+            // InternalDCL.g:448:2: iv_ruleDCLComponentInterface= ruleDCLComponentInterface EOF
             {
              newCompositeNode(grammarAccess.getDCLComponentInterfaceRule()); 
-            pushFollow(FOLLOW_ruleDCLComponentInterface_in_entryRuleDCLComponentInterface996);
+            pushFollow(FOLLOW_1);
             iv_ruleDCLComponentInterface=ruleDCLComponentInterface();
 
             state._fsp--;
 
              current =iv_ruleDCLComponentInterface; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLComponentInterface1006); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1072,7 +1072,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDCLComponentInterface"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:455:1: ruleDCLComponentInterface returns [EObject current=null] : (otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';' ) ;
+    // InternalDCL.g:455:1: ruleDCLComponentInterface returns [EObject current=null] : (otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';' ) ;
     public final EObject ruleDCLComponentInterface() throws RecognitionException {
         EObject current = null;
 
@@ -1089,23 +1089,23 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:458:28: ( (otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:459:1: (otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';' )
+            // InternalDCL.g:458:28: ( (otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';' ) )
+            // InternalDCL.g:459:1: (otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:459:1: (otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:459:3: otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';'
+            // InternalDCL.g:459:1: (otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';' )
+            // InternalDCL.g:459:3: otherlv_0= 'interface' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= 'ofComponent ' ( (otherlv_3= RULE_ID ) ) (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) ) otherlv_7= ';'
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleDCLComponentInterface1043); 
+            otherlv_0=(Token)match(input,23,FOLLOW_8); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDCLComponentInterfaceAccess().getInterfaceKeyword_0());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:463:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:464:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:463:1: ( (lv_name_1_0= RULE_ID ) )
+            // InternalDCL.g:464:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:464:1: (lv_name_1_0= RULE_ID )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:465:3: lv_name_1_0= RULE_ID
+            // InternalDCL.g:464:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:465:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLComponentInterface1060); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_17); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getDCLComponentInterfaceAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1117,7 +1117,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"ID");
+                    		"org.eclipse.xtext.common.Terminals.ID");
             	    
 
             }
@@ -1125,22 +1125,22 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,24,FOLLOW_24_in_ruleDCLComponentInterface1077); 
+            otherlv_2=(Token)match(input,24,FOLLOW_8); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getDCLComponentInterfaceAccess().getOfComponentKeyword_2());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:485:1: ( (otherlv_3= RULE_ID ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:486:1: (otherlv_3= RULE_ID )
+            // InternalDCL.g:485:1: ( (otherlv_3= RULE_ID ) )
+            // InternalDCL.g:486:1: (otherlv_3= RULE_ID )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:486:1: (otherlv_3= RULE_ID )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:487:3: otherlv_3= RULE_ID
+            // InternalDCL.g:486:1: (otherlv_3= RULE_ID )
+            // InternalDCL.g:487:3: otherlv_3= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getDCLComponentInterfaceRule());
             	        }
                     
-            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLComponentInterface1097); 
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_9); 
 
             		newLeafNode(otherlv_3, grammarAccess.getDCLComponentInterfaceAccess().getComponentDCLStructureElementCrossReference_3_0()); 
             	
@@ -1150,27 +1150,27 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:498:2: (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:498:4: otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) )
+            // InternalDCL.g:498:2: (otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) ) )
+            // InternalDCL.g:498:4: otherlv_4= ',' otherlv_5= 'type: ' ( (lv_interfaceType_6_0= ruleInterfaceType ) )
             {
-            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleDCLComponentInterface1110); 
+            otherlv_4=(Token)match(input,16,FOLLOW_18); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getDCLComponentInterfaceAccess().getCommaKeyword_4_0());
                 
-            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleDCLComponentInterface1122); 
+            otherlv_5=(Token)match(input,25,FOLLOW_19); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getDCLComponentInterfaceAccess().getTypeKeyword_4_1());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:506:1: ( (lv_interfaceType_6_0= ruleInterfaceType ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:507:1: (lv_interfaceType_6_0= ruleInterfaceType )
+            // InternalDCL.g:506:1: ( (lv_interfaceType_6_0= ruleInterfaceType ) )
+            // InternalDCL.g:507:1: (lv_interfaceType_6_0= ruleInterfaceType )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:507:1: (lv_interfaceType_6_0= ruleInterfaceType )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:508:3: lv_interfaceType_6_0= ruleInterfaceType
+            // InternalDCL.g:507:1: (lv_interfaceType_6_0= ruleInterfaceType )
+            // InternalDCL.g:508:3: lv_interfaceType_6_0= ruleInterfaceType
             {
              
             	        newCompositeNode(grammarAccess.getDCLComponentInterfaceAccess().getInterfaceTypeInterfaceTypeParserRuleCall_4_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleInterfaceType_in_ruleDCLComponentInterface1143);
+            pushFollow(FOLLOW_14);
             lv_interfaceType_6_0=ruleInterfaceType();
 
             state._fsp--;
@@ -1183,7 +1183,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"interfaceType",
                     		lv_interfaceType_6_0, 
-                    		"InterfaceType");
+                    		"com.br.terra.dcl.DCL.InterfaceType");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -1195,7 +1195,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,21,FOLLOW_21_in_ruleDCLComponentInterface1156); 
+            otherlv_7=(Token)match(input,21,FOLLOW_2); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getDCLComponentInterfaceAccess().getSemicolonKeyword_5());
                 
@@ -1220,7 +1220,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleInterfaceType"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:536:1: entryRuleInterfaceType returns [EObject current=null] : iv_ruleInterfaceType= ruleInterfaceType EOF ;
+    // InternalDCL.g:536:1: entryRuleInterfaceType returns [EObject current=null] : iv_ruleInterfaceType= ruleInterfaceType EOF ;
     public final EObject entryRuleInterfaceType() throws RecognitionException {
         EObject current = null;
 
@@ -1228,17 +1228,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:537:2: (iv_ruleInterfaceType= ruleInterfaceType EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:538:2: iv_ruleInterfaceType= ruleInterfaceType EOF
+            // InternalDCL.g:537:2: (iv_ruleInterfaceType= ruleInterfaceType EOF )
+            // InternalDCL.g:538:2: iv_ruleInterfaceType= ruleInterfaceType EOF
             {
              newCompositeNode(grammarAccess.getInterfaceTypeRule()); 
-            pushFollow(FOLLOW_ruleInterfaceType_in_entryRuleInterfaceType1192);
+            pushFollow(FOLLOW_1);
             iv_ruleInterfaceType=ruleInterfaceType();
 
             state._fsp--;
 
              current =iv_ruleInterfaceType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleInterfaceType1202); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1256,7 +1256,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInterfaceType"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:545:1: ruleInterfaceType returns [EObject current=null] : ( ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) ) ) ;
+    // InternalDCL.g:545:1: ruleInterfaceType returns [EObject current=null] : ( ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) ) ) ;
     public final EObject ruleInterfaceType() throws RecognitionException {
         EObject current = null;
 
@@ -1266,16 +1266,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:548:28: ( ( ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:549:1: ( ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) ) )
+            // InternalDCL.g:548:28: ( ( ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) ) ) )
+            // InternalDCL.g:549:1: ( ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:549:1: ( ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:550:1: ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) )
+            // InternalDCL.g:549:1: ( ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) ) )
+            // InternalDCL.g:550:1: ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:550:1: ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:551:1: (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' )
+            // InternalDCL.g:550:1: ( (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' ) )
+            // InternalDCL.g:551:1: (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:551:1: (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' )
+            // InternalDCL.g:551:1: (lv_interfaceTypeName_0_1= 'provided' | lv_interfaceTypeName_0_2= 'required' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1293,9 +1293,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:552:3: lv_interfaceTypeName_0_1= 'provided'
+                    // InternalDCL.g:552:3: lv_interfaceTypeName_0_1= 'provided'
                     {
-                    lv_interfaceTypeName_0_1=(Token)match(input,26,FOLLOW_26_in_ruleInterfaceType1246); 
+                    lv_interfaceTypeName_0_1=(Token)match(input,26,FOLLOW_2); 
 
                             newLeafNode(lv_interfaceTypeName_0_1, grammarAccess.getInterfaceTypeAccess().getInterfaceTypeNameProvidedKeyword_0_0());
                         
@@ -1309,9 +1309,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:564:8: lv_interfaceTypeName_0_2= 'required'
+                    // InternalDCL.g:564:8: lv_interfaceTypeName_0_2= 'required'
                     {
-                    lv_interfaceTypeName_0_2=(Token)match(input,27,FOLLOW_27_in_ruleInterfaceType1275); 
+                    lv_interfaceTypeName_0_2=(Token)match(input,27,FOLLOW_2); 
 
                             newLeafNode(lv_interfaceTypeName_0_2, grammarAccess.getInterfaceTypeAccess().getInterfaceTypeNameRequiredKeyword_0_1());
                         
@@ -1351,7 +1351,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDCLSubSystem"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:587:1: entryRuleDCLSubSystem returns [EObject current=null] : iv_ruleDCLSubSystem= ruleDCLSubSystem EOF ;
+    // InternalDCL.g:587:1: entryRuleDCLSubSystem returns [EObject current=null] : iv_ruleDCLSubSystem= ruleDCLSubSystem EOF ;
     public final EObject entryRuleDCLSubSystem() throws RecognitionException {
         EObject current = null;
 
@@ -1359,17 +1359,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:588:2: (iv_ruleDCLSubSystem= ruleDCLSubSystem EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:589:2: iv_ruleDCLSubSystem= ruleDCLSubSystem EOF
+            // InternalDCL.g:588:2: (iv_ruleDCLSubSystem= ruleDCLSubSystem EOF )
+            // InternalDCL.g:589:2: iv_ruleDCLSubSystem= ruleDCLSubSystem EOF
             {
              newCompositeNode(grammarAccess.getDCLSubSystemRule()); 
-            pushFollow(FOLLOW_ruleDCLSubSystem_in_entryRuleDCLSubSystem1326);
+            pushFollow(FOLLOW_1);
             iv_ruleDCLSubSystem=ruleDCLSubSystem();
 
             state._fsp--;
 
              current =iv_ruleDCLSubSystem; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLSubSystem1336); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1387,7 +1387,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDCLSubSystem"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:596:1: ruleDCLSubSystem returns [EObject current=null] : (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';' ) ;
+    // InternalDCL.g:596:1: ruleDCLSubSystem returns [EObject current=null] : (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';' ) ;
     public final EObject ruleDCLSubSystem() throws RecognitionException {
         EObject current = null;
 
@@ -1401,23 +1401,23 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:599:28: ( (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:600:1: (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';' )
+            // InternalDCL.g:599:28: ( (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';' ) )
+            // InternalDCL.g:600:1: (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:600:1: (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:600:3: otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';'
+            // InternalDCL.g:600:1: (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';' )
+            // InternalDCL.g:600:3: otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )? otherlv_5= ';'
             {
-            otherlv_0=(Token)match(input,28,FOLLOW_28_in_ruleDCLSubSystem1373); 
+            otherlv_0=(Token)match(input,28,FOLLOW_8); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDCLSubSystemAccess().getSubSystemKeyword_0());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:604:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:605:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:604:1: ( (lv_name_1_0= RULE_ID ) )
+            // InternalDCL.g:605:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:605:1: (lv_name_1_0= RULE_ID )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:606:3: lv_name_1_0= RULE_ID
+            // InternalDCL.g:605:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:606:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLSubSystem1390); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_12); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getDCLSubSystemAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1429,7 +1429,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"ID");
+                    		"org.eclipse.xtext.common.Terminals.ID");
             	    
 
             }
@@ -1437,7 +1437,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:622:2: (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )?
+            // InternalDCL.g:622:2: (otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) ) )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1446,28 +1446,28 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:622:4: otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) )
+                    // InternalDCL.g:622:4: otherlv_2= ',' otherlv_3= 'inSubSystem: ' ( (otherlv_4= RULE_ID ) )
                     {
-                    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleDCLSubSystem1408); 
+                    otherlv_2=(Token)match(input,16,FOLLOW_15); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getDCLSubSystemAccess().getCommaKeyword_2_0());
                         
-                    otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleDCLSubSystem1420); 
+                    otherlv_3=(Token)match(input,19,FOLLOW_8); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getDCLSubSystemAccess().getInSubSystemKeyword_2_1());
                         
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:630:1: ( (otherlv_4= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:631:1: (otherlv_4= RULE_ID )
+                    // InternalDCL.g:630:1: ( (otherlv_4= RULE_ID ) )
+                    // InternalDCL.g:631:1: (otherlv_4= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:631:1: (otherlv_4= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:632:3: otherlv_4= RULE_ID
+                    // InternalDCL.g:631:1: (otherlv_4= RULE_ID )
+                    // InternalDCL.g:632:3: otherlv_4= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCLSubSystemRule());
                     	        }
                             
-                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLSubSystem1440); 
+                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_14); 
 
                     		newLeafNode(otherlv_4, grammarAccess.getDCLSubSystemAccess().getSubSystemDCLStructureElementCrossReference_2_2_0()); 
                     	
@@ -1483,7 +1483,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,21,FOLLOW_21_in_ruleDCLSubSystem1454); 
+            otherlv_5=(Token)match(input,21,FOLLOW_2); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getDCLSubSystemAccess().getSemicolonKeyword_3());
                 
@@ -1508,7 +1508,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDCLModule"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:655:1: entryRuleDCLModule returns [EObject current=null] : iv_ruleDCLModule= ruleDCLModule EOF ;
+    // InternalDCL.g:655:1: entryRuleDCLModule returns [EObject current=null] : iv_ruleDCLModule= ruleDCLModule EOF ;
     public final EObject entryRuleDCLModule() throws RecognitionException {
         EObject current = null;
 
@@ -1516,17 +1516,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:656:2: (iv_ruleDCLModule= ruleDCLModule EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:657:2: iv_ruleDCLModule= ruleDCLModule EOF
+            // InternalDCL.g:656:2: (iv_ruleDCLModule= ruleDCLModule EOF )
+            // InternalDCL.g:657:2: iv_ruleDCLModule= ruleDCLModule EOF
             {
              newCompositeNode(grammarAccess.getDCLModuleRule()); 
-            pushFollow(FOLLOW_ruleDCLModule_in_entryRuleDCLModule1490);
+            pushFollow(FOLLOW_1);
             iv_ruleDCLModule=ruleDCLModule();
 
             state._fsp--;
 
              current =iv_ruleDCLModule; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLModule1500); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1544,7 +1544,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDCLModule"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:664:1: ruleDCLModule returns [EObject current=null] : (otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    // InternalDCL.g:664:1: ruleDCLModule returns [EObject current=null] : (otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
     public final EObject ruleDCLModule() throws RecognitionException {
         EObject current = null;
 
@@ -1555,23 +1555,23 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:667:28: ( (otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:668:1: (otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
+            // InternalDCL.g:667:28: ( (otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) )
+            // InternalDCL.g:668:1: (otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:668:1: (otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:668:3: otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
+            // InternalDCL.g:668:1: (otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
+            // InternalDCL.g:668:3: otherlv_0= 'module' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleDCLModule1537); 
+            otherlv_0=(Token)match(input,29,FOLLOW_8); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDCLModuleAccess().getModuleKeyword_0());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:672:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:673:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:672:1: ( (lv_name_1_0= RULE_ID ) )
+            // InternalDCL.g:673:1: (lv_name_1_0= RULE_ID )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:673:1: (lv_name_1_0= RULE_ID )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:674:3: lv_name_1_0= RULE_ID
+            // InternalDCL.g:673:1: (lv_name_1_0= RULE_ID )
+            // InternalDCL.g:674:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLModule1554); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_14); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getDCLModuleAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1583,7 +1583,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"ID");
+                    		"org.eclipse.xtext.common.Terminals.ID");
             	    
 
             }
@@ -1591,7 +1591,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleDCLModule1571); 
+            otherlv_2=(Token)match(input,21,FOLLOW_2); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getDCLModuleAccess().getSemicolonKeyword_2());
                 
@@ -1616,7 +1616,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDCDecl"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:702:1: entryRuleDCDecl returns [EObject current=null] : iv_ruleDCDecl= ruleDCDecl EOF ;
+    // InternalDCL.g:702:1: entryRuleDCDecl returns [EObject current=null] : iv_ruleDCDecl= ruleDCDecl EOF ;
     public final EObject entryRuleDCDecl() throws RecognitionException {
         EObject current = null;
 
@@ -1624,17 +1624,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:703:2: (iv_ruleDCDecl= ruleDCDecl EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:704:2: iv_ruleDCDecl= ruleDCDecl EOF
+            // InternalDCL.g:703:2: (iv_ruleDCDecl= ruleDCDecl EOF )
+            // InternalDCL.g:704:2: iv_ruleDCDecl= ruleDCDecl EOF
             {
              newCompositeNode(grammarAccess.getDCDeclRule()); 
-            pushFollow(FOLLOW_ruleDCDecl_in_entryRuleDCDecl1607);
+            pushFollow(FOLLOW_1);
             iv_ruleDCDecl=ruleDCDecl();
 
             state._fsp--;
 
              current =iv_ruleDCDecl; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDCDecl1617); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1652,7 +1652,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDCDecl"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:711:1: ruleDCDecl returns [EObject current=null] : ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (lv_only2_14_0= ruleOnly2 ) ) ( (otherlv_15= RULE_ID ) ) otherlv_16= ';' ) | ( ( (otherlv_17= RULE_ID ) ) ( (lv_must_18_0= ruleMust ) ) ( (lv_entityType_19_0= ruleEntityType ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) ) ;
+    // InternalDCL.g:711:1: ruleDCDecl returns [EObject current=null] : ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (otherlv_14= RULE_ID ) ) otherlv_15= ';' ) | ( ( (otherlv_16= RULE_ID ) ) ( (lv_can_17_0= ruleCan ) ) ( (lv_elementType_18_0= ruleElementType ) ) ( (lv_only2_19_0= ruleOnly2 ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) | ( ( (otherlv_22= RULE_ID ) ) ( (lv_must_23_0= ruleMust ) ) ( (lv_entityType_24_0= ruleEntityType ) ) ( (otherlv_25= RULE_ID ) ) otherlv_26= ';' ) ) ;
     public final EObject ruleDCDecl() throws RecognitionException {
         EObject current = null;
 
@@ -1663,11 +1663,14 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         Token otherlv_9=null;
         Token otherlv_10=null;
         Token otherlv_11=null;
+        Token otherlv_14=null;
         Token otherlv_15=null;
         Token otherlv_16=null;
-        Token otherlv_17=null;
         Token otherlv_20=null;
         Token otherlv_21=null;
+        Token otherlv_22=null;
+        Token otherlv_25=null;
+        Token otherlv_26=null;
         EObject lv_only_0_0 = null;
 
         EObject lv_can_2_0 = null;
@@ -1682,74 +1685,43 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
         EObject lv_elementType_13_0 = null;
 
-        EObject lv_only2_14_0 = null;
+        EObject lv_can_17_0 = null;
 
-        EObject lv_must_18_0 = null;
+        EObject lv_elementType_18_0 = null;
 
-        EObject lv_entityType_19_0 = null;
+        EObject lv_only2_19_0 = null;
+
+        EObject lv_must_23_0 = null;
+
+        EObject lv_entityType_24_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:714:28: ( ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (lv_only2_14_0= ruleOnly2 ) ) ( (otherlv_15= RULE_ID ) ) otherlv_16= ';' ) | ( ( (otherlv_17= RULE_ID ) ) ( (lv_must_18_0= ruleMust ) ) ( (lv_entityType_19_0= ruleEntityType ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:715:1: ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (lv_only2_14_0= ruleOnly2 ) ) ( (otherlv_15= RULE_ID ) ) otherlv_16= ';' ) | ( ( (otherlv_17= RULE_ID ) ) ( (lv_must_18_0= ruleMust ) ) ( (lv_entityType_19_0= ruleEntityType ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) )
+            // InternalDCL.g:714:28: ( ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (otherlv_14= RULE_ID ) ) otherlv_15= ';' ) | ( ( (otherlv_16= RULE_ID ) ) ( (lv_can_17_0= ruleCan ) ) ( (lv_elementType_18_0= ruleElementType ) ) ( (lv_only2_19_0= ruleOnly2 ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) | ( ( (otherlv_22= RULE_ID ) ) ( (lv_must_23_0= ruleMust ) ) ( (lv_entityType_24_0= ruleEntityType ) ) ( (otherlv_25= RULE_ID ) ) otherlv_26= ';' ) ) )
+            // InternalDCL.g:715:1: ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (otherlv_14= RULE_ID ) ) otherlv_15= ';' ) | ( ( (otherlv_16= RULE_ID ) ) ( (lv_can_17_0= ruleCan ) ) ( (lv_elementType_18_0= ruleElementType ) ) ( (lv_only2_19_0= ruleOnly2 ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) | ( ( (otherlv_22= RULE_ID ) ) ( (lv_must_23_0= ruleMust ) ) ( (lv_entityType_24_0= ruleEntityType ) ) ( (otherlv_25= RULE_ID ) ) otherlv_26= ';' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:715:1: ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (lv_only2_14_0= ruleOnly2 ) ) ( (otherlv_15= RULE_ID ) ) otherlv_16= ';' ) | ( ( (otherlv_17= RULE_ID ) ) ( (lv_must_18_0= ruleMust ) ) ( (lv_entityType_19_0= ruleEntityType ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) )
-            int alt8=4;
-            int LA8_0 = input.LA(1);
-
-            if ( (LA8_0==30) ) {
-                alt8=1;
-            }
-            else if ( (LA8_0==RULE_ID) ) {
-                switch ( input.LA(2) ) {
-                case 31:
-                    {
-                    alt8=3;
-                    }
-                    break;
-                case 34:
-                    {
-                    alt8=4;
-                    }
-                    break;
-                case 32:
-                    {
-                    alt8=2;
-                    }
-                    break;
-                default:
-                    NoViableAltException nvae =
-                        new NoViableAltException("", 8, 2, input);
-
-                    throw nvae;
-                }
-
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
-
-                throw nvae;
-            }
+            // InternalDCL.g:715:1: ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (otherlv_14= RULE_ID ) ) otherlv_15= ';' ) | ( ( (otherlv_16= RULE_ID ) ) ( (lv_can_17_0= ruleCan ) ) ( (lv_elementType_18_0= ruleElementType ) ) ( (lv_only2_19_0= ruleOnly2 ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) | ( ( (otherlv_22= RULE_ID ) ) ( (lv_must_23_0= ruleMust ) ) ( (lv_entityType_24_0= ruleEntityType ) ) ( (otherlv_25= RULE_ID ) ) otherlv_26= ';' ) )
+            int alt8=5;
+            alt8 = dfa8.predict(input);
             switch (alt8) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:715:2: ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' )
+                    // InternalDCL.g:715:2: ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:715:2: ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:715:3: ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';'
+                    // InternalDCL.g:715:2: ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' )
+                    // InternalDCL.g:715:3: ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';'
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:715:3: ( (lv_only_0_0= ruleOnly ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:716:1: (lv_only_0_0= ruleOnly )
+                    // InternalDCL.g:715:3: ( (lv_only_0_0= ruleOnly ) )
+                    // InternalDCL.g:716:1: (lv_only_0_0= ruleOnly )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:716:1: (lv_only_0_0= ruleOnly )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:717:3: lv_only_0_0= ruleOnly
+                    // InternalDCL.g:716:1: (lv_only_0_0= ruleOnly )
+                    // InternalDCL.g:717:3: lv_only_0_0= ruleOnly
                     {
                      
                     	        newCompositeNode(grammarAccess.getDCDeclAccess().getOnlyOnlyParserRuleCall_0_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleOnly_in_ruleDCDecl1664);
+                    pushFollow(FOLLOW_8);
                     lv_only_0_0=ruleOnly();
 
                     state._fsp--;
@@ -1762,7 +1734,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"only",
                             		lv_only_0_0, 
-                            		"Only");
+                            		"com.br.terra.dcl.DCL.Only");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1771,18 +1743,18 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:733:2: ( (otherlv_1= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:734:1: (otherlv_1= RULE_ID )
+                    // InternalDCL.g:733:2: ( (otherlv_1= RULE_ID ) )
+                    // InternalDCL.g:734:1: (otherlv_1= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:734:1: (otherlv_1= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:735:3: otherlv_1= RULE_ID
+                    // InternalDCL.g:734:1: (otherlv_1= RULE_ID )
+                    // InternalDCL.g:735:3: otherlv_1= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCDeclRule());
                     	        }
                             
-                    otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1684); 
+                    otherlv_1=(Token)match(input,RULE_ID,FOLLOW_20); 
 
                     		newLeafNode(otherlv_1, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_0_1_0()); 
                     	
@@ -1792,16 +1764,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:746:2: ( (lv_can_2_0= ruleCan ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:747:1: (lv_can_2_0= ruleCan )
+                    // InternalDCL.g:746:2: ( (lv_can_2_0= ruleCan ) )
+                    // InternalDCL.g:747:1: (lv_can_2_0= ruleCan )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:747:1: (lv_can_2_0= ruleCan )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:748:3: lv_can_2_0= ruleCan
+                    // InternalDCL.g:747:1: (lv_can_2_0= ruleCan )
+                    // InternalDCL.g:748:3: lv_can_2_0= ruleCan
                     {
                      
                     	        newCompositeNode(grammarAccess.getDCDeclAccess().getCanCanParserRuleCall_0_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleCan_in_ruleDCDecl1705);
+                    pushFollow(FOLLOW_21);
                     lv_can_2_0=ruleCan();
 
                     state._fsp--;
@@ -1814,7 +1786,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"can",
                             		lv_can_2_0, 
-                            		"Can");
+                            		"com.br.terra.dcl.DCL.Can");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1823,16 +1795,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:764:2: ( (lv_elementType_3_0= ruleElementType ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:765:1: (lv_elementType_3_0= ruleElementType )
+                    // InternalDCL.g:764:2: ( (lv_elementType_3_0= ruleElementType ) )
+                    // InternalDCL.g:765:1: (lv_elementType_3_0= ruleElementType )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:765:1: (lv_elementType_3_0= ruleElementType )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:766:3: lv_elementType_3_0= ruleElementType
+                    // InternalDCL.g:765:1: (lv_elementType_3_0= ruleElementType )
+                    // InternalDCL.g:766:3: lv_elementType_3_0= ruleElementType
                     {
                      
                     	        newCompositeNode(grammarAccess.getDCDeclAccess().getElementTypeElementTypeParserRuleCall_0_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleElementType_in_ruleDCDecl1726);
+                    pushFollow(FOLLOW_8);
                     lv_elementType_3_0=ruleElementType();
 
                     state._fsp--;
@@ -1845,7 +1817,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"elementType",
                             		lv_elementType_3_0, 
-                            		"ElementType");
+                            		"com.br.terra.dcl.DCL.ElementType");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1854,18 +1826,18 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:782:2: ( (otherlv_4= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:783:1: (otherlv_4= RULE_ID )
+                    // InternalDCL.g:782:2: ( (otherlv_4= RULE_ID ) )
+                    // InternalDCL.g:783:1: (otherlv_4= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:783:1: (otherlv_4= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:784:3: otherlv_4= RULE_ID
+                    // InternalDCL.g:783:1: (otherlv_4= RULE_ID )
+                    // InternalDCL.g:784:3: otherlv_4= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCDeclRule());
                     	        }
                             
-                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1746); 
+                    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_14); 
 
                     		newLeafNode(otherlv_4, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_0_4_0()); 
                     	
@@ -1875,7 +1847,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_5=(Token)match(input,21,FOLLOW_21_in_ruleDCDecl1758); 
+                    otherlv_5=(Token)match(input,21,FOLLOW_2); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getDCDeclAccess().getSemicolonKeyword_0_5());
                         
@@ -1886,23 +1858,23 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:800:6: ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' )
+                    // InternalDCL.g:800:6: ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:800:6: ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:800:7: ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';'
+                    // InternalDCL.g:800:6: ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' )
+                    // InternalDCL.g:800:7: ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';'
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:800:7: ( (otherlv_6= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:801:1: (otherlv_6= RULE_ID )
+                    // InternalDCL.g:800:7: ( (otherlv_6= RULE_ID ) )
+                    // InternalDCL.g:801:1: (otherlv_6= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:801:1: (otherlv_6= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:802:3: otherlv_6= RULE_ID
+                    // InternalDCL.g:801:1: (otherlv_6= RULE_ID )
+                    // InternalDCL.g:802:3: otherlv_6= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCDeclRule());
                     	        }
                             
-                    otherlv_6=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1786); 
+                    otherlv_6=(Token)match(input,RULE_ID,FOLLOW_22); 
 
                     		newLeafNode(otherlv_6, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_1_0_0()); 
                     	
@@ -1912,16 +1884,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:813:2: ( (lv_cannot_7_0= ruleCannot ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:814:1: (lv_cannot_7_0= ruleCannot )
+                    // InternalDCL.g:813:2: ( (lv_cannot_7_0= ruleCannot ) )
+                    // InternalDCL.g:814:1: (lv_cannot_7_0= ruleCannot )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:814:1: (lv_cannot_7_0= ruleCannot )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:815:3: lv_cannot_7_0= ruleCannot
+                    // InternalDCL.g:814:1: (lv_cannot_7_0= ruleCannot )
+                    // InternalDCL.g:815:3: lv_cannot_7_0= ruleCannot
                     {
                      
                     	        newCompositeNode(grammarAccess.getDCDeclAccess().getCannotCannotParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleCannot_in_ruleDCDecl1807);
+                    pushFollow(FOLLOW_21);
                     lv_cannot_7_0=ruleCannot();
 
                     state._fsp--;
@@ -1934,7 +1906,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"cannot",
                             		lv_cannot_7_0, 
-                            		"Cannot");
+                            		"com.br.terra.dcl.DCL.Cannot");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1943,16 +1915,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:831:2: ( (lv_elementType_8_0= ruleElementType ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:832:1: (lv_elementType_8_0= ruleElementType )
+                    // InternalDCL.g:831:2: ( (lv_elementType_8_0= ruleElementType ) )
+                    // InternalDCL.g:832:1: (lv_elementType_8_0= ruleElementType )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:832:1: (lv_elementType_8_0= ruleElementType )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:833:3: lv_elementType_8_0= ruleElementType
+                    // InternalDCL.g:832:1: (lv_elementType_8_0= ruleElementType )
+                    // InternalDCL.g:833:3: lv_elementType_8_0= ruleElementType
                     {
                      
                     	        newCompositeNode(grammarAccess.getDCDeclAccess().getElementTypeElementTypeParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleElementType_in_ruleDCDecl1828);
+                    pushFollow(FOLLOW_8);
                     lv_elementType_8_0=ruleElementType();
 
                     state._fsp--;
@@ -1965,7 +1937,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"elementType",
                             		lv_elementType_8_0, 
-                            		"ElementType");
+                            		"com.br.terra.dcl.DCL.ElementType");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1974,18 +1946,18 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:849:2: ( (otherlv_9= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:850:1: (otherlv_9= RULE_ID )
+                    // InternalDCL.g:849:2: ( (otherlv_9= RULE_ID ) )
+                    // InternalDCL.g:850:1: (otherlv_9= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:850:1: (otherlv_9= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:851:3: otherlv_9= RULE_ID
+                    // InternalDCL.g:850:1: (otherlv_9= RULE_ID )
+                    // InternalDCL.g:851:3: otherlv_9= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCDeclRule());
                     	        }
                             
-                    otherlv_9=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1848); 
+                    otherlv_9=(Token)match(input,RULE_ID,FOLLOW_14); 
 
                     		newLeafNode(otherlv_9, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_1_3_0()); 
                     	
@@ -1995,7 +1967,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,21,FOLLOW_21_in_ruleDCDecl1860); 
+                    otherlv_10=(Token)match(input,21,FOLLOW_2); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getDCDeclAccess().getSemicolonKeyword_1_4());
                         
@@ -2006,23 +1978,23 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:867:6: ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (lv_only2_14_0= ruleOnly2 ) ) ( (otherlv_15= RULE_ID ) ) otherlv_16= ';' )
+                    // InternalDCL.g:867:6: ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (otherlv_14= RULE_ID ) ) otherlv_15= ';' )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:867:6: ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (lv_only2_14_0= ruleOnly2 ) ) ( (otherlv_15= RULE_ID ) ) otherlv_16= ';' )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:867:7: ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (lv_only2_14_0= ruleOnly2 ) ) ( (otherlv_15= RULE_ID ) ) otherlv_16= ';'
+                    // InternalDCL.g:867:6: ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (otherlv_14= RULE_ID ) ) otherlv_15= ';' )
+                    // InternalDCL.g:867:7: ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (otherlv_14= RULE_ID ) ) otherlv_15= ';'
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:867:7: ( (otherlv_11= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:868:1: (otherlv_11= RULE_ID )
+                    // InternalDCL.g:867:7: ( (otherlv_11= RULE_ID ) )
+                    // InternalDCL.g:868:1: (otherlv_11= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:868:1: (otherlv_11= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:869:3: otherlv_11= RULE_ID
+                    // InternalDCL.g:868:1: (otherlv_11= RULE_ID )
+                    // InternalDCL.g:869:3: otherlv_11= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCDeclRule());
                     	        }
                             
-                    otherlv_11=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1888); 
+                    otherlv_11=(Token)match(input,RULE_ID,FOLLOW_20); 
 
                     		newLeafNode(otherlv_11, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_2_0_0()); 
                     	
@@ -2032,16 +2004,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:880:2: ( (lv_can_12_0= ruleCan ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:881:1: (lv_can_12_0= ruleCan )
+                    // InternalDCL.g:880:2: ( (lv_can_12_0= ruleCan ) )
+                    // InternalDCL.g:881:1: (lv_can_12_0= ruleCan )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:881:1: (lv_can_12_0= ruleCan )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:882:3: lv_can_12_0= ruleCan
+                    // InternalDCL.g:881:1: (lv_can_12_0= ruleCan )
+                    // InternalDCL.g:882:3: lv_can_12_0= ruleCan
                     {
                      
                     	        newCompositeNode(grammarAccess.getDCDeclAccess().getCanCanParserRuleCall_2_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleCan_in_ruleDCDecl1909);
+                    pushFollow(FOLLOW_21);
                     lv_can_12_0=ruleCan();
 
                     state._fsp--;
@@ -2054,7 +2026,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"can",
                             		lv_can_12_0, 
-                            		"Can");
+                            		"com.br.terra.dcl.DCL.Can");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -2063,16 +2035,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:898:2: ( (lv_elementType_13_0= ruleElementType ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:899:1: (lv_elementType_13_0= ruleElementType )
+                    // InternalDCL.g:898:2: ( (lv_elementType_13_0= ruleElementType ) )
+                    // InternalDCL.g:899:1: (lv_elementType_13_0= ruleElementType )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:899:1: (lv_elementType_13_0= ruleElementType )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:900:3: lv_elementType_13_0= ruleElementType
+                    // InternalDCL.g:899:1: (lv_elementType_13_0= ruleElementType )
+                    // InternalDCL.g:900:3: lv_elementType_13_0= ruleElementType
                     {
                      
                     	        newCompositeNode(grammarAccess.getDCDeclAccess().getElementTypeElementTypeParserRuleCall_2_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleElementType_in_ruleDCDecl1930);
+                    pushFollow(FOLLOW_8);
                     lv_elementType_13_0=ruleElementType();
 
                     state._fsp--;
@@ -2085,7 +2057,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"elementType",
                             		lv_elementType_13_0, 
-                            		"ElementType");
+                            		"com.br.terra.dcl.DCL.ElementType");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -2094,17 +2066,137 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:916:2: ( (lv_only2_14_0= ruleOnly2 ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:917:1: (lv_only2_14_0= ruleOnly2 )
+                    // InternalDCL.g:916:2: ( (otherlv_14= RULE_ID ) )
+                    // InternalDCL.g:917:1: (otherlv_14= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:917:1: (lv_only2_14_0= ruleOnly2 )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:918:3: lv_only2_14_0= ruleOnly2
+                    // InternalDCL.g:917:1: (otherlv_14= RULE_ID )
+                    // InternalDCL.g:918:3: otherlv_14= RULE_ID
+                    {
+
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getDCDeclRule());
+                    	        }
+                            
+                    otherlv_14=(Token)match(input,RULE_ID,FOLLOW_14); 
+
+                    		newLeafNode(otherlv_14, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_2_3_0()); 
+                    	
+
+                    }
+
+
+                    }
+
+                    otherlv_15=(Token)match(input,21,FOLLOW_2); 
+
+                        	newLeafNode(otherlv_15, grammarAccess.getDCDeclAccess().getSemicolonKeyword_2_4());
+                        
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // InternalDCL.g:934:6: ( ( (otherlv_16= RULE_ID ) ) ( (lv_can_17_0= ruleCan ) ) ( (lv_elementType_18_0= ruleElementType ) ) ( (lv_only2_19_0= ruleOnly2 ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' )
+                    {
+                    // InternalDCL.g:934:6: ( ( (otherlv_16= RULE_ID ) ) ( (lv_can_17_0= ruleCan ) ) ( (lv_elementType_18_0= ruleElementType ) ) ( (lv_only2_19_0= ruleOnly2 ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' )
+                    // InternalDCL.g:934:7: ( (otherlv_16= RULE_ID ) ) ( (lv_can_17_0= ruleCan ) ) ( (lv_elementType_18_0= ruleElementType ) ) ( (lv_only2_19_0= ruleOnly2 ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';'
+                    {
+                    // InternalDCL.g:934:7: ( (otherlv_16= RULE_ID ) )
+                    // InternalDCL.g:935:1: (otherlv_16= RULE_ID )
+                    {
+                    // InternalDCL.g:935:1: (otherlv_16= RULE_ID )
+                    // InternalDCL.g:936:3: otherlv_16= RULE_ID
+                    {
+
+                    			if (current==null) {
+                    	            current = createModelElement(grammarAccess.getDCDeclRule());
+                    	        }
+                            
+                    otherlv_16=(Token)match(input,RULE_ID,FOLLOW_20); 
+
+                    		newLeafNode(otherlv_16, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_3_0_0()); 
+                    	
+
+                    }
+
+
+                    }
+
+                    // InternalDCL.g:947:2: ( (lv_can_17_0= ruleCan ) )
+                    // InternalDCL.g:948:1: (lv_can_17_0= ruleCan )
+                    {
+                    // InternalDCL.g:948:1: (lv_can_17_0= ruleCan )
+                    // InternalDCL.g:949:3: lv_can_17_0= ruleCan
                     {
                      
-                    	        newCompositeNode(grammarAccess.getDCDeclAccess().getOnly2Only2ParserRuleCall_2_3_0()); 
+                    	        newCompositeNode(grammarAccess.getDCDeclAccess().getCanCanParserRuleCall_3_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleOnly2_in_ruleDCDecl1951);
-                    lv_only2_14_0=ruleOnly2();
+                    pushFollow(FOLLOW_21);
+                    lv_can_17_0=ruleCan();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getDCDeclRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"can",
+                            		lv_can_17_0, 
+                            		"com.br.terra.dcl.DCL.Can");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+                    // InternalDCL.g:965:2: ( (lv_elementType_18_0= ruleElementType ) )
+                    // InternalDCL.g:966:1: (lv_elementType_18_0= ruleElementType )
+                    {
+                    // InternalDCL.g:966:1: (lv_elementType_18_0= ruleElementType )
+                    // InternalDCL.g:967:3: lv_elementType_18_0= ruleElementType
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getDCDeclAccess().getElementTypeElementTypeParserRuleCall_3_2_0()); 
+                    	    
+                    pushFollow(FOLLOW_23);
+                    lv_elementType_18_0=ruleElementType();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getDCDeclRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"elementType",
+                            		lv_elementType_18_0, 
+                            		"com.br.terra.dcl.DCL.ElementType");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
+                    // InternalDCL.g:983:2: ( (lv_only2_19_0= ruleOnly2 ) )
+                    // InternalDCL.g:984:1: (lv_only2_19_0= ruleOnly2 )
+                    {
+                    // InternalDCL.g:984:1: (lv_only2_19_0= ruleOnly2 )
+                    // InternalDCL.g:985:3: lv_only2_19_0= ruleOnly2
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getDCDeclAccess().getOnly2Only2ParserRuleCall_3_3_0()); 
+                    	    
+                    pushFollow(FOLLOW_8);
+                    lv_only2_19_0=ruleOnly2();
 
                     state._fsp--;
 
@@ -2115,8 +2207,8 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"only2",
-                            		lv_only2_14_0, 
-                            		"Only2");
+                            		lv_only2_19_0, 
+                            		"com.br.terra.dcl.DCL.Only2");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -2125,20 +2217,20 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:934:2: ( (otherlv_15= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:935:1: (otherlv_15= RULE_ID )
+                    // InternalDCL.g:1001:2: ( (otherlv_20= RULE_ID ) )
+                    // InternalDCL.g:1002:1: (otherlv_20= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:935:1: (otherlv_15= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:936:3: otherlv_15= RULE_ID
+                    // InternalDCL.g:1002:1: (otherlv_20= RULE_ID )
+                    // InternalDCL.g:1003:3: otherlv_20= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCDeclRule());
                     	        }
                             
-                    otherlv_15=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1971); 
+                    otherlv_20=(Token)match(input,RULE_ID,FOLLOW_14); 
 
-                    		newLeafNode(otherlv_15, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_2_4_0()); 
+                    		newLeafNode(otherlv_20, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_3_4_0()); 
                     	
 
                     }
@@ -2146,9 +2238,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_16=(Token)match(input,21,FOLLOW_21_in_ruleDCDecl1983); 
+                    otherlv_21=(Token)match(input,21,FOLLOW_2); 
 
-                        	newLeafNode(otherlv_16, grammarAccess.getDCDeclAccess().getSemicolonKeyword_2_5());
+                        	newLeafNode(otherlv_21, grammarAccess.getDCDeclAccess().getSemicolonKeyword_3_5());
                         
 
                     }
@@ -2156,26 +2248,26 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
-                case 4 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:952:6: ( ( (otherlv_17= RULE_ID ) ) ( (lv_must_18_0= ruleMust ) ) ( (lv_entityType_19_0= ruleEntityType ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' )
+                case 5 :
+                    // InternalDCL.g:1019:6: ( ( (otherlv_22= RULE_ID ) ) ( (lv_must_23_0= ruleMust ) ) ( (lv_entityType_24_0= ruleEntityType ) ) ( (otherlv_25= RULE_ID ) ) otherlv_26= ';' )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:952:6: ( ( (otherlv_17= RULE_ID ) ) ( (lv_must_18_0= ruleMust ) ) ( (lv_entityType_19_0= ruleEntityType ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:952:7: ( (otherlv_17= RULE_ID ) ) ( (lv_must_18_0= ruleMust ) ) ( (lv_entityType_19_0= ruleEntityType ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';'
+                    // InternalDCL.g:1019:6: ( ( (otherlv_22= RULE_ID ) ) ( (lv_must_23_0= ruleMust ) ) ( (lv_entityType_24_0= ruleEntityType ) ) ( (otherlv_25= RULE_ID ) ) otherlv_26= ';' )
+                    // InternalDCL.g:1019:7: ( (otherlv_22= RULE_ID ) ) ( (lv_must_23_0= ruleMust ) ) ( (lv_entityType_24_0= ruleEntityType ) ) ( (otherlv_25= RULE_ID ) ) otherlv_26= ';'
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:952:7: ( (otherlv_17= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:953:1: (otherlv_17= RULE_ID )
+                    // InternalDCL.g:1019:7: ( (otherlv_22= RULE_ID ) )
+                    // InternalDCL.g:1020:1: (otherlv_22= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:953:1: (otherlv_17= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:954:3: otherlv_17= RULE_ID
+                    // InternalDCL.g:1020:1: (otherlv_22= RULE_ID )
+                    // InternalDCL.g:1021:3: otherlv_22= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCDeclRule());
                     	        }
                             
-                    otherlv_17=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl2011); 
+                    otherlv_22=(Token)match(input,RULE_ID,FOLLOW_24); 
 
-                    		newLeafNode(otherlv_17, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_3_0_0()); 
+                    		newLeafNode(otherlv_22, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_4_0_0()); 
                     	
 
                     }
@@ -2183,17 +2275,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:965:2: ( (lv_must_18_0= ruleMust ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:966:1: (lv_must_18_0= ruleMust )
+                    // InternalDCL.g:1032:2: ( (lv_must_23_0= ruleMust ) )
+                    // InternalDCL.g:1033:1: (lv_must_23_0= ruleMust )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:966:1: (lv_must_18_0= ruleMust )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:967:3: lv_must_18_0= ruleMust
+                    // InternalDCL.g:1033:1: (lv_must_23_0= ruleMust )
+                    // InternalDCL.g:1034:3: lv_must_23_0= ruleMust
                     {
                      
-                    	        newCompositeNode(grammarAccess.getDCDeclAccess().getMustMustParserRuleCall_3_1_0()); 
+                    	        newCompositeNode(grammarAccess.getDCDeclAccess().getMustMustParserRuleCall_4_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleMust_in_ruleDCDecl2032);
-                    lv_must_18_0=ruleMust();
+                    pushFollow(FOLLOW_21);
+                    lv_must_23_0=ruleMust();
 
                     state._fsp--;
 
@@ -2204,8 +2296,8 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"must",
-                            		lv_must_18_0, 
-                            		"Must");
+                            		lv_must_23_0, 
+                            		"com.br.terra.dcl.DCL.Must");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -2214,17 +2306,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:983:2: ( (lv_entityType_19_0= ruleEntityType ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:984:1: (lv_entityType_19_0= ruleEntityType )
+                    // InternalDCL.g:1050:2: ( (lv_entityType_24_0= ruleEntityType ) )
+                    // InternalDCL.g:1051:1: (lv_entityType_24_0= ruleEntityType )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:984:1: (lv_entityType_19_0= ruleEntityType )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:985:3: lv_entityType_19_0= ruleEntityType
+                    // InternalDCL.g:1051:1: (lv_entityType_24_0= ruleEntityType )
+                    // InternalDCL.g:1052:3: lv_entityType_24_0= ruleEntityType
                     {
                      
-                    	        newCompositeNode(grammarAccess.getDCDeclAccess().getEntityTypeEntityTypeParserRuleCall_3_2_0()); 
+                    	        newCompositeNode(grammarAccess.getDCDeclAccess().getEntityTypeEntityTypeParserRuleCall_4_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleEntityType_in_ruleDCDecl2053);
-                    lv_entityType_19_0=ruleEntityType();
+                    pushFollow(FOLLOW_8);
+                    lv_entityType_24_0=ruleEntityType();
 
                     state._fsp--;
 
@@ -2235,8 +2327,8 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"entityType",
-                            		lv_entityType_19_0, 
-                            		"EntityType");
+                            		lv_entityType_24_0, 
+                            		"com.br.terra.dcl.DCL.EntityType");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -2245,20 +2337,20 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1001:2: ( (otherlv_20= RULE_ID ) )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1002:1: (otherlv_20= RULE_ID )
+                    // InternalDCL.g:1068:2: ( (otherlv_25= RULE_ID ) )
+                    // InternalDCL.g:1069:1: (otherlv_25= RULE_ID )
                     {
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1002:1: (otherlv_20= RULE_ID )
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1003:3: otherlv_20= RULE_ID
+                    // InternalDCL.g:1069:1: (otherlv_25= RULE_ID )
+                    // InternalDCL.g:1070:3: otherlv_25= RULE_ID
                     {
 
                     			if (current==null) {
                     	            current = createModelElement(grammarAccess.getDCDeclRule());
                     	        }
                             
-                    otherlv_20=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl2073); 
+                    otherlv_25=(Token)match(input,RULE_ID,FOLLOW_14); 
 
-                    		newLeafNode(otherlv_20, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_3_3_0()); 
+                    		newLeafNode(otherlv_25, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_4_3_0()); 
                     	
 
                     }
@@ -2266,9 +2358,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,21,FOLLOW_21_in_ruleDCDecl2085); 
+                    otherlv_26=(Token)match(input,21,FOLLOW_2); 
 
-                        	newLeafNode(otherlv_21, grammarAccess.getDCDeclAccess().getSemicolonKeyword_3_4());
+                        	newLeafNode(otherlv_26, grammarAccess.getDCDeclAccess().getSemicolonKeyword_4_4());
                         
 
                     }
@@ -2297,7 +2389,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOnly"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1026:1: entryRuleOnly returns [EObject current=null] : iv_ruleOnly= ruleOnly EOF ;
+    // InternalDCL.g:1093:1: entryRuleOnly returns [EObject current=null] : iv_ruleOnly= ruleOnly EOF ;
     public final EObject entryRuleOnly() throws RecognitionException {
         EObject current = null;
 
@@ -2305,17 +2397,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1027:2: (iv_ruleOnly= ruleOnly EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1028:2: iv_ruleOnly= ruleOnly EOF
+            // InternalDCL.g:1094:2: (iv_ruleOnly= ruleOnly EOF )
+            // InternalDCL.g:1095:2: iv_ruleOnly= ruleOnly EOF
             {
              newCompositeNode(grammarAccess.getOnlyRule()); 
-            pushFollow(FOLLOW_ruleOnly_in_entryRuleOnly2122);
+            pushFollow(FOLLOW_1);
             iv_ruleOnly=ruleOnly();
 
             state._fsp--;
 
              current =iv_ruleOnly; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOnly2132); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2333,7 +2425,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOnly"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1035:1: ruleOnly returns [EObject current=null] : ( (lv_only_0_0= 'only' ) ) ;
+    // InternalDCL.g:1102:1: ruleOnly returns [EObject current=null] : ( (lv_only_0_0= 'only' ) ) ;
     public final EObject ruleOnly() throws RecognitionException {
         EObject current = null;
 
@@ -2342,16 +2434,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1038:28: ( ( (lv_only_0_0= 'only' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1039:1: ( (lv_only_0_0= 'only' ) )
+            // InternalDCL.g:1105:28: ( ( (lv_only_0_0= 'only' ) ) )
+            // InternalDCL.g:1106:1: ( (lv_only_0_0= 'only' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1039:1: ( (lv_only_0_0= 'only' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1040:1: (lv_only_0_0= 'only' )
+            // InternalDCL.g:1106:1: ( (lv_only_0_0= 'only' ) )
+            // InternalDCL.g:1107:1: (lv_only_0_0= 'only' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1040:1: (lv_only_0_0= 'only' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1041:3: lv_only_0_0= 'only'
+            // InternalDCL.g:1107:1: (lv_only_0_0= 'only' )
+            // InternalDCL.g:1108:3: lv_only_0_0= 'only'
             {
-            lv_only_0_0=(Token)match(input,30,FOLLOW_30_in_ruleOnly2174); 
+            lv_only_0_0=(Token)match(input,30,FOLLOW_2); 
 
                     newLeafNode(lv_only_0_0, grammarAccess.getOnlyAccess().getOnlyOnlyKeyword_0());
                 
@@ -2385,7 +2477,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCan"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1062:1: entryRuleCan returns [EObject current=null] : iv_ruleCan= ruleCan EOF ;
+    // InternalDCL.g:1129:1: entryRuleCan returns [EObject current=null] : iv_ruleCan= ruleCan EOF ;
     public final EObject entryRuleCan() throws RecognitionException {
         EObject current = null;
 
@@ -2393,17 +2485,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1063:2: (iv_ruleCan= ruleCan EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1064:2: iv_ruleCan= ruleCan EOF
+            // InternalDCL.g:1130:2: (iv_ruleCan= ruleCan EOF )
+            // InternalDCL.g:1131:2: iv_ruleCan= ruleCan EOF
             {
              newCompositeNode(grammarAccess.getCanRule()); 
-            pushFollow(FOLLOW_ruleCan_in_entryRuleCan2222);
+            pushFollow(FOLLOW_1);
             iv_ruleCan=ruleCan();
 
             state._fsp--;
 
              current =iv_ruleCan; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCan2232); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2421,7 +2513,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCan"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1071:1: ruleCan returns [EObject current=null] : ( (lv_can_0_0= 'can-' ) ) ;
+    // InternalDCL.g:1138:1: ruleCan returns [EObject current=null] : ( (lv_can_0_0= 'can-' ) ) ;
     public final EObject ruleCan() throws RecognitionException {
         EObject current = null;
 
@@ -2430,16 +2522,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1074:28: ( ( (lv_can_0_0= 'can-' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1075:1: ( (lv_can_0_0= 'can-' ) )
+            // InternalDCL.g:1141:28: ( ( (lv_can_0_0= 'can-' ) ) )
+            // InternalDCL.g:1142:1: ( (lv_can_0_0= 'can-' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1075:1: ( (lv_can_0_0= 'can-' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1076:1: (lv_can_0_0= 'can-' )
+            // InternalDCL.g:1142:1: ( (lv_can_0_0= 'can-' ) )
+            // InternalDCL.g:1143:1: (lv_can_0_0= 'can-' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1076:1: (lv_can_0_0= 'can-' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1077:3: lv_can_0_0= 'can-'
+            // InternalDCL.g:1143:1: (lv_can_0_0= 'can-' )
+            // InternalDCL.g:1144:3: lv_can_0_0= 'can-'
             {
-            lv_can_0_0=(Token)match(input,31,FOLLOW_31_in_ruleCan2274); 
+            lv_can_0_0=(Token)match(input,31,FOLLOW_2); 
 
                     newLeafNode(lv_can_0_0, grammarAccess.getCanAccess().getCanCanKeyword_0());
                 
@@ -2473,7 +2565,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCannot"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1098:1: entryRuleCannot returns [EObject current=null] : iv_ruleCannot= ruleCannot EOF ;
+    // InternalDCL.g:1165:1: entryRuleCannot returns [EObject current=null] : iv_ruleCannot= ruleCannot EOF ;
     public final EObject entryRuleCannot() throws RecognitionException {
         EObject current = null;
 
@@ -2481,17 +2573,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1099:2: (iv_ruleCannot= ruleCannot EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1100:2: iv_ruleCannot= ruleCannot EOF
+            // InternalDCL.g:1166:2: (iv_ruleCannot= ruleCannot EOF )
+            // InternalDCL.g:1167:2: iv_ruleCannot= ruleCannot EOF
             {
              newCompositeNode(grammarAccess.getCannotRule()); 
-            pushFollow(FOLLOW_ruleCannot_in_entryRuleCannot2322);
+            pushFollow(FOLLOW_1);
             iv_ruleCannot=ruleCannot();
 
             state._fsp--;
 
              current =iv_ruleCannot; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCannot2332); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2509,7 +2601,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCannot"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1107:1: ruleCannot returns [EObject current=null] : ( (lv_cannot_0_0= 'cannot-' ) ) ;
+    // InternalDCL.g:1174:1: ruleCannot returns [EObject current=null] : ( (lv_cannot_0_0= 'cannot-' ) ) ;
     public final EObject ruleCannot() throws RecognitionException {
         EObject current = null;
 
@@ -2518,16 +2610,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1110:28: ( ( (lv_cannot_0_0= 'cannot-' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1111:1: ( (lv_cannot_0_0= 'cannot-' ) )
+            // InternalDCL.g:1177:28: ( ( (lv_cannot_0_0= 'cannot-' ) ) )
+            // InternalDCL.g:1178:1: ( (lv_cannot_0_0= 'cannot-' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1111:1: ( (lv_cannot_0_0= 'cannot-' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1112:1: (lv_cannot_0_0= 'cannot-' )
+            // InternalDCL.g:1178:1: ( (lv_cannot_0_0= 'cannot-' ) )
+            // InternalDCL.g:1179:1: (lv_cannot_0_0= 'cannot-' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1112:1: (lv_cannot_0_0= 'cannot-' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1113:3: lv_cannot_0_0= 'cannot-'
+            // InternalDCL.g:1179:1: (lv_cannot_0_0= 'cannot-' )
+            // InternalDCL.g:1180:3: lv_cannot_0_0= 'cannot-'
             {
-            lv_cannot_0_0=(Token)match(input,32,FOLLOW_32_in_ruleCannot2374); 
+            lv_cannot_0_0=(Token)match(input,32,FOLLOW_2); 
 
                     newLeafNode(lv_cannot_0_0, grammarAccess.getCannotAccess().getCannotCannotKeyword_0());
                 
@@ -2561,7 +2653,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOnly2"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1134:1: entryRuleOnly2 returns [EObject current=null] : iv_ruleOnly2= ruleOnly2 EOF ;
+    // InternalDCL.g:1201:1: entryRuleOnly2 returns [EObject current=null] : iv_ruleOnly2= ruleOnly2 EOF ;
     public final EObject entryRuleOnly2() throws RecognitionException {
         EObject current = null;
 
@@ -2569,17 +2661,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1135:2: (iv_ruleOnly2= ruleOnly2 EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1136:2: iv_ruleOnly2= ruleOnly2 EOF
+            // InternalDCL.g:1202:2: (iv_ruleOnly2= ruleOnly2 EOF )
+            // InternalDCL.g:1203:2: iv_ruleOnly2= ruleOnly2 EOF
             {
              newCompositeNode(grammarAccess.getOnly2Rule()); 
-            pushFollow(FOLLOW_ruleOnly2_in_entryRuleOnly22422);
+            pushFollow(FOLLOW_1);
             iv_ruleOnly2=ruleOnly2();
 
             state._fsp--;
 
              current =iv_ruleOnly2; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOnly22432); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2597,7 +2689,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOnly2"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1143:1: ruleOnly2 returns [EObject current=null] : ( (lv_only2_0_0= '-only' ) ) ;
+    // InternalDCL.g:1210:1: ruleOnly2 returns [EObject current=null] : ( (lv_only2_0_0= '-only' ) ) ;
     public final EObject ruleOnly2() throws RecognitionException {
         EObject current = null;
 
@@ -2606,16 +2698,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1146:28: ( ( (lv_only2_0_0= '-only' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1147:1: ( (lv_only2_0_0= '-only' ) )
+            // InternalDCL.g:1213:28: ( ( (lv_only2_0_0= '-only' ) ) )
+            // InternalDCL.g:1214:1: ( (lv_only2_0_0= '-only' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1147:1: ( (lv_only2_0_0= '-only' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1148:1: (lv_only2_0_0= '-only' )
+            // InternalDCL.g:1214:1: ( (lv_only2_0_0= '-only' ) )
+            // InternalDCL.g:1215:1: (lv_only2_0_0= '-only' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1148:1: (lv_only2_0_0= '-only' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1149:3: lv_only2_0_0= '-only'
+            // InternalDCL.g:1215:1: (lv_only2_0_0= '-only' )
+            // InternalDCL.g:1216:3: lv_only2_0_0= '-only'
             {
-            lv_only2_0_0=(Token)match(input,33,FOLLOW_33_in_ruleOnly22474); 
+            lv_only2_0_0=(Token)match(input,33,FOLLOW_2); 
 
                     newLeafNode(lv_only2_0_0, grammarAccess.getOnly2Access().getOnly2OnlyKeyword_0());
                 
@@ -2649,7 +2741,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMust"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1170:1: entryRuleMust returns [EObject current=null] : iv_ruleMust= ruleMust EOF ;
+    // InternalDCL.g:1237:1: entryRuleMust returns [EObject current=null] : iv_ruleMust= ruleMust EOF ;
     public final EObject entryRuleMust() throws RecognitionException {
         EObject current = null;
 
@@ -2657,17 +2749,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1171:2: (iv_ruleMust= ruleMust EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1172:2: iv_ruleMust= ruleMust EOF
+            // InternalDCL.g:1238:2: (iv_ruleMust= ruleMust EOF )
+            // InternalDCL.g:1239:2: iv_ruleMust= ruleMust EOF
             {
              newCompositeNode(grammarAccess.getMustRule()); 
-            pushFollow(FOLLOW_ruleMust_in_entryRuleMust2522);
+            pushFollow(FOLLOW_1);
             iv_ruleMust=ruleMust();
 
             state._fsp--;
 
              current =iv_ruleMust; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMust2532); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2685,7 +2777,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMust"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1179:1: ruleMust returns [EObject current=null] : ( (lv_must_0_0= 'must-' ) ) ;
+    // InternalDCL.g:1246:1: ruleMust returns [EObject current=null] : ( (lv_must_0_0= 'must-' ) ) ;
     public final EObject ruleMust() throws RecognitionException {
         EObject current = null;
 
@@ -2694,16 +2786,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1182:28: ( ( (lv_must_0_0= 'must-' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1183:1: ( (lv_must_0_0= 'must-' ) )
+            // InternalDCL.g:1249:28: ( ( (lv_must_0_0= 'must-' ) ) )
+            // InternalDCL.g:1250:1: ( (lv_must_0_0= 'must-' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1183:1: ( (lv_must_0_0= 'must-' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1184:1: (lv_must_0_0= 'must-' )
+            // InternalDCL.g:1250:1: ( (lv_must_0_0= 'must-' ) )
+            // InternalDCL.g:1251:1: (lv_must_0_0= 'must-' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1184:1: (lv_must_0_0= 'must-' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1185:3: lv_must_0_0= 'must-'
+            // InternalDCL.g:1251:1: (lv_must_0_0= 'must-' )
+            // InternalDCL.g:1252:3: lv_must_0_0= 'must-'
             {
-            lv_must_0_0=(Token)match(input,34,FOLLOW_34_in_ruleMust2574); 
+            lv_must_0_0=(Token)match(input,34,FOLLOW_2); 
 
                     newLeafNode(lv_must_0_0, grammarAccess.getMustAccess().getMustMustKeyword_0());
                 
@@ -2737,7 +2829,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleElementType"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1206:1: entryRuleElementType returns [EObject current=null] : iv_ruleElementType= ruleElementType EOF ;
+    // InternalDCL.g:1273:1: entryRuleElementType returns [EObject current=null] : iv_ruleElementType= ruleElementType EOF ;
     public final EObject entryRuleElementType() throws RecognitionException {
         EObject current = null;
 
@@ -2745,17 +2837,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1207:2: (iv_ruleElementType= ruleElementType EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1208:2: iv_ruleElementType= ruleElementType EOF
+            // InternalDCL.g:1274:2: (iv_ruleElementType= ruleElementType EOF )
+            // InternalDCL.g:1275:2: iv_ruleElementType= ruleElementType EOF
             {
              newCompositeNode(grammarAccess.getElementTypeRule()); 
-            pushFollow(FOLLOW_ruleElementType_in_entryRuleElementType2622);
+            pushFollow(FOLLOW_1);
             iv_ruleElementType=ruleElementType();
 
             state._fsp--;
 
              current =iv_ruleElementType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleElementType2632); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2773,7 +2865,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleElementType"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1215:1: ruleElementType returns [EObject current=null] : (this_BasicType_0= ruleBasicType | this_EntityType_1= ruleEntityType ) ;
+    // InternalDCL.g:1282:1: ruleElementType returns [EObject current=null] : (this_BasicType_0= ruleBasicType | this_EntityType_1= ruleEntityType ) ;
     public final EObject ruleElementType() throws RecognitionException {
         EObject current = null;
 
@@ -2785,10 +2877,10 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1218:28: ( (this_BasicType_0= ruleBasicType | this_EntityType_1= ruleEntityType ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1219:1: (this_BasicType_0= ruleBasicType | this_EntityType_1= ruleEntityType )
+            // InternalDCL.g:1285:28: ( (this_BasicType_0= ruleBasicType | this_EntityType_1= ruleEntityType ) )
+            // InternalDCL.g:1286:1: (this_BasicType_0= ruleBasicType | this_EntityType_1= ruleEntityType )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1219:1: (this_BasicType_0= ruleBasicType | this_EntityType_1= ruleEntityType )
+            // InternalDCL.g:1286:1: (this_BasicType_0= ruleBasicType | this_EntityType_1= ruleEntityType )
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -2806,12 +2898,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             }
             switch (alt9) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1220:5: this_BasicType_0= ruleBasicType
+                    // InternalDCL.g:1287:5: this_BasicType_0= ruleBasicType
                     {
                      
                             newCompositeNode(grammarAccess.getElementTypeAccess().getBasicTypeParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleBasicType_in_ruleElementType2679);
+                    pushFollow(FOLLOW_2);
                     this_BasicType_0=ruleBasicType();
 
                     state._fsp--;
@@ -2824,12 +2916,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1230:5: this_EntityType_1= ruleEntityType
+                    // InternalDCL.g:1297:5: this_EntityType_1= ruleEntityType
                     {
                      
                             newCompositeNode(grammarAccess.getElementTypeAccess().getEntityTypeParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleEntityType_in_ruleElementType2706);
+                    pushFollow(FOLLOW_2);
                     this_EntityType_1=ruleEntityType();
 
                     state._fsp--;
@@ -2862,7 +2954,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBasicType"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1246:1: entryRuleBasicType returns [EObject current=null] : iv_ruleBasicType= ruleBasicType EOF ;
+    // InternalDCL.g:1313:1: entryRuleBasicType returns [EObject current=null] : iv_ruleBasicType= ruleBasicType EOF ;
     public final EObject entryRuleBasicType() throws RecognitionException {
         EObject current = null;
 
@@ -2870,17 +2962,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1247:2: (iv_ruleBasicType= ruleBasicType EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1248:2: iv_ruleBasicType= ruleBasicType EOF
+            // InternalDCL.g:1314:2: (iv_ruleBasicType= ruleBasicType EOF )
+            // InternalDCL.g:1315:2: iv_ruleBasicType= ruleBasicType EOF
             {
              newCompositeNode(grammarAccess.getBasicTypeRule()); 
-            pushFollow(FOLLOW_ruleBasicType_in_entryRuleBasicType2741);
+            pushFollow(FOLLOW_1);
             iv_ruleBasicType=ruleBasicType();
 
             state._fsp--;
 
              current =iv_ruleBasicType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBasicType2751); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2898,7 +2990,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBasicType"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1255:1: ruleBasicType returns [EObject current=null] : ( ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) ) ) ;
+    // InternalDCL.g:1322:1: ruleBasicType returns [EObject current=null] : ( ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) ) ) ;
     public final EObject ruleBasicType() throws RecognitionException {
         EObject current = null;
 
@@ -2911,16 +3003,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1258:28: ( ( ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1259:1: ( ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) ) )
+            // InternalDCL.g:1325:28: ( ( ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) ) ) )
+            // InternalDCL.g:1326:1: ( ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1259:1: ( ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1260:1: ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) )
+            // InternalDCL.g:1326:1: ( ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) ) )
+            // InternalDCL.g:1327:1: ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1260:1: ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1261:1: (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' )
+            // InternalDCL.g:1327:1: ( (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' ) )
+            // InternalDCL.g:1328:1: (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1261:1: (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' )
+            // InternalDCL.g:1328:1: (lv_typeName_0_1= 'access' | lv_typeName_0_2= 'declare' | lv_typeName_0_3= 'handle' | lv_typeName_0_4= 'create' | lv_typeName_0_5= 'depend' )
             int alt10=5;
             switch ( input.LA(1) ) {
             case 35:
@@ -2957,9 +3049,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             switch (alt10) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1262:3: lv_typeName_0_1= 'access'
+                    // InternalDCL.g:1329:3: lv_typeName_0_1= 'access'
                     {
-                    lv_typeName_0_1=(Token)match(input,35,FOLLOW_35_in_ruleBasicType2795); 
+                    lv_typeName_0_1=(Token)match(input,35,FOLLOW_2); 
 
                             newLeafNode(lv_typeName_0_1, grammarAccess.getBasicTypeAccess().getTypeNameAccessKeyword_0_0());
                         
@@ -2973,9 +3065,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1274:8: lv_typeName_0_2= 'declare'
+                    // InternalDCL.g:1341:8: lv_typeName_0_2= 'declare'
                     {
-                    lv_typeName_0_2=(Token)match(input,36,FOLLOW_36_in_ruleBasicType2824); 
+                    lv_typeName_0_2=(Token)match(input,36,FOLLOW_2); 
 
                             newLeafNode(lv_typeName_0_2, grammarAccess.getBasicTypeAccess().getTypeNameDeclareKeyword_0_1());
                         
@@ -2989,9 +3081,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1286:8: lv_typeName_0_3= 'handle'
+                    // InternalDCL.g:1353:8: lv_typeName_0_3= 'handle'
                     {
-                    lv_typeName_0_3=(Token)match(input,37,FOLLOW_37_in_ruleBasicType2853); 
+                    lv_typeName_0_3=(Token)match(input,37,FOLLOW_2); 
 
                             newLeafNode(lv_typeName_0_3, grammarAccess.getBasicTypeAccess().getTypeNameHandleKeyword_0_2());
                         
@@ -3005,9 +3097,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1298:8: lv_typeName_0_4= 'create'
+                    // InternalDCL.g:1365:8: lv_typeName_0_4= 'create'
                     {
-                    lv_typeName_0_4=(Token)match(input,38,FOLLOW_38_in_ruleBasicType2882); 
+                    lv_typeName_0_4=(Token)match(input,38,FOLLOW_2); 
 
                             newLeafNode(lv_typeName_0_4, grammarAccess.getBasicTypeAccess().getTypeNameCreateKeyword_0_3());
                         
@@ -3021,9 +3113,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1310:8: lv_typeName_0_5= 'depend'
+                    // InternalDCL.g:1377:8: lv_typeName_0_5= 'depend'
                     {
-                    lv_typeName_0_5=(Token)match(input,39,FOLLOW_39_in_ruleBasicType2911); 
+                    lv_typeName_0_5=(Token)match(input,39,FOLLOW_2); 
 
                             newLeafNode(lv_typeName_0_5, grammarAccess.getBasicTypeAccess().getTypeNameDependKeyword_0_4());
                         
@@ -3063,7 +3155,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEntityType"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1333:1: entryRuleEntityType returns [EObject current=null] : iv_ruleEntityType= ruleEntityType EOF ;
+    // InternalDCL.g:1400:1: entryRuleEntityType returns [EObject current=null] : iv_ruleEntityType= ruleEntityType EOF ;
     public final EObject entryRuleEntityType() throws RecognitionException {
         EObject current = null;
 
@@ -3071,17 +3163,17 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1334:2: (iv_ruleEntityType= ruleEntityType EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1335:2: iv_ruleEntityType= ruleEntityType EOF
+            // InternalDCL.g:1401:2: (iv_ruleEntityType= ruleEntityType EOF )
+            // InternalDCL.g:1402:2: iv_ruleEntityType= ruleEntityType EOF
             {
              newCompositeNode(grammarAccess.getEntityTypeRule()); 
-            pushFollow(FOLLOW_ruleEntityType_in_entryRuleEntityType2962);
+            pushFollow(FOLLOW_1);
             iv_ruleEntityType=ruleEntityType();
 
             state._fsp--;
 
              current =iv_ruleEntityType; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEntityType2972); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -3099,7 +3191,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEntityType"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1342:1: ruleEntityType returns [EObject current=null] : ( ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) ) ) ;
+    // InternalDCL.g:1409:1: ruleEntityType returns [EObject current=null] : ( ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) ) ) ;
     public final EObject ruleEntityType() throws RecognitionException {
         EObject current = null;
 
@@ -3112,16 +3204,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1345:28: ( ( ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1346:1: ( ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) ) )
+            // InternalDCL.g:1412:28: ( ( ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) ) ) )
+            // InternalDCL.g:1413:1: ( ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1346:1: ( ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1347:1: ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) )
+            // InternalDCL.g:1413:1: ( ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) ) )
+            // InternalDCL.g:1414:1: ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1347:1: ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1348:1: (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' )
+            // InternalDCL.g:1414:1: ( (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' ) )
+            // InternalDCL.g:1415:1: (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1348:1: (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' )
+            // InternalDCL.g:1415:1: (lv_entity_0_1= 'extend' | lv_entity_0_2= 'implement' | lv_entity_0_3= 'derive' | lv_entity_0_4= 'throw' | lv_entity_0_5= 'useannotation' )
             int alt11=5;
             switch ( input.LA(1) ) {
             case 40:
@@ -3158,9 +3250,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             switch (alt11) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1349:3: lv_entity_0_1= 'extend'
+                    // InternalDCL.g:1416:3: lv_entity_0_1= 'extend'
                     {
-                    lv_entity_0_1=(Token)match(input,40,FOLLOW_40_in_ruleEntityType3016); 
+                    lv_entity_0_1=(Token)match(input,40,FOLLOW_2); 
 
                             newLeafNode(lv_entity_0_1, grammarAccess.getEntityTypeAccess().getEntityExtendKeyword_0_0());
                         
@@ -3174,9 +3266,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1361:8: lv_entity_0_2= 'implement'
+                    // InternalDCL.g:1428:8: lv_entity_0_2= 'implement'
                     {
-                    lv_entity_0_2=(Token)match(input,41,FOLLOW_41_in_ruleEntityType3045); 
+                    lv_entity_0_2=(Token)match(input,41,FOLLOW_2); 
 
                             newLeafNode(lv_entity_0_2, grammarAccess.getEntityTypeAccess().getEntityImplementKeyword_0_1());
                         
@@ -3190,9 +3282,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1373:8: lv_entity_0_3= 'derive'
+                    // InternalDCL.g:1440:8: lv_entity_0_3= 'derive'
                     {
-                    lv_entity_0_3=(Token)match(input,42,FOLLOW_42_in_ruleEntityType3074); 
+                    lv_entity_0_3=(Token)match(input,42,FOLLOW_2); 
 
                             newLeafNode(lv_entity_0_3, grammarAccess.getEntityTypeAccess().getEntityDeriveKeyword_0_2());
                         
@@ -3206,9 +3298,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1385:8: lv_entity_0_4= 'throw'
+                    // InternalDCL.g:1452:8: lv_entity_0_4= 'throw'
                     {
-                    lv_entity_0_4=(Token)match(input,43,FOLLOW_43_in_ruleEntityType3103); 
+                    lv_entity_0_4=(Token)match(input,43,FOLLOW_2); 
 
                             newLeafNode(lv_entity_0_4, grammarAccess.getEntityTypeAccess().getEntityThrowKeyword_0_3());
                         
@@ -3222,9 +3314,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:1397:8: lv_entity_0_5= 'useannotation'
+                    // InternalDCL.g:1464:8: lv_entity_0_5= 'useannotation'
                     {
-                    lv_entity_0_5=(Token)match(input,44,FOLLOW_44_in_ruleEntityType3132); 
+                    lv_entity_0_5=(Token)match(input,44,FOLLOW_2); 
 
                             newLeafNode(lv_entity_0_5, grammarAccess.getEntityTypeAccess().getEntityUseannotationKeyword_0_4());
                         
@@ -3265,136 +3357,82 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
     // Delegated rules
 
 
+    protected DFA8 dfa8 = new DFA8(this);
+    static final String dfa_1s = "\22\uffff";
+    static final String dfa_2s = "\1\4\1\uffff\1\37\1\43\2\uffff\12\4\2\uffff";
+    static final String dfa_3s = "\1\36\1\uffff\1\42\1\54\2\uffff\12\41\2\uffff";
+    static final String dfa_4s = "\1\uffff\1\1\2\uffff\1\5\1\2\12\uffff\1\3\1\4";
+    static final String dfa_5s = "\22\uffff}>";
+    static final String[] dfa_6s = {
+            "\1\2\31\uffff\1\1",
+            "",
+            "\1\3\1\5\1\uffff\1\4",
+            "\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17",
+            "",
+            "",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "\1\20\34\uffff\1\21",
+            "",
+            ""
+    };
+
+    static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
+    static final char[] dfa_2 = DFA.unpackEncodedStringToUnsignedChars(dfa_2s);
+    static final char[] dfa_3 = DFA.unpackEncodedStringToUnsignedChars(dfa_3s);
+    static final short[] dfa_4 = DFA.unpackEncodedString(dfa_4s);
+    static final short[] dfa_5 = DFA.unpackEncodedString(dfa_5s);
+    static final short[][] dfa_6 = unpackEncodedStringArray(dfa_6s);
+
+    class DFA8 extends DFA {
+
+        public DFA8(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 8;
+            this.eot = dfa_1;
+            this.eof = dfa_1;
+            this.min = dfa_2;
+            this.max = dfa_3;
+            this.accept = dfa_4;
+            this.special = dfa_5;
+            this.transition = dfa_6;
+        }
+        public String getDescription() {
+            return "715:1: ( ( ( (lv_only_0_0= ruleOnly ) ) ( (otherlv_1= RULE_ID ) ) ( (lv_can_2_0= ruleCan ) ) ( (lv_elementType_3_0= ruleElementType ) ) ( (otherlv_4= RULE_ID ) ) otherlv_5= ';' ) | ( ( (otherlv_6= RULE_ID ) ) ( (lv_cannot_7_0= ruleCannot ) ) ( (lv_elementType_8_0= ruleElementType ) ) ( (otherlv_9= RULE_ID ) ) otherlv_10= ';' ) | ( ( (otherlv_11= RULE_ID ) ) ( (lv_can_12_0= ruleCan ) ) ( (lv_elementType_13_0= ruleElementType ) ) ( (otherlv_14= RULE_ID ) ) otherlv_15= ';' ) | ( ( (otherlv_16= RULE_ID ) ) ( (lv_can_17_0= ruleCan ) ) ( (lv_elementType_18_0= ruleElementType ) ) ( (lv_only2_19_0= ruleOnly2 ) ) ( (otherlv_20= RULE_ID ) ) otherlv_21= ';' ) | ( ( (otherlv_22= RULE_ID ) ) ( (lv_must_23_0= ruleMust ) ) ( (lv_entityType_24_0= ruleEntityType ) ) ( (otherlv_25= RULE_ID ) ) otherlv_26= ';' ) )";
+        }
+    }
  
 
-    public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleModel122 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleModel134 = new BitSet(new long[]{0x0000000030C08000L});
-    public static final BitSet FOLLOW_ruleDCLStructureElement_in_ruleModel155 = new BitSet(new long[]{0x0000000030C0A000L});
-    public static final BitSet FOLLOW_13_in_ruleModel168 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleModel180 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleModel192 = new BitSet(new long[]{0x0000000040002010L});
-    public static final BitSet FOLLOW_ruleDCDecl_in_ruleModel213 = new BitSet(new long[]{0x0000000040002010L});
-    public static final BitSet FOLLOW_13_in_ruleModel226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLStructureElement_in_entryRuleDCLStructureElement262 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDCLStructureElement272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLLayer_in_ruleDCLStructureElement319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLComponent_in_ruleDCLStructureElement346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLSubSystem_in_ruleDCLStructureElement373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLModule_in_ruleDCLStructureElement400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLComponentInterface_in_ruleDCLStructureElement427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLLayer_in_entryRuleDCLLayer462 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDCLLayer472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleDCLLayer509 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLLayer526 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleDCLLayer543 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_ruleDCLLayer555 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleDCLLayer572 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_16_in_ruleDCLLayer591 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleDCLLayer603 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLLayer623 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_16_in_ruleDCLLayer643 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleDCLLayer655 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLLayer675 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_16_in_ruleDCLLayer695 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleDCLLayer707 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLLayer727 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCLLayer742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLComponent_in_entryRuleDCLComponent778 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDCLComponent788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleDCLComponent825 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLComponent842 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_16_in_ruleDCLComponent861 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_18_in_ruleDCLComponent873 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLComponent893 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_16_in_ruleDCLComponent913 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleDCLComponent925 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLComponent945 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCLComponent960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLComponentInterface_in_entryRuleDCLComponentInterface996 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDCLComponentInterface1006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleDCLComponentInterface1043 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLComponentInterface1060 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleDCLComponentInterface1077 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLComponentInterface1097 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleDCLComponentInterface1110 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleDCLComponentInterface1122 = new BitSet(new long[]{0x000000000C000000L});
-    public static final BitSet FOLLOW_ruleInterfaceType_in_ruleDCLComponentInterface1143 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCLComponentInterface1156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInterfaceType_in_entryRuleInterfaceType1192 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleInterfaceType1202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleInterfaceType1246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleInterfaceType1275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLSubSystem_in_entryRuleDCLSubSystem1326 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDCLSubSystem1336 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleDCLSubSystem1373 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLSubSystem1390 = new BitSet(new long[]{0x0000000000210000L});
-    public static final BitSet FOLLOW_16_in_ruleDCLSubSystem1408 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_ruleDCLSubSystem1420 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLSubSystem1440 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCLSubSystem1454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCLModule_in_entryRuleDCLModule1490 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDCLModule1500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleDCLModule1537 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLModule1554 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCLModule1571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDCDecl_in_entryRuleDCDecl1607 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDCDecl1617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOnly_in_ruleDCDecl1664 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCDecl1684 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_ruleCan_in_ruleDCDecl1705 = new BitSet(new long[]{0x00001FF800000000L});
-    public static final BitSet FOLLOW_ruleElementType_in_ruleDCDecl1726 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCDecl1746 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCDecl1758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCDecl1786 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_ruleCannot_in_ruleDCDecl1807 = new BitSet(new long[]{0x00001FF800000000L});
-    public static final BitSet FOLLOW_ruleElementType_in_ruleDCDecl1828 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCDecl1848 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCDecl1860 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCDecl1888 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_ruleCan_in_ruleDCDecl1909 = new BitSet(new long[]{0x00001FF800000000L});
-    public static final BitSet FOLLOW_ruleElementType_in_ruleDCDecl1930 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_ruleOnly2_in_ruleDCDecl1951 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCDecl1971 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCDecl1983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCDecl2011 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_ruleMust_in_ruleDCDecl2032 = new BitSet(new long[]{0x00001FF800000000L});
-    public static final BitSet FOLLOW_ruleEntityType_in_ruleDCDecl2053 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleDCDecl2073 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleDCDecl2085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOnly_in_entryRuleOnly2122 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOnly2132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleOnly2174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCan_in_entryRuleCan2222 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCan2232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleCan2274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCannot_in_entryRuleCannot2322 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCannot2332 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_ruleCannot2374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOnly2_in_entryRuleOnly22422 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOnly22432 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_ruleOnly22474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMust_in_entryRuleMust2522 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMust2532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleMust2574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleElementType_in_entryRuleElementType2622 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleElementType2632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicType_in_ruleElementType2679 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntityType_in_ruleElementType2706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBasicType_in_entryRuleBasicType2741 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBasicType2751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleBasicType2795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleBasicType2824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleBasicType2853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleBasicType2882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleBasicType2911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntityType_in_entryRuleEntityType2962 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEntityType2972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleEntityType3016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleEntityType3045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleEntityType3074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleEntityType3103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_ruleEntityType3132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000030C08000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000030C0A000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000040002010L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000210000L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x000000000C000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x00001FF800000000L});
+    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000400000000L});
 
 }

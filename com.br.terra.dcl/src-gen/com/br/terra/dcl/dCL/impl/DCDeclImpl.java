@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCDeclImpl#getOnly <em>Only</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCDeclImpl#getT <em>T</em>}</li>
@@ -39,7 +40,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCDeclImpl#getMust <em>Must</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCDeclImpl#getEntityType <em>Entity Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
