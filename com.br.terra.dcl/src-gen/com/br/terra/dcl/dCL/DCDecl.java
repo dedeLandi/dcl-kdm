@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.DCDecl#getOnly <em>Only</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.DCDecl#getT <em>T</em>}</li>
@@ -22,7 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.br.terra.dcl.dCL.DCDecl#getMust <em>Must</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.DCDecl#getEntityType <em>Entity Type</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.br.terra.dcl.dCL.DCLPackage#getDCDecl()
  * @model

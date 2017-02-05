@@ -27,11 +27,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.impl.ModelImpl#getStructureElements <em>Structure Elements</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.impl.ModelImpl#getDCDecl <em>DC Decl</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

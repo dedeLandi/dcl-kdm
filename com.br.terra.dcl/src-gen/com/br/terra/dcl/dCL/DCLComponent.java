@@ -10,11 +10,11 @@ package com.br.terra.dcl.dCL;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.DCLComponent#getLayer <em>Layer</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.DCLComponent#getSubSystem <em>Sub System</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.br.terra.dcl.dCL.DCLPackage#getDCLComponent()
  * @model

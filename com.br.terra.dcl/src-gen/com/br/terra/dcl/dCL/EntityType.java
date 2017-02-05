@@ -10,10 +10,10 @@ package com.br.terra.dcl.dCL;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.EntityType#getEntity <em>Entity</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.br.terra.dcl.dCL.DCLPackage#getEntityType()
  * @model

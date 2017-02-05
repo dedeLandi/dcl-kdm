@@ -21,11 +21,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCLComponentInterfaceImpl#getComponent <em>Component</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCLComponentInterfaceImpl#getInterfaceType <em>Interface Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

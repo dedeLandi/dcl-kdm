@@ -10,13 +10,13 @@ package com.br.terra.dcl.dCL;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.DCLLayer#getLevel <em>Level</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.DCLLayer#getLayer <em>Layer</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.DCLLayer#getSubSystem <em>Sub System</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.DCLLayer#getComponent <em>Component</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.br.terra.dcl.dCL.DCLPackage#getDCLLayer()
  * @model

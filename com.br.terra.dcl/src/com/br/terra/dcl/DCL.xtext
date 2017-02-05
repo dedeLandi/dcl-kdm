@@ -32,6 +32,7 @@ Model:
  
  DCDecl: (only=Only t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') | 
  	     (t=[DCLStructureElement] cannot=Cannot elementType=ElementType type = [DCLStructureElement] ';') |
+ 	     (t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') |
  	     (t=[DCLStructureElement] can=Can elementType=ElementType only2=Only2 type = [DCLStructureElement] ';') |
  	     (t=[DCLStructureElement] must=Must entityType=EntityType type = [DCLStructureElement] ';');
  

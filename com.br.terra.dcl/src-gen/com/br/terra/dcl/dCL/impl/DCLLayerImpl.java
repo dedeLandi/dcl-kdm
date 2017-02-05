@@ -19,13 +19,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCLLayerImpl#getLevel <em>Level</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCLLayerImpl#getLayer <em>Layer</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCLLayerImpl#getSubSystem <em>Sub System</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.impl.DCLLayerImpl#getComponent <em>Component</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
