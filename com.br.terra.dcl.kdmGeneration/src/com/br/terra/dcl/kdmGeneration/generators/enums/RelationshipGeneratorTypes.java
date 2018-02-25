@@ -10,6 +10,7 @@ import org.eclipse.gmt.modisco.omg.kdm.action.ActionFactory;
 import org.eclipse.gmt.modisco.omg.kdm.action.Calls;
 import org.eclipse.gmt.modisco.omg.kdm.action.Creates;
 import org.eclipse.gmt.modisco.omg.kdm.action.UsesType;
+import org.eclipse.gmt.modisco.omg.kdm.action.Writes;
 import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
 import org.eclipse.gmt.modisco.omg.kdm.code.CodeElement;
 import org.eclipse.gmt.modisco.omg.kdm.code.CodeFactory;
@@ -26,9 +27,9 @@ import com.br.terra.dcl.kdmGeneration.generators.interfaces.IRelationshipGenerat
  * @author Landi
  *
  */
-public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KDMRelationship,AbstractCodeElement>{
+public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KDMRelationship, AbstractCodeElement> {
 
-	ACCESS(1,"access"){
+	ACCESS(1, "access") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -36,13 +37,13 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			ActionElement actionElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof ActionElement){
-					actionElementForRelations = (ActionElement)abstractCodeElement;
+				if (abstractCodeElement instanceof ActionElement) {
+					actionElementForRelations = (ActionElement) abstractCodeElement;
 				}
 			}
 
 			Calls relation = ActionFactory.eINSTANCE.createCalls();
-			lisfOfRelationshipsToAdd.add(relation);												
+			lisfOfRelationshipsToAdd.add(relation);
 			actionElementForRelations.getActionRelation().add(relation);
 
 			return lisfOfRelationshipsToAdd;
@@ -63,7 +64,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 		}
 
 	},
-	CREATE(2,"create"){
+	CREATE(2, "create") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -71,8 +72,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			ActionElement actionElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof ActionElement){
-					actionElementForRelations = (ActionElement)abstractCodeElement;
+				if (abstractCodeElement instanceof ActionElement) {
+					actionElementForRelations = (ActionElement) abstractCodeElement;
 				}
 			}
 
@@ -97,9 +98,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			return relationshipNames;
 		}
 
-
 	},
-	DECLARE(3,"declare"){
+	DECLARE(3, "declare") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -107,15 +107,15 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			ActionElement actionElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof ActionElement){
-					actionElementForRelations = (ActionElement)abstractCodeElement;
+				if (abstractCodeElement instanceof ActionElement) {
+					actionElementForRelations = (ActionElement) abstractCodeElement;
 				}
 			}
 
 			UsesType relation2 = ActionFactory.eINSTANCE.createUsesType();
 			lisfOfRelationshipsToAdd.add(relation2);
 			actionElementForRelations.getActionRelation().add(relation2);
-			
+
 			return lisfOfRelationshipsToAdd;
 		}
 
@@ -133,9 +133,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			return relationshipNames;
 		}
 
-
 	},
-	DEPEND(4,"depend"){
+	DEPEND(4, "depend") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -145,16 +144,16 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			CodeElement codeElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof CodeElement){
-					codeElementForRelations = (CodeElement)abstractCodeElement;
-				}else if(abstractCodeElement instanceof ActionElement){
-					actionElementForRelations = (ActionElement)abstractCodeElement;
+				if (abstractCodeElement instanceof CodeElement) {
+					codeElementForRelations = (CodeElement) abstractCodeElement;
+				} else if (abstractCodeElement instanceof ActionElement) {
+					actionElementForRelations = (ActionElement) abstractCodeElement;
 				}
 			}
 
-			//Andre - tipos de relacao de action:
+			// Andre - tipos de relacao de action:
 			Calls relation = ActionFactory.eINSTANCE.createCalls();
-			lisfOfRelationshipsToAdd.add(relation);												
+			lisfOfRelationshipsToAdd.add(relation);
 			actionElementForRelations.getActionRelation().add(relation);
 
 			UsesType relation2 = ActionFactory.eINSTANCE.createUsesType();
@@ -165,7 +164,11 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			lisfOfRelationshipsToAdd.add(relation3);
 			actionElementForRelations.getActionRelation().add(relation3);
 
-			//Andre - Tipos de relação de code:
+			Writes relation3_1 = ActionFactory.eINSTANCE.createWrites();
+			lisfOfRelationshipsToAdd.add(relation3_1);
+			actionElementForRelations.getActionRelation().add(relation3_1);
+
+			// Andre - Tipos de relação de code:
 			Extends relation4 = CodeFactory.eINSTANCE.createExtends();
 			lisfOfRelationshipsToAdd.add(relation4);
 			codeElementForRelations.getCodeRelation().add(relation4);
@@ -181,7 +184,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			Imports relation7 = CodeFactory.eINSTANCE.createImports();
 			lisfOfRelationshipsToAdd.add(relation7);
 			codeElementForRelations.getCodeRelation().add(relation7);
-			
+
 			HasType relation8 = CodeFactory.eINSTANCE.createHasType();
 			lisfOfRelationshipsToAdd.add(relation8);
 			codeElementForRelations.getCodeRelation().add(relation8);
@@ -195,6 +198,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			relationshipClasses.add(Calls.class);
 			relationshipClasses.add(UsesType.class);
 			relationshipClasses.add(Creates.class);
+			relationshipClasses.add(Writes.class);
 			relationshipClasses.add(Extends.class);
 			relationshipClasses.add(Implements.class);
 			relationshipClasses.add(HasValue.class);
@@ -209,6 +213,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			relationshipNames.add("Calls");
 			relationshipNames.add("UsesType");
 			relationshipNames.add("Creates");
+			relationshipNames.add("Writes");
 			relationshipNames.add("Extends");
 			relationshipNames.add("Implements");
 			relationshipNames.add("HasValue");
@@ -217,9 +222,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			return relationshipNames;
 		}
 
-
 	},
-	DERIVE(5,"derive"){
+	DERIVE(5, "derive") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -227,8 +231,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			CodeElement codeElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof CodeElement){
-					codeElementForRelations = (CodeElement)abstractCodeElement;
+				if (abstractCodeElement instanceof CodeElement) {
+					codeElementForRelations = (CodeElement) abstractCodeElement;
 				}
 			}
 
@@ -266,7 +270,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 		}
 
 	},
-	EXTEND(6,"extend"){
+	EXTEND(6, "extend") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -274,8 +278,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			CodeElement codeElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof CodeElement){
-					codeElementForRelations = (CodeElement)abstractCodeElement;
+				if (abstractCodeElement instanceof CodeElement) {
+					codeElementForRelations = (CodeElement) abstractCodeElement;
 				}
 			}
 
@@ -307,7 +311,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 		}
 
 	},
-	HANDLE(7,"handle"){
+	HANDLE(7, "handle") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -315,14 +319,14 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			ActionElement actionElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof ActionElement){
-					actionElementForRelations = (ActionElement)abstractCodeElement;
+				if (abstractCodeElement instanceof ActionElement) {
+					actionElementForRelations = (ActionElement) abstractCodeElement;
 				}
 			}
 
-			//Andre - tipos de relacao de action:
+			// Andre - tipos de relacao de action:
 			Calls relation = ActionFactory.eINSTANCE.createCalls();
-			lisfOfRelationshipsToAdd.add(relation);												
+			lisfOfRelationshipsToAdd.add(relation);
 			actionElementForRelations.getActionRelation().add(relation);
 
 			UsesType relation2 = ActionFactory.eINSTANCE.createUsesType();
@@ -349,7 +353,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 		}
 
 	},
-	IMPLEMENT(8,"implement"){
+	IMPLEMENT(8, "implement") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -357,8 +361,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			CodeElement codeElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof CodeElement){
-					codeElementForRelations = (CodeElement)abstractCodeElement;
+				if (abstractCodeElement instanceof CodeElement) {
+					codeElementForRelations = (CodeElement) abstractCodeElement;
 				}
 			}
 
@@ -389,9 +393,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			return relationshipNames;
 		}
 
-
 	},
-	THROW(9,"throw"){
+	THROW(9, "throw") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -399,14 +402,14 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			ActionElement actionElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof ActionElement){
-					actionElementForRelations = (ActionElement)abstractCodeElement;
+				if (abstractCodeElement instanceof ActionElement) {
+					actionElementForRelations = (ActionElement) abstractCodeElement;
 				}
 			}
 
-			//Andre - tipos de relacao de action:
+			// Andre - tipos de relacao de action:
 			Calls relation = ActionFactory.eINSTANCE.createCalls();
-			lisfOfRelationshipsToAdd.add(relation);												
+			lisfOfRelationshipsToAdd.add(relation);
 			actionElementForRelations.getActionRelation().add(relation);
 
 			return lisfOfRelationshipsToAdd;
@@ -427,7 +430,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 		}
 
 	},
-	USEANNOTATION(10,"useannotation"){
+	USEANNOTATION(10, "useannotation") {
 
 		@Override
 		public List<KDMRelationship> getRelationships(AbstractCodeElement... elementToAdd) {
@@ -435,8 +438,8 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 			CodeElement codeElementForRelations = null;
 
 			for (AbstractCodeElement abstractCodeElement : elementToAdd) {
-				if(abstractCodeElement instanceof CodeElement){
-					codeElementForRelations = (CodeElement)abstractCodeElement;
+				if (abstractCodeElement instanceof CodeElement) {
+					codeElementForRelations = (CodeElement) abstractCodeElement;
 				}
 			}
 
@@ -471,26 +474,16 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 
 	;
 
-	private static final RelationshipGeneratorTypes[] VALUES_ARRAY =
-			new RelationshipGeneratorTypes[] {
-					ACCESS,
-					CREATE,
-					DECLARE,
-					DEPEND,
-					DERIVE,
-					EXTEND,
-					HANDLE,
-					IMPLEMENT,
-					THROW,
-					USEANNOTATION
-	};
+	private static final RelationshipGeneratorTypes[] VALUES_ARRAY = new RelationshipGeneratorTypes[] { ACCESS, CREATE,
+			DECLARE, DEPEND, DERIVE, EXTEND, HANDLE, IMPLEMENT, THROW, USEANNOTATION };
 
 	private final int value;
 
 	private String dclText = "";
 
-	public static final List<RelationshipGeneratorTypes> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
-	
+	public static final List<RelationshipGeneratorTypes> VALUES = Collections
+			.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+
 	/**
 	 * 
 	 */
@@ -498,7 +491,7 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 		this.value = value;
 		this.dclText = dclText;
 	}
-	
+
 	public static RelationshipGeneratorTypes getByDclText(String dclText) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
 			RelationshipGeneratorTypes result = VALUES_ARRAY[i];
@@ -508,9 +501,9 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 		}
 		return null;
 	}
-	
+
 	public int getValue() {
-	  return value;
+		return value;
 	}
 
 	/**
@@ -520,9 +513,9 @@ public enum RelationshipGeneratorTypes implements IRelationshipGeneratorTypes<KD
 		return dclText;
 	}
 
-	public static RelationshipGeneratorTypes getRelationshipGeneratorTypesByDclText(String dclTextToSearch){
+	public static RelationshipGeneratorTypes getRelationshipGeneratorTypesByDclText(String dclTextToSearch) {
 		for (RelationshipGeneratorTypes relation : RelationshipGeneratorTypes.values()) {
-			if(relation.getDclText().equalsIgnoreCase(dclTextToSearch)){
+			if (relation.getDclText().equalsIgnoreCase(dclTextToSearch)) {
 				return relation;
 			}
 		}
