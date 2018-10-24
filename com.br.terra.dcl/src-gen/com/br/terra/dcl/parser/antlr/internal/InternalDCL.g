@@ -77,9 +77,9 @@ ruleModel returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='architeturalElements' 
+(	otherlv_0='architecturalElements' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getModelAccess().getArchiteturalElementsKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getModelAccess().getArchitecturalElementsKeyword_0());
     }
 	otherlv_1='{' 
     {
@@ -160,52 +160,854 @@ ruleDCLStructureElement returns [EObject current=null]
     @after { leaveRule(); }:
 (
     { 
-        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLLayerParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLManagedSubsystemParserRuleCall_0()); 
     }
-    this_DCLLayer_0=ruleDCLLayer
+    this_DCLManagedSubsystem_0=ruleDCLManagedSubsystem
     { 
-        $current = $this_DCLLayer_0.current; 
+        $current = $this_DCLManagedSubsystem_0.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLComponentParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLManagingSubsystemParserRuleCall_1()); 
     }
-    this_DCLComponent_1=ruleDCLComponent
+    this_DCLManagingSubsystem_1=ruleDCLManagingSubsystem
     { 
-        $current = $this_DCLComponent_1.current; 
+        $current = $this_DCLManagingSubsystem_1.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLSubSystemParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLMonitorParserRuleCall_2()); 
     }
-    this_DCLSubSystem_2=ruleDCLSubSystem
+    this_DCLMonitor_2=ruleDCLMonitor
     { 
-        $current = $this_DCLSubSystem_2.current; 
+        $current = $this_DCLMonitor_2.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLModuleParserRuleCall_3()); 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLPlannerParserRuleCall_3()); 
     }
-    this_DCLModule_3=ruleDCLModule
+    this_DCLPlanner_3=ruleDCLPlanner
     { 
-        $current = $this_DCLModule_3.current; 
+        $current = $this_DCLPlanner_3.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLComponentInterfaceParserRuleCall_4()); 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLAnalyzerParserRuleCall_4()); 
     }
-    this_DCLComponentInterface_4=ruleDCLComponentInterface
+    this_DCLAnalyzer_4=ruleDCLAnalyzer
     { 
-        $current = $this_DCLComponentInterface_4.current; 
+        $current = $this_DCLAnalyzer_4.current; 
         afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLExecutorParserRuleCall_5()); 
+    }
+    this_DCLExecutor_5=ruleDCLExecutor
+    { 
+        $current = $this_DCLExecutor_5.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLSensorParserRuleCall_6()); 
+    }
+    this_DCLSensor_6=ruleDCLSensor
+    { 
+        $current = $this_DCLSensor_6.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLActuatorParserRuleCall_7()); 
+    }
+    this_DCLActuator_7=ruleDCLActuator
+    { 
+        $current = $this_DCLActuator_7.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLKnowledgeParserRuleCall_8()); 
+    }
+    this_DCLKnowledge_8=ruleDCLKnowledge
+    { 
+        $current = $this_DCLKnowledge_8.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLReferencesParserRuleCall_9()); 
+    }
+    this_DCLReferences_9=ruleDCLReferences
+    { 
+        $current = $this_DCLReferences_9.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLLayerParserRuleCall_10()); 
+    }
+    this_DCLLayer_10=ruleDCLLayer
+    { 
+        $current = $this_DCLLayer_10.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLComponentParserRuleCall_11()); 
+    }
+    this_DCLComponent_11=ruleDCLComponent
+    { 
+        $current = $this_DCLComponent_11.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLSubSystemParserRuleCall_12()); 
+    }
+    this_DCLSubSystem_12=ruleDCLSubSystem
+    { 
+        $current = $this_DCLSubSystem_12.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLModuleParserRuleCall_13()); 
+    }
+    this_DCLModule_13=ruleDCLModule
+    { 
+        $current = $this_DCLModule_13.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLComponentInterfaceParserRuleCall_14()); 
+    }
+    this_DCLComponentInterface_14=ruleDCLComponentInterface
+    { 
+        $current = $this_DCLComponentInterface_14.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLManagedSubsystem
+entryRuleDCLManagedSubsystem returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLManagedSubsystemRule()); }
+	 iv_ruleDCLManagedSubsystem=ruleDCLManagedSubsystem 
+	 { $current=$iv_ruleDCLManagedSubsystem.current; } 
+	 EOF 
+;
+
+// Rule DCLManagedSubsystem
+ruleDCLManagedSubsystem returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='managedSubsystem' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLManagedSubsystemAccess().getManagedSubsystemKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLManagedSubsystemAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLManagedSubsystemRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLManagedSubsystemAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagedSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLManagedSubsystemAccess().getInManagedSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLManagedSubsystemRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLManagedSubsystemAccess().getManagedSubsystemDCLManagedSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLManagedSubsystemAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLManagingSubsystem
+entryRuleDCLManagingSubsystem returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLManagingSubsystemRule()); }
+	 iv_ruleDCLManagingSubsystem=ruleDCLManagingSubsystem 
+	 { $current=$iv_ruleDCLManagingSubsystem.current; } 
+	 EOF 
+;
+
+// Rule DCLManagingSubsystem
+ruleDCLManagingSubsystem returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='managingSubsystem' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLManagingSubsystemAccess().getManagingSubsystemKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLManagingSubsystemAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLManagingSubsystemRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLManagingSubsystemAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLManagingSubsystemAccess().getInManagingSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLManagingSubsystemRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLManagingSubsystemAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLManagingSubsystemAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLMonitor
+entryRuleDCLMonitor returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLMonitorRule()); }
+	 iv_ruleDCLMonitor=ruleDCLMonitor 
+	 { $current=$iv_ruleDCLMonitor.current; } 
+	 EOF 
+;
+
+// Rule DCLMonitor
+ruleDCLMonitor returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='monitor' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLMonitorAccess().getMonitorKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLMonitorAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLMonitorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLMonitorAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLMonitorAccess().getInManagingSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLMonitorRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLMonitorAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLMonitorAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLPlanner
+entryRuleDCLPlanner returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLPlannerRule()); }
+	 iv_ruleDCLPlanner=ruleDCLPlanner 
+	 { $current=$iv_ruleDCLPlanner.current; } 
+	 EOF 
+;
+
+// Rule DCLPlanner
+ruleDCLPlanner returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='planner' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLPlannerAccess().getPlannerKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLPlannerAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLPlannerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLPlannerAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLPlannerAccess().getInManagingSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLPlannerRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLPlannerAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLPlannerAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLAnalyzer
+entryRuleDCLAnalyzer returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLAnalyzerRule()); }
+	 iv_ruleDCLAnalyzer=ruleDCLAnalyzer 
+	 { $current=$iv_ruleDCLAnalyzer.current; } 
+	 EOF 
+;
+
+// Rule DCLAnalyzer
+ruleDCLAnalyzer returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='analyzer' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLAnalyzerAccess().getAnalyzerKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLAnalyzerAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLAnalyzerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLAnalyzerAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLAnalyzerAccess().getInManagingSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLAnalyzerRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLAnalyzerAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLAnalyzerAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLExecutor
+entryRuleDCLExecutor returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLExecutorRule()); }
+	 iv_ruleDCLExecutor=ruleDCLExecutor 
+	 { $current=$iv_ruleDCLExecutor.current; } 
+	 EOF 
+;
+
+// Rule DCLExecutor
+ruleDCLExecutor returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='executor' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLExecutorAccess().getExecutorKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLExecutorAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLExecutorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLExecutorAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLExecutorAccess().getInManagingSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLExecutorRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLExecutorAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLExecutorAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLSensor
+entryRuleDCLSensor returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLSensorRule()); }
+	 iv_ruleDCLSensor=ruleDCLSensor 
+	 { $current=$iv_ruleDCLSensor.current; } 
+	 EOF 
+;
+
+// Rule DCLSensor
+ruleDCLSensor returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='sensor' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLSensorAccess().getSensorKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLSensorAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLSensorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLSensorAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLSensorAccess().getInManagingSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLSensorRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLSensorAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLSensorAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLActuator
+entryRuleDCLActuator returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLActuatorRule()); }
+	 iv_ruleDCLActuator=ruleDCLActuator 
+	 { $current=$iv_ruleDCLActuator.current; } 
+	 EOF 
+;
+
+// Rule DCLActuator
+ruleDCLActuator returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='actuator' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLActuatorAccess().getActuatorKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLActuatorAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLActuatorRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLActuatorAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLActuatorAccess().getInManagingSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLActuatorRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLActuatorAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLActuatorAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLKnowledge
+entryRuleDCLKnowledge returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLKnowledgeRule()); }
+	 iv_ruleDCLKnowledge=ruleDCLKnowledge 
+	 { $current=$iv_ruleDCLKnowledge.current; } 
+	 EOF 
+;
+
+// Rule DCLKnowledge
+ruleDCLKnowledge returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='knowledge' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLKnowledgeAccess().getKnowledgeKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLKnowledgeAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLKnowledgeRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)(	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLKnowledgeAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLKnowledgeAccess().getInManagingSubsystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLKnowledgeRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLKnowledgeAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLKnowledgeAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLReferences
+entryRuleDCLReferences returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLReferencesRule()); }
+	 iv_ruleDCLReferences=ruleDCLReferences 
+	 { $current=$iv_ruleDCLReferences.current; } 
+	 EOF 
+;
+
+// Rule DCLReferences
+ruleDCLReferences returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='references' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLReferencesAccess().getReferencesKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLReferencesAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLReferencesRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"org.eclipse.xtext.common.Terminals.ID");
+	    }
+
+)
+)((	otherlv_2=',' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLReferencesAccess().getCommaKeyword_2_0_0());
+    }
+	otherlv_3='inManagingSubsystem:' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLReferencesAccess().getInManagingSubsystemKeyword_2_0_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLReferencesRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLReferencesAccess().getManagingSubsystemDCLManagingSubsystemCrossReference_2_0_2_0()); 
+	}
+
+)
+))
+    |(	otherlv_5=',' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLReferencesAccess().getCommaKeyword_2_1_0());
+    }
+	otherlv_6='inKnowledge:' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getDCLReferencesAccess().getInKnowledgeKeyword_2_1_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLReferencesRule());
+	        }
+        }
+	otherlv_7=RULE_ID
+	{
+		newLeafNode(otherlv_7, grammarAccess.getDCLReferencesAccess().getKnowledgeDCLKnowledgeCrossReference_2_1_2_0()); 
+	}
+
+)
+)))?	otherlv_8=';' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getDCLReferencesAccess().getSemicolonKeyword_3());
     }
 )
 ;
@@ -280,7 +1082,7 @@ ruleDCLLayer returns [EObject current=null]
     {
     	newLeafNode(otherlv_5, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_0_0());
     }
-	otherlv_6='inLayer: ' 
+	otherlv_6='inLayer:' 
     {
     	newLeafNode(otherlv_6, grammarAccess.getDCLLayerAccess().getInLayerKeyword_5_0_1());
     }
@@ -293,7 +1095,7 @@ ruleDCLLayer returns [EObject current=null]
         }
 	otherlv_7=RULE_ID
 	{
-		newLeafNode(otherlv_7, grammarAccess.getDCLLayerAccess().getLayerDCLStructureElementCrossReference_5_0_2_0()); 
+		newLeafNode(otherlv_7, grammarAccess.getDCLLayerAccess().getLayerDCLLayerCrossReference_5_0_2_0()); 
 	}
 
 )
@@ -302,7 +1104,7 @@ ruleDCLLayer returns [EObject current=null]
     {
     	newLeafNode(otherlv_8, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_1_0());
     }
-	otherlv_9='inSubSystem: ' 
+	otherlv_9='inSubSystem:' 
     {
     	newLeafNode(otherlv_9, grammarAccess.getDCLLayerAccess().getInSubSystemKeyword_5_1_1());
     }
@@ -315,7 +1117,7 @@ ruleDCLLayer returns [EObject current=null]
         }
 	otherlv_10=RULE_ID
 	{
-		newLeafNode(otherlv_10, grammarAccess.getDCLLayerAccess().getSubSystemDCLStructureElementCrossReference_5_1_2_0()); 
+		newLeafNode(otherlv_10, grammarAccess.getDCLLayerAccess().getSubSystemDCLSubSystemCrossReference_5_1_2_0()); 
 	}
 
 )
@@ -324,7 +1126,7 @@ ruleDCLLayer returns [EObject current=null]
     {
     	newLeafNode(otherlv_11, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_2_0());
     }
-	otherlv_12='inComponent: ' 
+	otherlv_12='inComponent:' 
     {
     	newLeafNode(otherlv_12, grammarAccess.getDCLLayerAccess().getInComponentKeyword_5_2_1());
     }
@@ -337,7 +1139,7 @@ ruleDCLLayer returns [EObject current=null]
         }
 	otherlv_13=RULE_ID
 	{
-		newLeafNode(otherlv_13, grammarAccess.getDCLLayerAccess().getComponentDCLStructureElementCrossReference_5_2_2_0()); 
+		newLeafNode(otherlv_13, grammarAccess.getDCLLayerAccess().getComponentDCLComponentCrossReference_5_2_2_0()); 
 	}
 
 )
@@ -392,7 +1194,7 @@ ruleDCLComponent returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getDCLComponentAccess().getCommaKeyword_2_0_0());
     }
-	otherlv_3='inLayer: ' 
+	otherlv_3='inLayer:' 
     {
     	newLeafNode(otherlv_3, grammarAccess.getDCLComponentAccess().getInLayerKeyword_2_0_1());
     }
@@ -405,7 +1207,7 @@ ruleDCLComponent returns [EObject current=null]
         }
 	otherlv_4=RULE_ID
 	{
-		newLeafNode(otherlv_4, grammarAccess.getDCLComponentAccess().getLayerDCLStructureElementCrossReference_2_0_2_0()); 
+		newLeafNode(otherlv_4, grammarAccess.getDCLComponentAccess().getLayerDCLLayerCrossReference_2_0_2_0()); 
 	}
 
 )
@@ -414,7 +1216,7 @@ ruleDCLComponent returns [EObject current=null]
     {
     	newLeafNode(otherlv_5, grammarAccess.getDCLComponentAccess().getCommaKeyword_2_1_0());
     }
-	otherlv_6='inSubSystem: ' 
+	otherlv_6='inSubSystem:' 
     {
     	newLeafNode(otherlv_6, grammarAccess.getDCLComponentAccess().getInSubSystemKeyword_2_1_1());
     }
@@ -427,7 +1229,7 @@ ruleDCLComponent returns [EObject current=null]
         }
 	otherlv_7=RULE_ID
 	{
-		newLeafNode(otherlv_7, grammarAccess.getDCLComponentAccess().getSubSystemDCLStructureElementCrossReference_2_1_2_0()); 
+		newLeafNode(otherlv_7, grammarAccess.getDCLComponentAccess().getSubSystemDCLSubSystemCrossReference_2_1_2_0()); 
 	}
 
 )
@@ -478,7 +1280,7 @@ ruleDCLComponentInterface returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='ofComponent ' 
+)	otherlv_2='ofComponent' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getDCLComponentInterfaceAccess().getOfComponentKeyword_2());
     }
@@ -499,7 +1301,7 @@ ruleDCLComponentInterface returns [EObject current=null]
     {
     	newLeafNode(otherlv_4, grammarAccess.getDCLComponentInterfaceAccess().getCommaKeyword_4_0());
     }
-	otherlv_5='type: ' 
+	otherlv_5='type:' 
     {
     	newLeafNode(otherlv_5, grammarAccess.getDCLComponentInterfaceAccess().getTypeKeyword_4_1());
     }
@@ -623,7 +1425,7 @@ ruleDCLSubSystem returns [EObject current=null]
     {
     	newLeafNode(otherlv_2, grammarAccess.getDCLSubSystemAccess().getCommaKeyword_2_0());
     }
-	otherlv_3='inSubSystem: ' 
+	otherlv_3='inSubSystem:' 
     {
     	newLeafNode(otherlv_3, grammarAccess.getDCLSubSystemAccess().getInSubSystemKeyword_2_1());
     }
@@ -636,7 +1438,7 @@ ruleDCLSubSystem returns [EObject current=null]
         }
 	otherlv_4=RULE_ID
 	{
-		newLeafNode(otherlv_4, grammarAccess.getDCLSubSystemAccess().getSubSystemDCLStructureElementCrossReference_2_2_0()); 
+		newLeafNode(otherlv_4, grammarAccess.getDCLSubSystemAccess().getSubSystemDCLSubSystemCrossReference_2_2_0()); 
 	}
 
 )

@@ -6,12 +6,22 @@ import com.br.terra.dcl.dCL.BasicType;
 import com.br.terra.dcl.dCL.Can;
 import com.br.terra.dcl.dCL.Cannot;
 import com.br.terra.dcl.dCL.DCDecl;
+import com.br.terra.dcl.dCL.DCLActuator;
+import com.br.terra.dcl.dCL.DCLAnalyzer;
 import com.br.terra.dcl.dCL.DCLComponent;
 import com.br.terra.dcl.dCL.DCLComponentInterface;
+import com.br.terra.dcl.dCL.DCLExecutor;
 import com.br.terra.dcl.dCL.DCLFactory;
+import com.br.terra.dcl.dCL.DCLKnowledge;
 import com.br.terra.dcl.dCL.DCLLayer;
+import com.br.terra.dcl.dCL.DCLManagedSubsystem;
+import com.br.terra.dcl.dCL.DCLManagingSubsystem;
 import com.br.terra.dcl.dCL.DCLModule;
+import com.br.terra.dcl.dCL.DCLMonitor;
 import com.br.terra.dcl.dCL.DCLPackage;
+import com.br.terra.dcl.dCL.DCLPlanner;
+import com.br.terra.dcl.dCL.DCLReferences;
+import com.br.terra.dcl.dCL.DCLSensor;
 import com.br.terra.dcl.dCL.DCLStructureElement;
 import com.br.terra.dcl.dCL.DCLSubSystem;
 import com.br.terra.dcl.dCL.ElementType;
@@ -50,6 +60,76 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * @generated
    */
   private EClass dclStructureElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclManagedSubsystemEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclManagingSubsystemEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclMonitorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclPlannerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclAnalyzerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclExecutorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclSensorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclActuatorEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclKnowledgeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dclReferencesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -267,6 +347,216 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
   public EAttribute getDCLStructureElement_Name()
   {
     return (EAttribute)dclStructureElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLManagedSubsystem()
+  {
+    return dclManagedSubsystemEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLManagedSubsystem_ManagedSubsystem()
+  {
+    return (EReference)dclManagedSubsystemEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLManagingSubsystem()
+  {
+    return dclManagingSubsystemEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLManagingSubsystem_ManagingSubsystem()
+  {
+    return (EReference)dclManagingSubsystemEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLMonitor()
+  {
+    return dclMonitorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLMonitor_ManagingSubsystem()
+  {
+    return (EReference)dclMonitorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLPlanner()
+  {
+    return dclPlannerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLPlanner_ManagingSubsystem()
+  {
+    return (EReference)dclPlannerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLAnalyzer()
+  {
+    return dclAnalyzerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLAnalyzer_ManagingSubsystem()
+  {
+    return (EReference)dclAnalyzerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLExecutor()
+  {
+    return dclExecutorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLExecutor_ManagingSubsystem()
+  {
+    return (EReference)dclExecutorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLSensor()
+  {
+    return dclSensorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLSensor_ManagingSubsystem()
+  {
+    return (EReference)dclSensorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLActuator()
+  {
+    return dclActuatorEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLActuator_ManagingSubsystem()
+  {
+    return (EReference)dclActuatorEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLKnowledge()
+  {
+    return dclKnowledgeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLKnowledge_ManagingSubsystem()
+  {
+    return (EReference)dclKnowledgeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDCLReferences()
+  {
+    return dclReferencesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLReferences_ManagingSubsystem()
+  {
+    return (EReference)dclReferencesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDCLReferences_Knowledge()
+  {
+    return (EReference)dclReferencesEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -716,6 +1006,37 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
     dclStructureElementEClass = createEClass(DCL_STRUCTURE_ELEMENT);
     createEAttribute(dclStructureElementEClass, DCL_STRUCTURE_ELEMENT__NAME);
 
+    dclManagedSubsystemEClass = createEClass(DCL_MANAGED_SUBSYSTEM);
+    createEReference(dclManagedSubsystemEClass, DCL_MANAGED_SUBSYSTEM__MANAGED_SUBSYSTEM);
+
+    dclManagingSubsystemEClass = createEClass(DCL_MANAGING_SUBSYSTEM);
+    createEReference(dclManagingSubsystemEClass, DCL_MANAGING_SUBSYSTEM__MANAGING_SUBSYSTEM);
+
+    dclMonitorEClass = createEClass(DCL_MONITOR);
+    createEReference(dclMonitorEClass, DCL_MONITOR__MANAGING_SUBSYSTEM);
+
+    dclPlannerEClass = createEClass(DCL_PLANNER);
+    createEReference(dclPlannerEClass, DCL_PLANNER__MANAGING_SUBSYSTEM);
+
+    dclAnalyzerEClass = createEClass(DCL_ANALYZER);
+    createEReference(dclAnalyzerEClass, DCL_ANALYZER__MANAGING_SUBSYSTEM);
+
+    dclExecutorEClass = createEClass(DCL_EXECUTOR);
+    createEReference(dclExecutorEClass, DCL_EXECUTOR__MANAGING_SUBSYSTEM);
+
+    dclSensorEClass = createEClass(DCL_SENSOR);
+    createEReference(dclSensorEClass, DCL_SENSOR__MANAGING_SUBSYSTEM);
+
+    dclActuatorEClass = createEClass(DCL_ACTUATOR);
+    createEReference(dclActuatorEClass, DCL_ACTUATOR__MANAGING_SUBSYSTEM);
+
+    dclKnowledgeEClass = createEClass(DCL_KNOWLEDGE);
+    createEReference(dclKnowledgeEClass, DCL_KNOWLEDGE__MANAGING_SUBSYSTEM);
+
+    dclReferencesEClass = createEClass(DCL_REFERENCES);
+    createEReference(dclReferencesEClass, DCL_REFERENCES__MANAGING_SUBSYSTEM);
+    createEReference(dclReferencesEClass, DCL_REFERENCES__KNOWLEDGE);
+
     dclLayerEClass = createEClass(DCL_LAYER);
     createEAttribute(dclLayerEClass, DCL_LAYER__LEVEL);
     createEReference(dclLayerEClass, DCL_LAYER__LAYER);
@@ -802,6 +1123,16 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    dclManagedSubsystemEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclManagingSubsystemEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclMonitorEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclPlannerEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclAnalyzerEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclExecutorEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclSensorEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclActuatorEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclKnowledgeEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclReferencesEClass.getESuperTypes().add(this.getDCLStructureElement());
     dclLayerEClass.getESuperTypes().add(this.getDCLStructureElement());
     dclComponentEClass.getESuperTypes().add(this.getDCLStructureElement());
     dclComponentInterfaceEClass.getESuperTypes().add(this.getDCLStructureElement());
@@ -818,15 +1149,46 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
     initEClass(dclStructureElementEClass, DCLStructureElement.class, "DCLStructureElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDCLStructureElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, DCLStructureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(dclManagedSubsystemEClass, DCLManagedSubsystem.class, "DCLManagedSubsystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLManagedSubsystem_ManagedSubsystem(), this.getDCLManagedSubsystem(), null, "managedSubsystem", null, 0, 1, DCLManagedSubsystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclManagingSubsystemEClass, DCLManagingSubsystem.class, "DCLManagingSubsystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLManagingSubsystem_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLManagingSubsystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclMonitorEClass, DCLMonitor.class, "DCLMonitor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLMonitor_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLMonitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclPlannerEClass, DCLPlanner.class, "DCLPlanner", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLPlanner_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLPlanner.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclAnalyzerEClass, DCLAnalyzer.class, "DCLAnalyzer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLAnalyzer_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLAnalyzer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclExecutorEClass, DCLExecutor.class, "DCLExecutor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLExecutor_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLExecutor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclSensorEClass, DCLSensor.class, "DCLSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLSensor_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLSensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclActuatorEClass, DCLActuator.class, "DCLActuator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLActuator_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLActuator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclKnowledgeEClass, DCLKnowledge.class, "DCLKnowledge", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLKnowledge_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLKnowledge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(dclReferencesEClass, DCLReferences.class, "DCLReferences", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDCLReferences_ManagingSubsystem(), this.getDCLManagingSubsystem(), null, "managingSubsystem", null, 0, 1, DCLReferences.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCLReferences_Knowledge(), this.getDCLKnowledge(), null, "knowledge", null, 0, 1, DCLReferences.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(dclLayerEClass, DCLLayer.class, "DCLLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDCLLayer_Level(), ecorePackage.getEInt(), "level", null, 0, 1, DCLLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDCLLayer_Layer(), this.getDCLStructureElement(), null, "layer", null, 0, 1, DCLLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDCLLayer_SubSystem(), this.getDCLStructureElement(), null, "subSystem", null, 0, 1, DCLLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDCLLayer_Component(), this.getDCLStructureElement(), null, "component", null, 0, 1, DCLLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCLLayer_Layer(), this.getDCLLayer(), null, "layer", null, 0, 1, DCLLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCLLayer_SubSystem(), this.getDCLSubSystem(), null, "subSystem", null, 0, 1, DCLLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCLLayer_Component(), this.getDCLComponent(), null, "component", null, 0, 1, DCLLayer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dclComponentEClass, DCLComponent.class, "DCLComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDCLComponent_Layer(), this.getDCLStructureElement(), null, "layer", null, 0, 1, DCLComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDCLComponent_SubSystem(), this.getDCLStructureElement(), null, "subSystem", null, 0, 1, DCLComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCLComponent_Layer(), this.getDCLLayer(), null, "layer", null, 0, 1, DCLComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCLComponent_SubSystem(), this.getDCLSubSystem(), null, "subSystem", null, 0, 1, DCLComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dclComponentInterfaceEClass, DCLComponentInterface.class, "DCLComponentInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDCLComponentInterface_Component(), this.getDCLStructureElement(), null, "component", null, 0, 1, DCLComponentInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -836,7 +1198,7 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
     initEAttribute(getInterfaceType_InterfaceTypeName(), ecorePackage.getEString(), "interfaceTypeName", null, 0, 1, InterfaceType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dclSubSystemEClass, DCLSubSystem.class, "DCLSubSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDCLSubSystem_SubSystem(), this.getDCLStructureElement(), null, "subSystem", null, 0, 1, DCLSubSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCLSubSystem_SubSystem(), this.getDCLSubSystem(), null, "subSystem", null, 0, 1, DCLSubSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dclModuleEClass, DCLModule.class, "DCLModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

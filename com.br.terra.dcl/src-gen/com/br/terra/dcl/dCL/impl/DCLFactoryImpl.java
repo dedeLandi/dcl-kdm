@@ -66,6 +66,16 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
     {
       case DCLPackage.MODEL: return createModel();
       case DCLPackage.DCL_STRUCTURE_ELEMENT: return createDCLStructureElement();
+      case DCLPackage.DCL_MANAGED_SUBSYSTEM: return createDCLManagedSubsystem();
+      case DCLPackage.DCL_MANAGING_SUBSYSTEM: return createDCLManagingSubsystem();
+      case DCLPackage.DCL_MONITOR: return createDCLMonitor();
+      case DCLPackage.DCL_PLANNER: return createDCLPlanner();
+      case DCLPackage.DCL_ANALYZER: return createDCLAnalyzer();
+      case DCLPackage.DCL_EXECUTOR: return createDCLExecutor();
+      case DCLPackage.DCL_SENSOR: return createDCLSensor();
+      case DCLPackage.DCL_ACTUATOR: return createDCLActuator();
+      case DCLPackage.DCL_KNOWLEDGE: return createDCLKnowledge();
+      case DCLPackage.DCL_REFERENCES: return createDCLReferences();
       case DCLPackage.DCL_LAYER: return createDCLLayer();
       case DCLPackage.DCL_COMPONENT: return createDCLComponent();
       case DCLPackage.DCL_COMPONENT_INTERFACE: return createDCLComponentInterface();
@@ -106,6 +116,116 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
   {
     DCLStructureElementImpl dclStructureElement = new DCLStructureElementImpl();
     return dclStructureElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLManagedSubsystem createDCLManagedSubsystem()
+  {
+    DCLManagedSubsystemImpl dclManagedSubsystem = new DCLManagedSubsystemImpl();
+    return dclManagedSubsystem;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLManagingSubsystem createDCLManagingSubsystem()
+  {
+    DCLManagingSubsystemImpl dclManagingSubsystem = new DCLManagingSubsystemImpl();
+    return dclManagingSubsystem;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLMonitor createDCLMonitor()
+  {
+    DCLMonitorImpl dclMonitor = new DCLMonitorImpl();
+    return dclMonitor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLPlanner createDCLPlanner()
+  {
+    DCLPlannerImpl dclPlanner = new DCLPlannerImpl();
+    return dclPlanner;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLAnalyzer createDCLAnalyzer()
+  {
+    DCLAnalyzerImpl dclAnalyzer = new DCLAnalyzerImpl();
+    return dclAnalyzer;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLExecutor createDCLExecutor()
+  {
+    DCLExecutorImpl dclExecutor = new DCLExecutorImpl();
+    return dclExecutor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLSensor createDCLSensor()
+  {
+    DCLSensorImpl dclSensor = new DCLSensorImpl();
+    return dclSensor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLActuator createDCLActuator()
+  {
+    DCLActuatorImpl dclActuator = new DCLActuatorImpl();
+    return dclActuator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLKnowledge createDCLKnowledge()
+  {
+    DCLKnowledgeImpl dclKnowledge = new DCLKnowledgeImpl();
+    return dclKnowledge;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DCLReferences createDCLReferences()
+  {
+    DCLReferencesImpl dclReferences = new DCLReferencesImpl();
+    return dclReferences;
   }
 
   /**

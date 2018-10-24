@@ -6,9 +6,19 @@ import org.eclipse.gmt.modisco.omg.kdm.structure.AbstractStructureElement;
 import org.eclipse.gmt.modisco.omg.kdm.structure.StructureFactory;
 import org.eclipse.gmt.modisco.omg.kdm.structure.StructureModel;
 
+import com.br.terra.dcl.dCL.DCLActuator;
+import com.br.terra.dcl.dCL.DCLAnalyzer;
 import com.br.terra.dcl.dCL.DCLComponent;
+import com.br.terra.dcl.dCL.DCLExecutor;
+import com.br.terra.dcl.dCL.DCLKnowledge;
 import com.br.terra.dcl.dCL.DCLLayer;
+import com.br.terra.dcl.dCL.DCLManagedSubsystem;
+import com.br.terra.dcl.dCL.DCLManagingSubsystem;
 import com.br.terra.dcl.dCL.DCLModule;
+import com.br.terra.dcl.dCL.DCLMonitor;
+import com.br.terra.dcl.dCL.DCLPlanner;
+import com.br.terra.dcl.dCL.DCLReferences;
+import com.br.terra.dcl.dCL.DCLSensor;
 import com.br.terra.dcl.dCL.DCLStructureElement;
 import com.br.terra.dcl.dCL.DCLSubSystem;
 import com.br.terra.dcl.kdmGeneration.actions.DCL2KDM;
@@ -79,6 +89,67 @@ public class ArchitecturalGenerator {
 
 			} else if (dclStructureElement instanceof DCLModule) {
 				structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+			} else if (dclStructureElement instanceof DCLManagedSubsystem) {
+
+				if(((DCLManagedSubsystem) dclStructureElement).getManagedSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLManagingSubsystem) {
+
+				if(((DCLManagingSubsystem) dclStructureElement).getManagingSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLMonitor) {
+
+				if(((DCLMonitor) dclStructureElement).getManagingSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLPlanner) {
+
+				if(((DCLPlanner) dclStructureElement).getManagingSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLAnalyzer) {
+
+				if(((DCLAnalyzer) dclStructureElement).getManagingSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLExecutor) {
+
+				if(((DCLExecutor) dclStructureElement).getManagingSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLSensor) {
+
+				if(((DCLSensor) dclStructureElement).getManagingSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLActuator) {
+
+				if(((DCLActuator) dclStructureElement).getManagingSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLKnowledge) {
+
+				if(((DCLKnowledge) dclStructureElement).getManagingSubsystem() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+				}	
+
+			} else if (dclStructureElement instanceof DCLReferences) {
+
+				if(((DCLReferences) dclStructureElement).getManagingSubsystem() == null && 
+						((DCLReferences) dclStructureElement).getKnowledge() == null){
+					structureModel.getStructureElement().add(this.dCLEntity2KDMEntity(dclStructureElement));
+
+				}	
 			}
 		}
 	}
@@ -107,11 +178,73 @@ public class ArchitecturalGenerator {
 					this.createElementsWithHierarchy(structureModel, dclStructureElement);
 				}
 
-			} else if (dclStructureElement instanceof DCLSubSystem) {
+			}else if (dclStructureElement instanceof DCLSubSystem) {
 
 				if(((DCLSubSystem) dclStructureElement).getSubSystem() != null){
 					this.createElementsWithHierarchy(structureModel, dclStructureElement);
 				}
+				
+			}else if (dclStructureElement instanceof DCLManagedSubsystem) {
+
+				if(((DCLManagedSubsystem) dclStructureElement).getManagedSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+				
+			}else if (dclStructureElement instanceof DCLManagingSubsystem) {
+
+				if(((DCLManagingSubsystem) dclStructureElement).getManagingSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+				
+			}else if (dclStructureElement instanceof DCLMonitor) {
+				
+				if(((DCLMonitor) dclStructureElement).getManagingSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+
+			}else if (dclStructureElement instanceof DCLPlanner) {
+				
+				if(((DCLPlanner) dclStructureElement).getManagingSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+
+			}else if (dclStructureElement instanceof DCLAnalyzer) {
+				
+				if(((DCLAnalyzer) dclStructureElement).getManagingSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+
+			}else if (dclStructureElement instanceof DCLExecutor) {
+				
+				if(((DCLExecutor) dclStructureElement).getManagingSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+
+			}else if (dclStructureElement instanceof DCLSensor) {
+				
+				if(((DCLSensor) dclStructureElement).getManagingSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+
+			}else if (dclStructureElement instanceof DCLActuator) {
+				
+				if(((DCLActuator) dclStructureElement).getManagingSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+
+			}else if (dclStructureElement instanceof DCLKnowledge) {
+				
+				if(((DCLKnowledge) dclStructureElement).getManagingSubsystem() != null){
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+
+			}else if (dclStructureElement instanceof DCLReferences) {
+				
+				if(((DCLReferences) dclStructureElement).getManagingSubsystem() != null ||
+						((DCLReferences) dclStructureElement).getKnowledge() != null) {
+					this.createElementsWithHierarchy(structureModel, dclStructureElement);
+				}
+
 			}
 
 		}
@@ -189,6 +322,124 @@ public class ArchitecturalGenerator {
 					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
 				}
 			}
+		}else if (elementToCreate instanceof DCLManagedSubsystem) {
+	
+			if(((DCLManagedSubsystem) elementToCreate).getManagedSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLManagedSubsystem) elementToCreate).getManagedSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLManagedSubsystem) elementToCreate).getManagedSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLManagedSubsystem) elementToCreate).getManagedSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLManagingSubsystem) {
+	
+			if(((DCLManagingSubsystem) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLManagingSubsystem) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLManagingSubsystem) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLManagingSubsystem) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLMonitor) {
+	
+			if(((DCLMonitor) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLMonitor) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLMonitor) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLMonitor) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLPlanner) {
+	
+			if(((DCLPlanner) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLPlanner) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLPlanner) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLPlanner) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLAnalyzer) {
+	
+			if(((DCLAnalyzer) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLAnalyzer) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLAnalyzer) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLAnalyzer) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLExecutor) {
+	
+			if(((DCLExecutor) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLExecutor) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLExecutor) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLExecutor) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLSensor) {
+	
+			if(((DCLSensor) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLSensor) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLSensor) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLSensor) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLActuator) {
+	
+			if(((DCLActuator) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLActuator) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLActuator) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLActuator) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLKnowledge) {
+	
+			if(((DCLKnowledge) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLKnowledge) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLKnowledge) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLKnowledge) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
+		}else if (elementToCreate instanceof DCLReferences) {
+	
+			if(((DCLReferences) elementToCreate).getManagingSubsystem() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLReferences) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLReferences) elementToCreate).getManagingSubsystem());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLReferences) elementToCreate).getManagingSubsystem()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}else if(((DCLReferences) elementToCreate).getKnowledge() != null){
+				AbstractStructureElement abstractStructureElementParent = GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLReferences) elementToCreate).getManagingSubsystem());
+				if(abstractStructureElementParent == null){
+					this.createElementsWithHierarchy(structureModel, ((DCLReferences) elementToCreate).getKnowledge());
+					GenericMethodsArchitecture.findArchitecturaElement(structureModel, ((DCLReferences) elementToCreate).getKnowledge()).getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}else{
+					abstractStructureElementParent.getStructureElement().add(this.dCLEntity2KDMEntity(elementToCreate));
+				}
+			}
 		}
 	}
 
@@ -205,17 +456,23 @@ public class ArchitecturalGenerator {
 			element = StructureFactory.eINSTANCE.createLayer();
 			element.setName(dclStructureElement.getName());
 
-		}else if (dclStructureElement instanceof DCLComponent) {
-
-			element = StructureFactory.eINSTANCE.createComponent();
-			element.setName(dclStructureElement.getName());
-
 		} else if (dclStructureElement instanceof DCLSubSystem) {
 
 			element = StructureFactory.eINSTANCE.createSubsystem();
 			element.setName(dclStructureElement.getName());
 
-		} else if (dclStructureElement instanceof DCLModule) {
+		} else if (dclStructureElement instanceof DCLModule ||
+				dclStructureElement instanceof DCLComponent ||
+				dclStructureElement instanceof DCLManagedSubsystem ||
+				dclStructureElement instanceof DCLManagingSubsystem ||
+				dclStructureElement instanceof DCLMonitor ||
+				dclStructureElement instanceof DCLPlanner ||
+				dclStructureElement instanceof DCLAnalyzer ||
+				dclStructureElement instanceof DCLExecutor ||
+				dclStructureElement instanceof DCLSensor ||
+				dclStructureElement instanceof DCLActuator ||
+				dclStructureElement instanceof DCLKnowledge ||
+				dclStructureElement instanceof DCLReferences) {
 
 			element = StructureFactory.eINSTANCE.createComponent();
 			element.setName(dclStructureElement.getName());

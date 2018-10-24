@@ -7,11 +7,21 @@ import com.br.terra.dcl.dCL.BasicType;
 import com.br.terra.dcl.dCL.Can;
 import com.br.terra.dcl.dCL.Cannot;
 import com.br.terra.dcl.dCL.DCDecl;
+import com.br.terra.dcl.dCL.DCLActuator;
+import com.br.terra.dcl.dCL.DCLAnalyzer;
 import com.br.terra.dcl.dCL.DCLComponent;
 import com.br.terra.dcl.dCL.DCLComponentInterface;
+import com.br.terra.dcl.dCL.DCLExecutor;
+import com.br.terra.dcl.dCL.DCLKnowledge;
 import com.br.terra.dcl.dCL.DCLLayer;
+import com.br.terra.dcl.dCL.DCLManagedSubsystem;
+import com.br.terra.dcl.dCL.DCLManagingSubsystem;
 import com.br.terra.dcl.dCL.DCLModule;
+import com.br.terra.dcl.dCL.DCLMonitor;
 import com.br.terra.dcl.dCL.DCLPackage;
+import com.br.terra.dcl.dCL.DCLPlanner;
+import com.br.terra.dcl.dCL.DCLReferences;
+import com.br.terra.dcl.dCL.DCLSensor;
 import com.br.terra.dcl.dCL.DCLSubSystem;
 import com.br.terra.dcl.dCL.EntityType;
 import com.br.terra.dcl.dCL.InterfaceType;
@@ -58,17 +68,47 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case DCLPackage.DC_DECL:
 				sequence_DCDecl(context, (DCDecl) semanticObject); 
 				return; 
+			case DCLPackage.DCL_ACTUATOR:
+				sequence_DCLActuator(context, (DCLActuator) semanticObject); 
+				return; 
+			case DCLPackage.DCL_ANALYZER:
+				sequence_DCLAnalyzer(context, (DCLAnalyzer) semanticObject); 
+				return; 
 			case DCLPackage.DCL_COMPONENT:
 				sequence_DCLComponent(context, (DCLComponent) semanticObject); 
 				return; 
 			case DCLPackage.DCL_COMPONENT_INTERFACE:
 				sequence_DCLComponentInterface(context, (DCLComponentInterface) semanticObject); 
 				return; 
+			case DCLPackage.DCL_EXECUTOR:
+				sequence_DCLExecutor(context, (DCLExecutor) semanticObject); 
+				return; 
+			case DCLPackage.DCL_KNOWLEDGE:
+				sequence_DCLKnowledge(context, (DCLKnowledge) semanticObject); 
+				return; 
 			case DCLPackage.DCL_LAYER:
 				sequence_DCLLayer(context, (DCLLayer) semanticObject); 
 				return; 
+			case DCLPackage.DCL_MANAGED_SUBSYSTEM:
+				sequence_DCLManagedSubsystem(context, (DCLManagedSubsystem) semanticObject); 
+				return; 
+			case DCLPackage.DCL_MANAGING_SUBSYSTEM:
+				sequence_DCLManagingSubsystem(context, (DCLManagingSubsystem) semanticObject); 
+				return; 
 			case DCLPackage.DCL_MODULE:
 				sequence_DCLModule(context, (DCLModule) semanticObject); 
+				return; 
+			case DCLPackage.DCL_MONITOR:
+				sequence_DCLMonitor(context, (DCLMonitor) semanticObject); 
+				return; 
+			case DCLPackage.DCL_PLANNER:
+				sequence_DCLPlanner(context, (DCLPlanner) semanticObject); 
+				return; 
+			case DCLPackage.DCL_REFERENCES:
+				sequence_DCLReferences(context, (DCLReferences) semanticObject); 
+				return; 
+			case DCLPackage.DCL_SENSOR:
+				sequence_DCLSensor(context, (DCLSensor) semanticObject); 
 				return; 
 			case DCLPackage.DCL_SUB_SYSTEM:
 				sequence_DCLSubSystem(context, (DCLSubSystem) semanticObject); 
@@ -165,6 +205,32 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     DCLStructureElement returns DCLActuator
+	 *     DCLActuator returns DCLActuator
+	 *
+	 * Constraint:
+	 *     (name=ID managingSubsystem=[DCLManagingSubsystem|ID]?)
+	 */
+	protected void sequence_DCLActuator(ISerializationContext context, DCLActuator semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DCLStructureElement returns DCLAnalyzer
+	 *     DCLAnalyzer returns DCLAnalyzer
+	 *
+	 * Constraint:
+	 *     (name=ID managingSubsystem=[DCLManagingSubsystem|ID]?)
+	 */
+	protected void sequence_DCLAnalyzer(ISerializationContext context, DCLAnalyzer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     DCLStructureElement returns DCLComponentInterface
 	 *     DCLComponentInterface returns DCLComponentInterface
 	 *
@@ -182,7 +248,7 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDCLComponentInterfaceAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getDCLComponentInterfaceAccess().getComponentDCLStructureElementIDTerminalRuleCall_3_0_1(), semanticObject.getComponent());
+		feeder.accept(grammarAccess.getDCLComponentInterfaceAccess().getComponentDCLStructureElementIDTerminalRuleCall_3_0_1(), semanticObject.eGet(DCLPackage.Literals.DCL_COMPONENT_INTERFACE__COMPONENT, false));
 		feeder.accept(grammarAccess.getDCLComponentInterfaceAccess().getInterfaceTypeInterfaceTypeParserRuleCall_4_2_0(), semanticObject.getInterfaceType());
 		feeder.finish();
 	}
@@ -194,9 +260,35 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DCLComponent returns DCLComponent
 	 *
 	 * Constraint:
-	 *     (name=ID (layer=[DCLStructureElement|ID] | subSystem=[DCLStructureElement|ID])?)
+	 *     (name=ID (layer=[DCLLayer|ID] | subSystem=[DCLSubSystem|ID])?)
 	 */
 	protected void sequence_DCLComponent(ISerializationContext context, DCLComponent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DCLStructureElement returns DCLExecutor
+	 *     DCLExecutor returns DCLExecutor
+	 *
+	 * Constraint:
+	 *     (name=ID managingSubsystem=[DCLManagingSubsystem|ID]?)
+	 */
+	protected void sequence_DCLExecutor(ISerializationContext context, DCLExecutor semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DCLStructureElement returns DCLKnowledge
+	 *     DCLKnowledge returns DCLKnowledge
+	 *
+	 * Constraint:
+	 *     (name=ID managingSubsystem=[DCLManagingSubsystem|ID]?)
+	 */
+	protected void sequence_DCLKnowledge(ISerializationContext context, DCLKnowledge semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -207,9 +299,35 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DCLLayer returns DCLLayer
 	 *
 	 * Constraint:
-	 *     (name=ID level=INT (layer=[DCLStructureElement|ID] | subSystem=[DCLStructureElement|ID] | component=[DCLStructureElement|ID])?)
+	 *     (name=ID level=INT (layer=[DCLLayer|ID] | subSystem=[DCLSubSystem|ID] | component=[DCLComponent|ID])?)
 	 */
 	protected void sequence_DCLLayer(ISerializationContext context, DCLLayer semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DCLStructureElement returns DCLManagedSubsystem
+	 *     DCLManagedSubsystem returns DCLManagedSubsystem
+	 *
+	 * Constraint:
+	 *     (name=ID managedSubsystem=[DCLManagedSubsystem|ID]?)
+	 */
+	protected void sequence_DCLManagedSubsystem(ISerializationContext context, DCLManagedSubsystem semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DCLStructureElement returns DCLManagingSubsystem
+	 *     DCLManagingSubsystem returns DCLManagingSubsystem
+	 *
+	 * Constraint:
+	 *     (name=ID managingSubsystem=[DCLManagingSubsystem|ID]?)
+	 */
+	protected void sequence_DCLManagingSubsystem(ISerializationContext context, DCLManagingSubsystem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -235,11 +353,63 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     DCLStructureElement returns DCLMonitor
+	 *     DCLMonitor returns DCLMonitor
+	 *
+	 * Constraint:
+	 *     (name=ID managingSubsystem=[DCLManagingSubsystem|ID]?)
+	 */
+	protected void sequence_DCLMonitor(ISerializationContext context, DCLMonitor semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DCLStructureElement returns DCLPlanner
+	 *     DCLPlanner returns DCLPlanner
+	 *
+	 * Constraint:
+	 *     (name=ID managingSubsystem=[DCLManagingSubsystem|ID]?)
+	 */
+	protected void sequence_DCLPlanner(ISerializationContext context, DCLPlanner semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DCLStructureElement returns DCLReferences
+	 *     DCLReferences returns DCLReferences
+	 *
+	 * Constraint:
+	 *     (name=ID (managingSubsystem=[DCLManagingSubsystem|ID] | knowledge=[DCLKnowledge|ID])?)
+	 */
+	protected void sequence_DCLReferences(ISerializationContext context, DCLReferences semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DCLStructureElement returns DCLSensor
+	 *     DCLSensor returns DCLSensor
+	 *
+	 * Constraint:
+	 *     (name=ID managingSubsystem=[DCLManagingSubsystem|ID]?)
+	 */
+	protected void sequence_DCLSensor(ISerializationContext context, DCLSensor semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     DCLStructureElement returns DCLSubSystem
 	 *     DCLSubSystem returns DCLSubSystem
 	 *
 	 * Constraint:
-	 *     (name=ID subSystem=[DCLStructureElement|ID]?)
+	 *     (name=ID subSystem=[DCLSubSystem|ID]?)
 	 */
 	protected void sequence_DCLSubSystem(ISerializationContext context, DCLSubSystem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

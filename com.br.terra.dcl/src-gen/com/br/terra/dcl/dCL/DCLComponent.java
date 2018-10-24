@@ -31,12 +31,12 @@ public interface DCLComponent extends DCLStructureElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Layer</em>' reference.
-   * @see #setLayer(DCLStructureElement)
+   * @see #setLayer(DCLLayer)
    * @see com.br.terra.dcl.dCL.DCLPackage#getDCLComponent_Layer()
    * @model
    * @generated
    */
-  DCLStructureElement getLayer();
+  DCLLayer getLayer();
 
   /**
    * Sets the value of the '{@link com.br.terra.dcl.dCL.DCLComponent#getLayer <em>Layer</em>}' reference.
@@ -46,7 +46,7 @@ public interface DCLComponent extends DCLStructureElement
    * @see #getLayer()
    * @generated
    */
-  void setLayer(DCLStructureElement value);
+  void setLayer(DCLLayer value);
 
   /**
    * Returns the value of the '<em><b>Sub System</b></em>' reference.
@@ -57,12 +57,12 @@ public interface DCLComponent extends DCLStructureElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Sub System</em>' reference.
-   * @see #setSubSystem(DCLStructureElement)
+   * @see #setSubSystem(DCLSubSystem)
    * @see com.br.terra.dcl.dCL.DCLPackage#getDCLComponent_SubSystem()
    * @model
    * @generated
    */
-  DCLStructureElement getSubSystem();
+  DCLSubSystem getSubSystem();
 
   /**
    * Sets the value of the '{@link com.br.terra.dcl.dCL.DCLComponent#getSubSystem <em>Sub System</em>}' reference.
@@ -72,6 +72,6 @@ public interface DCLComponent extends DCLStructureElement
    * @see #getSubSystem()
    * @generated
    */
-  void setSubSystem(DCLStructureElement value);
+  void setSubSystem(DCLSubSystem value);
 
 } // DCLComponent

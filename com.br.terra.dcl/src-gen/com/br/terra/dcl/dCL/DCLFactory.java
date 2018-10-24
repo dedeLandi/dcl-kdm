@@ -41,6 +41,96 @@ public interface DCLFactory extends EFactory
   DCLStructureElement createDCLStructureElement();
 
   /**
+   * Returns a new object of class '<em>Managed Subsystem</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Managed Subsystem</em>'.
+   * @generated
+   */
+  DCLManagedSubsystem createDCLManagedSubsystem();
+
+  /**
+   * Returns a new object of class '<em>Managing Subsystem</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Managing Subsystem</em>'.
+   * @generated
+   */
+  DCLManagingSubsystem createDCLManagingSubsystem();
+
+  /**
+   * Returns a new object of class '<em>Monitor</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Monitor</em>'.
+   * @generated
+   */
+  DCLMonitor createDCLMonitor();
+
+  /**
+   * Returns a new object of class '<em>Planner</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Planner</em>'.
+   * @generated
+   */
+  DCLPlanner createDCLPlanner();
+
+  /**
+   * Returns a new object of class '<em>Analyzer</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Analyzer</em>'.
+   * @generated
+   */
+  DCLAnalyzer createDCLAnalyzer();
+
+  /**
+   * Returns a new object of class '<em>Executor</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Executor</em>'.
+   * @generated
+   */
+  DCLExecutor createDCLExecutor();
+
+  /**
+   * Returns a new object of class '<em>Sensor</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sensor</em>'.
+   * @generated
+   */
+  DCLSensor createDCLSensor();
+
+  /**
+   * Returns a new object of class '<em>Actuator</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Actuator</em>'.
+   * @generated
+   */
+  DCLActuator createDCLActuator();
+
+  /**
+   * Returns a new object of class '<em>Knowledge</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Knowledge</em>'.
+   * @generated
+   */
+  DCLKnowledge createDCLKnowledge();
+
+  /**
+   * Returns a new object of class '<em>References</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>References</em>'.
+   * @generated
+   */
+  DCLReferences createDCLReferences();
+
+  /**
    * Returns a new object of class '<em>Layer</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

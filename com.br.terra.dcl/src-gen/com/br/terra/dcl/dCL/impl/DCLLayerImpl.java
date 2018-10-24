@@ -2,9 +2,10 @@
  */
 package com.br.terra.dcl.dCL.impl;
 
+import com.br.terra.dcl.dCL.DCLComponent;
 import com.br.terra.dcl.dCL.DCLLayer;
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.DCLStructureElement;
+import com.br.terra.dcl.dCL.DCLSubSystem;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -59,7 +60,7 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * @generated
    * @ordered
    */
-  protected DCLStructureElement layer;
+  protected DCLLayer layer;
 
   /**
    * The cached value of the '{@link #getSubSystem() <em>Sub System</em>}' reference.
@@ -69,7 +70,7 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * @generated
    * @ordered
    */
-  protected DCLStructureElement subSystem;
+  protected DCLSubSystem subSystem;
 
   /**
    * The cached value of the '{@link #getComponent() <em>Component</em>}' reference.
@@ -79,7 +80,7 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * @generated
    * @ordered
    */
-  protected DCLStructureElement component;
+  protected DCLComponent component;
 
   /**
    * <!-- begin-user-doc -->
@@ -130,12 +131,12 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement getLayer()
+  public DCLLayer getLayer()
   {
     if (layer != null && layer.eIsProxy())
     {
       InternalEObject oldLayer = (InternalEObject)layer;
-      layer = (DCLStructureElement)eResolveProxy(oldLayer);
+      layer = (DCLLayer)eResolveProxy(oldLayer);
       if (layer != oldLayer)
       {
         if (eNotificationRequired())
@@ -150,7 +151,7 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement basicGetLayer()
+  public DCLLayer basicGetLayer()
   {
     return layer;
   }
@@ -160,9 +161,9 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLayer(DCLStructureElement newLayer)
+  public void setLayer(DCLLayer newLayer)
   {
-    DCLStructureElement oldLayer = layer;
+    DCLLayer oldLayer = layer;
     layer = newLayer;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DCL_LAYER__LAYER, oldLayer, layer));
@@ -173,12 +174,12 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement getSubSystem()
+  public DCLSubSystem getSubSystem()
   {
     if (subSystem != null && subSystem.eIsProxy())
     {
       InternalEObject oldSubSystem = (InternalEObject)subSystem;
-      subSystem = (DCLStructureElement)eResolveProxy(oldSubSystem);
+      subSystem = (DCLSubSystem)eResolveProxy(oldSubSystem);
       if (subSystem != oldSubSystem)
       {
         if (eNotificationRequired())
@@ -193,7 +194,7 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement basicGetSubSystem()
+  public DCLSubSystem basicGetSubSystem()
   {
     return subSystem;
   }
@@ -203,9 +204,9 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSubSystem(DCLStructureElement newSubSystem)
+  public void setSubSystem(DCLSubSystem newSubSystem)
   {
-    DCLStructureElement oldSubSystem = subSystem;
+    DCLSubSystem oldSubSystem = subSystem;
     subSystem = newSubSystem;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DCL_LAYER__SUB_SYSTEM, oldSubSystem, subSystem));
@@ -216,12 +217,12 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement getComponent()
+  public DCLComponent getComponent()
   {
     if (component != null && component.eIsProxy())
     {
       InternalEObject oldComponent = (InternalEObject)component;
-      component = (DCLStructureElement)eResolveProxy(oldComponent);
+      component = (DCLComponent)eResolveProxy(oldComponent);
       if (component != oldComponent)
       {
         if (eNotificationRequired())
@@ -236,7 +237,7 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement basicGetComponent()
+  public DCLComponent basicGetComponent()
   {
     return component;
   }
@@ -246,9 +247,9 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setComponent(DCLStructureElement newComponent)
+  public void setComponent(DCLComponent newComponent)
   {
-    DCLStructureElement oldComponent = component;
+    DCLComponent oldComponent = component;
     component = newComponent;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DCL_LAYER__COMPONENT, oldComponent, component));
@@ -293,13 +294,13 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
         setLevel((Integer)newValue);
         return;
       case DCLPackage.DCL_LAYER__LAYER:
-        setLayer((DCLStructureElement)newValue);
+        setLayer((DCLLayer)newValue);
         return;
       case DCLPackage.DCL_LAYER__SUB_SYSTEM:
-        setSubSystem((DCLStructureElement)newValue);
+        setSubSystem((DCLSubSystem)newValue);
         return;
       case DCLPackage.DCL_LAYER__COMPONENT:
-        setComponent((DCLStructureElement)newValue);
+        setComponent((DCLComponent)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -319,13 +320,13 @@ public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
         setLevel(LEVEL_EDEFAULT);
         return;
       case DCLPackage.DCL_LAYER__LAYER:
-        setLayer((DCLStructureElement)null);
+        setLayer((DCLLayer)null);
         return;
       case DCLPackage.DCL_LAYER__SUB_SYSTEM:
-        setSubSystem((DCLStructureElement)null);
+        setSubSystem((DCLSubSystem)null);
         return;
       case DCLPackage.DCL_LAYER__COMPONENT:
-        setComponent((DCLStructureElement)null);
+        setComponent((DCLComponent)null);
         return;
     }
     super.eUnset(featureID);

@@ -30,12 +30,12 @@ public interface DCLSubSystem extends DCLStructureElement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Sub System</em>' reference.
-   * @see #setSubSystem(DCLStructureElement)
+   * @see #setSubSystem(DCLSubSystem)
    * @see com.br.terra.dcl.dCL.DCLPackage#getDCLSubSystem_SubSystem()
    * @model
    * @generated
    */
-  DCLStructureElement getSubSystem();
+  DCLSubSystem getSubSystem();
 
   /**
    * Sets the value of the '{@link com.br.terra.dcl.dCL.DCLSubSystem#getSubSystem <em>Sub System</em>}' reference.
@@ -45,6 +45,6 @@ public interface DCLSubSystem extends DCLStructureElement
    * @see #getSubSystem()
    * @generated
    */
-  void setSubSystem(DCLStructureElement value);
+  void setSubSystem(DCLSubSystem value);
 
 } // DCLSubSystem

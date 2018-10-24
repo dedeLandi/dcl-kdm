@@ -85,6 +85,56 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
         return createDCLStructureElementAdapter();
       }
       @Override
+      public Adapter caseDCLManagedSubsystem(DCLManagedSubsystem object)
+      {
+        return createDCLManagedSubsystemAdapter();
+      }
+      @Override
+      public Adapter caseDCLManagingSubsystem(DCLManagingSubsystem object)
+      {
+        return createDCLManagingSubsystemAdapter();
+      }
+      @Override
+      public Adapter caseDCLMonitor(DCLMonitor object)
+      {
+        return createDCLMonitorAdapter();
+      }
+      @Override
+      public Adapter caseDCLPlanner(DCLPlanner object)
+      {
+        return createDCLPlannerAdapter();
+      }
+      @Override
+      public Adapter caseDCLAnalyzer(DCLAnalyzer object)
+      {
+        return createDCLAnalyzerAdapter();
+      }
+      @Override
+      public Adapter caseDCLExecutor(DCLExecutor object)
+      {
+        return createDCLExecutorAdapter();
+      }
+      @Override
+      public Adapter caseDCLSensor(DCLSensor object)
+      {
+        return createDCLSensorAdapter();
+      }
+      @Override
+      public Adapter caseDCLActuator(DCLActuator object)
+      {
+        return createDCLActuatorAdapter();
+      }
+      @Override
+      public Adapter caseDCLKnowledge(DCLKnowledge object)
+      {
+        return createDCLKnowledgeAdapter();
+      }
+      @Override
+      public Adapter caseDCLReferences(DCLReferences object)
+      {
+        return createDCLReferencesAdapter();
+      }
+      @Override
       public Adapter caseDCLLayer(DCLLayer object)
       {
         return createDCLLayerAdapter();
@@ -207,6 +257,156 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDCLStructureElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLManagedSubsystem <em>Managed Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLManagedSubsystem
+   * @generated
+   */
+  public Adapter createDCLManagedSubsystemAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLManagingSubsystem
+   * @generated
+   */
+  public Adapter createDCLManagingSubsystemAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLMonitor <em>Monitor</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLMonitor
+   * @generated
+   */
+  public Adapter createDCLMonitorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLPlanner <em>Planner</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLPlanner
+   * @generated
+   */
+  public Adapter createDCLPlannerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLAnalyzer <em>Analyzer</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLAnalyzer
+   * @generated
+   */
+  public Adapter createDCLAnalyzerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLExecutor <em>Executor</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLExecutor
+   * @generated
+   */
+  public Adapter createDCLExecutorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLSensor <em>Sensor</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLSensor
+   * @generated
+   */
+  public Adapter createDCLSensorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLActuator <em>Actuator</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLActuator
+   * @generated
+   */
+  public Adapter createDCLActuatorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLKnowledge <em>Knowledge</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLKnowledge
+   * @generated
+   */
+  public Adapter createDCLKnowledgeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLReferences <em>References</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLReferences
+   * @generated
+   */
+  public Adapter createDCLReferencesAdapter()
   {
     return null;
   }

@@ -3,7 +3,6 @@
 package com.br.terra.dcl.dCL.impl;
 
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.DCLStructureElement;
 import com.br.terra.dcl.dCL.DCLSubSystem;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -36,7 +35,7 @@ public class DCLSubSystemImpl extends DCLStructureElementImpl implements DCLSubS
    * @generated
    * @ordered
    */
-  protected DCLStructureElement subSystem;
+  protected DCLSubSystem subSystem;
 
   /**
    * <!-- begin-user-doc -->
@@ -64,12 +63,12 @@ public class DCLSubSystemImpl extends DCLStructureElementImpl implements DCLSubS
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement getSubSystem()
+  public DCLSubSystem getSubSystem()
   {
     if (subSystem != null && subSystem.eIsProxy())
     {
       InternalEObject oldSubSystem = (InternalEObject)subSystem;
-      subSystem = (DCLStructureElement)eResolveProxy(oldSubSystem);
+      subSystem = (DCLSubSystem)eResolveProxy(oldSubSystem);
       if (subSystem != oldSubSystem)
       {
         if (eNotificationRequired())
@@ -84,7 +83,7 @@ public class DCLSubSystemImpl extends DCLStructureElementImpl implements DCLSubS
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement basicGetSubSystem()
+  public DCLSubSystem basicGetSubSystem()
   {
     return subSystem;
   }
@@ -94,9 +93,9 @@ public class DCLSubSystemImpl extends DCLStructureElementImpl implements DCLSubS
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSubSystem(DCLStructureElement newSubSystem)
+  public void setSubSystem(DCLSubSystem newSubSystem)
   {
-    DCLStructureElement oldSubSystem = subSystem;
+    DCLSubSystem oldSubSystem = subSystem;
     subSystem = newSubSystem;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DCL_SUB_SYSTEM__SUB_SYSTEM, oldSubSystem, subSystem));
@@ -130,7 +129,7 @@ public class DCLSubSystemImpl extends DCLStructureElementImpl implements DCLSubS
     switch (featureID)
     {
       case DCLPackage.DCL_SUB_SYSTEM__SUB_SYSTEM:
-        setSubSystem((DCLStructureElement)newValue);
+        setSubSystem((DCLSubSystem)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -147,7 +146,7 @@ public class DCLSubSystemImpl extends DCLStructureElementImpl implements DCLSubS
     switch (featureID)
     {
       case DCLPackage.DCL_SUB_SYSTEM__SUB_SYSTEM:
-        setSubSystem((DCLStructureElement)null);
+        setSubSystem((DCLSubSystem)null);
         return;
     }
     super.eUnset(featureID);

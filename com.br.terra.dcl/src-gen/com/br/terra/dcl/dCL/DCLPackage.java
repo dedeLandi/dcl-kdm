@@ -122,6 +122,385 @@ public interface DCLPackage extends EPackage
   int DCL_STRUCTURE_ELEMENT_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLManagedSubsystemImpl <em>Managed Subsystem</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLManagedSubsystemImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLManagedSubsystem()
+   * @generated
+   */
+  int DCL_MANAGED_SUBSYSTEM = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MANAGED_SUBSYSTEM__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managed Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MANAGED_SUBSYSTEM__MANAGED_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Managed Subsystem</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MANAGED_SUBSYSTEM_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLManagingSubsystemImpl <em>Managing Subsystem</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLManagingSubsystemImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLManagingSubsystem()
+   * @generated
+   */
+  int DCL_MANAGING_SUBSYSTEM = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MANAGING_SUBSYSTEM__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MANAGING_SUBSYSTEM__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Managing Subsystem</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MANAGING_SUBSYSTEM_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLMonitorImpl <em>Monitor</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLMonitorImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLMonitor()
+   * @generated
+   */
+  int DCL_MONITOR = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MONITOR__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MONITOR__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Monitor</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_MONITOR_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLPlannerImpl <em>Planner</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLPlannerImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLPlanner()
+   * @generated
+   */
+  int DCL_PLANNER = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_PLANNER__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_PLANNER__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Planner</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_PLANNER_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLAnalyzerImpl <em>Analyzer</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLAnalyzerImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLAnalyzer()
+   * @generated
+   */
+  int DCL_ANALYZER = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_ANALYZER__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_ANALYZER__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Analyzer</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_ANALYZER_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLExecutorImpl <em>Executor</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLExecutorImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLExecutor()
+   * @generated
+   */
+  int DCL_EXECUTOR = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_EXECUTOR__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_EXECUTOR__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Executor</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_EXECUTOR_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLSensorImpl <em>Sensor</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLSensorImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLSensor()
+   * @generated
+   */
+  int DCL_SENSOR = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_SENSOR__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_SENSOR__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Sensor</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_SENSOR_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLActuatorImpl <em>Actuator</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLActuatorImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLActuator()
+   * @generated
+   */
+  int DCL_ACTUATOR = 9;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_ACTUATOR__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_ACTUATOR__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Actuator</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_ACTUATOR_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLKnowledgeImpl <em>Knowledge</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLKnowledgeImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLKnowledge()
+   * @generated
+   */
+  int DCL_KNOWLEDGE = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_KNOWLEDGE__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_KNOWLEDGE__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Knowledge</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_KNOWLEDGE_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLReferencesImpl <em>References</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.br.terra.dcl.dCL.impl.DCLReferencesImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLReferences()
+   * @generated
+   */
+  int DCL_REFERENCES = 11;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_REFERENCES__NAME = DCL_STRUCTURE_ELEMENT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Managing Subsystem</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_REFERENCES__MANAGING_SUBSYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Knowledge</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_REFERENCES__KNOWLEDGE = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>References</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_REFERENCES_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLLayerImpl <em>Layer</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -129,7 +508,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLLayer()
    * @generated
    */
-  int DCL_LAYER = 2;
+  int DCL_LAYER = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -193,7 +572,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLComponent()
    * @generated
    */
-  int DCL_COMPONENT = 3;
+  int DCL_COMPONENT = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -239,7 +618,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLComponentInterface()
    * @generated
    */
-  int DCL_COMPONENT_INTERFACE = 4;
+  int DCL_COMPONENT_INTERFACE = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -285,7 +664,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getInterfaceType()
    * @generated
    */
-  int INTERFACE_TYPE = 5;
+  int INTERFACE_TYPE = 15;
 
   /**
    * The feature id for the '<em><b>Interface Type Name</b></em>' attribute.
@@ -313,7 +692,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLSubSystem()
    * @generated
    */
-  int DCL_SUB_SYSTEM = 6;
+  int DCL_SUB_SYSTEM = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -350,7 +729,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLModule()
    * @generated
    */
-  int DCL_MODULE = 7;
+  int DCL_MODULE = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -378,7 +757,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCDecl()
    * @generated
    */
-  int DC_DECL = 8;
+  int DC_DECL = 18;
 
   /**
    * The feature id for the '<em><b>Only</b></em>' containment reference.
@@ -478,7 +857,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getOnly()
    * @generated
    */
-  int ONLY = 9;
+  int ONLY = 19;
 
   /**
    * The feature id for the '<em><b>Only</b></em>' attribute.
@@ -506,7 +885,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getCan()
    * @generated
    */
-  int CAN = 10;
+  int CAN = 20;
 
   /**
    * The feature id for the '<em><b>Can</b></em>' attribute.
@@ -534,7 +913,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getCannot()
    * @generated
    */
-  int CANNOT = 11;
+  int CANNOT = 21;
 
   /**
    * The feature id for the '<em><b>Cannot</b></em>' attribute.
@@ -562,7 +941,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getOnly2()
    * @generated
    */
-  int ONLY2 = 12;
+  int ONLY2 = 22;
 
   /**
    * The feature id for the '<em><b>Only2</b></em>' attribute.
@@ -590,7 +969,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getMust()
    * @generated
    */
-  int MUST = 13;
+  int MUST = 23;
 
   /**
    * The feature id for the '<em><b>Must</b></em>' attribute.
@@ -618,7 +997,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getElementType()
    * @generated
    */
-  int ELEMENT_TYPE = 14;
+  int ELEMENT_TYPE = 24;
 
   /**
    * The number of structural features of the '<em>Element Type</em>' class.
@@ -637,7 +1016,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getBasicType()
    * @generated
    */
-  int BASIC_TYPE = 15;
+  int BASIC_TYPE = 25;
 
   /**
    * The feature id for the '<em><b>Type Name</b></em>' attribute.
@@ -665,7 +1044,7 @@ public interface DCLPackage extends EPackage
    * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getEntityType()
    * @generated
    */
-  int ENTITY_TYPE = 16;
+  int ENTITY_TYPE = 26;
 
   /**
    * The feature id for the '<em><b>Entity</b></em>' attribute.
@@ -738,6 +1117,227 @@ public interface DCLPackage extends EPackage
    * @generated
    */
   EAttribute getDCLStructureElement_Name();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLManagedSubsystem <em>Managed Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Managed Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLManagedSubsystem
+   * @generated
+   */
+  EClass getDCLManagedSubsystem();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLManagedSubsystem#getManagedSubsystem <em>Managed Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managed Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLManagedSubsystem#getManagedSubsystem()
+   * @see #getDCLManagedSubsystem()
+   * @generated
+   */
+  EReference getDCLManagedSubsystem_ManagedSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLManagingSubsystem
+   * @generated
+   */
+  EClass getDCLManagingSubsystem();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLManagingSubsystem#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLManagingSubsystem#getManagingSubsystem()
+   * @see #getDCLManagingSubsystem()
+   * @generated
+   */
+  EReference getDCLManagingSubsystem_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLMonitor <em>Monitor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Monitor</em>'.
+   * @see com.br.terra.dcl.dCL.DCLMonitor
+   * @generated
+   */
+  EClass getDCLMonitor();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLMonitor#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLMonitor#getManagingSubsystem()
+   * @see #getDCLMonitor()
+   * @generated
+   */
+  EReference getDCLMonitor_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLPlanner <em>Planner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Planner</em>'.
+   * @see com.br.terra.dcl.dCL.DCLPlanner
+   * @generated
+   */
+  EClass getDCLPlanner();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLPlanner#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLPlanner#getManagingSubsystem()
+   * @see #getDCLPlanner()
+   * @generated
+   */
+  EReference getDCLPlanner_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLAnalyzer <em>Analyzer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Analyzer</em>'.
+   * @see com.br.terra.dcl.dCL.DCLAnalyzer
+   * @generated
+   */
+  EClass getDCLAnalyzer();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLAnalyzer#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLAnalyzer#getManagingSubsystem()
+   * @see #getDCLAnalyzer()
+   * @generated
+   */
+  EReference getDCLAnalyzer_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLExecutor <em>Executor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Executor</em>'.
+   * @see com.br.terra.dcl.dCL.DCLExecutor
+   * @generated
+   */
+  EClass getDCLExecutor();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLExecutor#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLExecutor#getManagingSubsystem()
+   * @see #getDCLExecutor()
+   * @generated
+   */
+  EReference getDCLExecutor_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLSensor <em>Sensor</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sensor</em>'.
+   * @see com.br.terra.dcl.dCL.DCLSensor
+   * @generated
+   */
+  EClass getDCLSensor();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLSensor#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLSensor#getManagingSubsystem()
+   * @see #getDCLSensor()
+   * @generated
+   */
+  EReference getDCLSensor_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLActuator <em>Actuator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Actuator</em>'.
+   * @see com.br.terra.dcl.dCL.DCLActuator
+   * @generated
+   */
+  EClass getDCLActuator();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLActuator#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLActuator#getManagingSubsystem()
+   * @see #getDCLActuator()
+   * @generated
+   */
+  EReference getDCLActuator_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLKnowledge <em>Knowledge</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Knowledge</em>'.
+   * @see com.br.terra.dcl.dCL.DCLKnowledge
+   * @generated
+   */
+  EClass getDCLKnowledge();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLKnowledge#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLKnowledge#getManagingSubsystem()
+   * @see #getDCLKnowledge()
+   * @generated
+   */
+  EReference getDCLKnowledge_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLReferences <em>References</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>References</em>'.
+   * @see com.br.terra.dcl.dCL.DCLReferences
+   * @generated
+   */
+  EClass getDCLReferences();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLReferences#getManagingSubsystem <em>Managing Subsystem</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Managing Subsystem</em>'.
+   * @see com.br.terra.dcl.dCL.DCLReferences#getManagingSubsystem()
+   * @see #getDCLReferences()
+   * @generated
+   */
+  EReference getDCLReferences_ManagingSubsystem();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLReferences#getKnowledge <em>Knowledge</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Knowledge</em>'.
+   * @see com.br.terra.dcl.dCL.DCLReferences#getKnowledge()
+   * @see #getDCLReferences()
+   * @generated
+   */
+  EReference getDCLReferences_Knowledge();
 
   /**
    * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLLayer <em>Layer</em>}'.
@@ -1241,6 +1841,194 @@ public interface DCLPackage extends EPackage
      * @generated
      */
     EAttribute DCL_STRUCTURE_ELEMENT__NAME = eINSTANCE.getDCLStructureElement_Name();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLManagedSubsystemImpl <em>Managed Subsystem</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLManagedSubsystemImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLManagedSubsystem()
+     * @generated
+     */
+    EClass DCL_MANAGED_SUBSYSTEM = eINSTANCE.getDCLManagedSubsystem();
+
+    /**
+     * The meta object literal for the '<em><b>Managed Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_MANAGED_SUBSYSTEM__MANAGED_SUBSYSTEM = eINSTANCE.getDCLManagedSubsystem_ManagedSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLManagingSubsystemImpl <em>Managing Subsystem</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLManagingSubsystemImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLManagingSubsystem()
+     * @generated
+     */
+    EClass DCL_MANAGING_SUBSYSTEM = eINSTANCE.getDCLManagingSubsystem();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_MANAGING_SUBSYSTEM__MANAGING_SUBSYSTEM = eINSTANCE.getDCLManagingSubsystem_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLMonitorImpl <em>Monitor</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLMonitorImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLMonitor()
+     * @generated
+     */
+    EClass DCL_MONITOR = eINSTANCE.getDCLMonitor();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_MONITOR__MANAGING_SUBSYSTEM = eINSTANCE.getDCLMonitor_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLPlannerImpl <em>Planner</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLPlannerImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLPlanner()
+     * @generated
+     */
+    EClass DCL_PLANNER = eINSTANCE.getDCLPlanner();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_PLANNER__MANAGING_SUBSYSTEM = eINSTANCE.getDCLPlanner_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLAnalyzerImpl <em>Analyzer</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLAnalyzerImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLAnalyzer()
+     * @generated
+     */
+    EClass DCL_ANALYZER = eINSTANCE.getDCLAnalyzer();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_ANALYZER__MANAGING_SUBSYSTEM = eINSTANCE.getDCLAnalyzer_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLExecutorImpl <em>Executor</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLExecutorImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLExecutor()
+     * @generated
+     */
+    EClass DCL_EXECUTOR = eINSTANCE.getDCLExecutor();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_EXECUTOR__MANAGING_SUBSYSTEM = eINSTANCE.getDCLExecutor_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLSensorImpl <em>Sensor</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLSensorImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLSensor()
+     * @generated
+     */
+    EClass DCL_SENSOR = eINSTANCE.getDCLSensor();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_SENSOR__MANAGING_SUBSYSTEM = eINSTANCE.getDCLSensor_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLActuatorImpl <em>Actuator</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLActuatorImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLActuator()
+     * @generated
+     */
+    EClass DCL_ACTUATOR = eINSTANCE.getDCLActuator();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_ACTUATOR__MANAGING_SUBSYSTEM = eINSTANCE.getDCLActuator_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLKnowledgeImpl <em>Knowledge</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLKnowledgeImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLKnowledge()
+     * @generated
+     */
+    EClass DCL_KNOWLEDGE = eINSTANCE.getDCLKnowledge();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_KNOWLEDGE__MANAGING_SUBSYSTEM = eINSTANCE.getDCLKnowledge_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLReferencesImpl <em>References</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.br.terra.dcl.dCL.impl.DCLReferencesImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLReferences()
+     * @generated
+     */
+    EClass DCL_REFERENCES = eINSTANCE.getDCLReferences();
+
+    /**
+     * The meta object literal for the '<em><b>Managing Subsystem</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_REFERENCES__MANAGING_SUBSYSTEM = eINSTANCE.getDCLReferences_ManagingSubsystem();
+
+    /**
+     * The meta object literal for the '<em><b>Knowledge</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_REFERENCES__KNOWLEDGE = eINSTANCE.getDCLReferences_Knowledge();
 
     /**
      * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLLayerImpl <em>Layer</em>}' class.

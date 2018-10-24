@@ -21,7 +21,7 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cArchiteturalElementsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cArchitecturalElementsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cStructureElementsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cStructureElementsDCLStructureElementParserRuleCall_2_0 = (RuleCall)cStructureElementsAssignment_2.eContents().get(0);
@@ -33,14 +33,15 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Model:
-		//	'architeturalElements' '{' structureElements+=DCLStructureElement+ '}' 'restrictions' '{' dCDecl+=DCDecl* '}';
+		//	'architecturalElements' '{' structureElements+=DCLStructureElement+ '}'
+		//	'restrictions' '{' dCDecl+=DCDecl* '}';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'architeturalElements' '{' structureElements+=DCLStructureElement+ '}' 'restrictions' '{' dCDecl+=DCDecl* '}'
+		//'architecturalElements' '{' structureElements+=DCLStructureElement+ '}' 'restrictions' '{' dCDecl+=DCDecl* '}'
 		public Group getGroup() { return cGroup; }
 
-		//'architeturalElements'
-		public Keyword getArchiteturalElementsKeyword_0() { return cArchiteturalElementsKeyword_0; }
+		//'architecturalElements'
+		public Keyword getArchitecturalElementsKeyword_0() { return cArchitecturalElementsKeyword_0; }
 
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -73,33 +74,626 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	public class DCLStructureElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLStructureElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cDCLLayerParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cDCLComponentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cDCLSubSystemParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cDCLModuleParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cDCLComponentInterfaceParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cDCLManagedSubsystemParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cDCLManagingSubsystemParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cDCLMonitorParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cDCLPlannerParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cDCLAnalyzerParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cDCLExecutorParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cDCLSensorParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cDCLActuatorParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cDCLKnowledgeParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cDCLReferencesParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cDCLLayerParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cDCLComponentParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cDCLSubSystemParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cDCLModuleParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cDCLComponentInterfaceParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
 		
 		//DCLStructureElement:
-		//	DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface;
+		//	DCLManagedSubsystem | DCLManagingSubsystem | DCLMonitor | DCLPlanner | DCLAnalyzer | DCLExecutor | DCLSensor |
+		//	DCLActuator | DCLKnowledge | DCLReferences | DCLLayer | DCLComponent | DCLSubSystem | DCLModule |
+		//	DCLComponentInterface;
 		@Override public ParserRule getRule() { return rule; }
 
-		//DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface
+		//DCLManagedSubsystem | DCLManagingSubsystem | DCLMonitor | DCLPlanner | DCLAnalyzer | DCLExecutor | DCLSensor |
+		//DCLActuator | DCLKnowledge | DCLReferences | DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//DCLManagedSubsystem
+		public RuleCall getDCLManagedSubsystemParserRuleCall_0() { return cDCLManagedSubsystemParserRuleCall_0; }
+
+		//DCLManagingSubsystem
+		public RuleCall getDCLManagingSubsystemParserRuleCall_1() { return cDCLManagingSubsystemParserRuleCall_1; }
+
+		//DCLMonitor
+		public RuleCall getDCLMonitorParserRuleCall_2() { return cDCLMonitorParserRuleCall_2; }
+
+		//DCLPlanner
+		public RuleCall getDCLPlannerParserRuleCall_3() { return cDCLPlannerParserRuleCall_3; }
+
+		//DCLAnalyzer
+		public RuleCall getDCLAnalyzerParserRuleCall_4() { return cDCLAnalyzerParserRuleCall_4; }
+
+		//DCLExecutor
+		public RuleCall getDCLExecutorParserRuleCall_5() { return cDCLExecutorParserRuleCall_5; }
+
+		//DCLSensor
+		public RuleCall getDCLSensorParserRuleCall_6() { return cDCLSensorParserRuleCall_6; }
+
+		//DCLActuator
+		public RuleCall getDCLActuatorParserRuleCall_7() { return cDCLActuatorParserRuleCall_7; }
+
+		//DCLKnowledge
+		public RuleCall getDCLKnowledgeParserRuleCall_8() { return cDCLKnowledgeParserRuleCall_8; }
+
+		//DCLReferences
+		public RuleCall getDCLReferencesParserRuleCall_9() { return cDCLReferencesParserRuleCall_9; }
+
 		//DCLLayer
-		public RuleCall getDCLLayerParserRuleCall_0() { return cDCLLayerParserRuleCall_0; }
+		public RuleCall getDCLLayerParserRuleCall_10() { return cDCLLayerParserRuleCall_10; }
 
 		//DCLComponent
-		public RuleCall getDCLComponentParserRuleCall_1() { return cDCLComponentParserRuleCall_1; }
+		public RuleCall getDCLComponentParserRuleCall_11() { return cDCLComponentParserRuleCall_11; }
 
 		//DCLSubSystem
-		public RuleCall getDCLSubSystemParserRuleCall_2() { return cDCLSubSystemParserRuleCall_2; }
+		public RuleCall getDCLSubSystemParserRuleCall_12() { return cDCLSubSystemParserRuleCall_12; }
 
 		//DCLModule
-		public RuleCall getDCLModuleParserRuleCall_3() { return cDCLModuleParserRuleCall_3; }
+		public RuleCall getDCLModuleParserRuleCall_13() { return cDCLModuleParserRuleCall_13; }
 
 		//DCLComponentInterface
-		public RuleCall getDCLComponentInterfaceParserRuleCall_4() { return cDCLComponentInterfaceParserRuleCall_4; }
+		public RuleCall getDCLComponentInterfaceParserRuleCall_14() { return cDCLComponentInterfaceParserRuleCall_14; }
+	}
+
+	public class DCLManagedSubsystemElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLManagedSubsystem");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cManagedSubsystemKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagedSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagedSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagedSubsystemDCLManagedSubsystemCrossReference_2_2_0 = (CrossReference)cManagedSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagedSubsystemDCLManagedSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagedSubsystemDCLManagedSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLManagedSubsystem:
+		//	'managedSubsystem' name=ID (',' 'inManagedSubsystem:' managedSubsystem=[DCLManagedSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'managedSubsystem' name=ID (',' 'inManagedSubsystem:' managedSubsystem=[DCLManagedSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'managedSubsystem'
+		public Keyword getManagedSubsystemKeyword_0() { return cManagedSubsystemKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagedSubsystem:' managedSubsystem=[DCLManagedSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagedSubsystem:'
+		public Keyword getInManagedSubsystemKeyword_2_1() { return cInManagedSubsystemKeyword_2_1; }
+
+		//managedSubsystem=[DCLManagedSubsystem]
+		public Assignment getManagedSubsystemAssignment_2_2() { return cManagedSubsystemAssignment_2_2; }
+
+		//[DCLManagedSubsystem]
+		public CrossReference getManagedSubsystemDCLManagedSubsystemCrossReference_2_2_0() { return cManagedSubsystemDCLManagedSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagedSubsystemDCLManagedSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagedSubsystemDCLManagedSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLManagingSubsystemElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLManagingSubsystem");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cManagingSubsystemKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0 = (CrossReference)cManagingSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLManagingSubsystem:
+		//	'managingSubsystem' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'managingSubsystem' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'managingSubsystem'
+		public Keyword getManagingSubsystemKeyword_0() { return cManagingSubsystemKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_1() { return cInManagingSubsystemKeyword_2_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_2() { return cManagingSubsystemAssignment_2_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLMonitorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLMonitor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cMonitorKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0 = (CrossReference)cManagingSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLMonitor:
+		//	'monitor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'monitor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'monitor'
+		public Keyword getMonitorKeyword_0() { return cMonitorKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_1() { return cInManagingSubsystemKeyword_2_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_2() { return cManagingSubsystemAssignment_2_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLPlannerElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLPlanner");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPlannerKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0 = (CrossReference)cManagingSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLPlanner:
+		//	'planner' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'planner' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'planner'
+		public Keyword getPlannerKeyword_0() { return cPlannerKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_1() { return cInManagingSubsystemKeyword_2_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_2() { return cManagingSubsystemAssignment_2_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLAnalyzerElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLAnalyzer");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAnalyzerKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0 = (CrossReference)cManagingSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLAnalyzer:
+		//	'analyzer' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'analyzer' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'analyzer'
+		public Keyword getAnalyzerKeyword_0() { return cAnalyzerKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_1() { return cInManagingSubsystemKeyword_2_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_2() { return cManagingSubsystemAssignment_2_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLExecutorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLExecutor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cExecutorKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0 = (CrossReference)cManagingSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLExecutor:
+		//	'executor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'executor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'executor'
+		public Keyword getExecutorKeyword_0() { return cExecutorKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_1() { return cInManagingSubsystemKeyword_2_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_2() { return cManagingSubsystemAssignment_2_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLSensorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLSensor");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSensorKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0 = (CrossReference)cManagingSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLSensor:
+		//	'sensor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'sensor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'sensor'
+		public Keyword getSensorKeyword_0() { return cSensorKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_1() { return cInManagingSubsystemKeyword_2_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_2() { return cManagingSubsystemAssignment_2_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLActuatorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLActuator");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cActuatorKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0 = (CrossReference)cManagingSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLActuator:
+		//	'actuator' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'actuator' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'actuator'
+		public Keyword getActuatorKeyword_0() { return cActuatorKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_1() { return cInManagingSubsystemKeyword_2_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_2() { return cManagingSubsystemAssignment_2_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLKnowledgeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLKnowledge");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cKnowledgeKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0 = (CrossReference)cManagingSubsystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLKnowledge:
+		//	'knowledge' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'knowledge' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'knowledge'
+		public Keyword getKnowledgeKeyword_0() { return cKnowledgeKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//','
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_1() { return cInManagingSubsystemKeyword_2_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_2() { return cManagingSubsystemAssignment_2_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+	}
+
+	public class DCLReferencesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.br.terra.dcl.DCL.DCLReferences");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cReferencesKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
+		private final Keyword cCommaKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
+		private final Keyword cInManagingSubsystemKeyword_2_0_1 = (Keyword)cGroup_2_0.eContents().get(1);
+		private final Assignment cManagingSubsystemAssignment_2_0_2 = (Assignment)cGroup_2_0.eContents().get(2);
+		private final CrossReference cManagingSubsystemDCLManagingSubsystemCrossReference_2_0_2_0 = (CrossReference)cManagingSubsystemAssignment_2_0_2.eContents().get(0);
+		private final RuleCall cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_0_2_0_1 = (RuleCall)cManagingSubsystemDCLManagingSubsystemCrossReference_2_0_2_0.eContents().get(1);
+		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Keyword cInKnowledgeKeyword_2_1_1 = (Keyword)cGroup_2_1.eContents().get(1);
+		private final Assignment cKnowledgeAssignment_2_1_2 = (Assignment)cGroup_2_1.eContents().get(2);
+		private final CrossReference cKnowledgeDCLKnowledgeCrossReference_2_1_2_0 = (CrossReference)cKnowledgeAssignment_2_1_2.eContents().get(0);
+		private final RuleCall cKnowledgeDCLKnowledgeIDTerminalRuleCall_2_1_2_0_1 = (RuleCall)cKnowledgeDCLKnowledgeCrossReference_2_1_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//DCLReferences:
+		//	'references' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem] | ',' 'inKnowledge:'
+		//	knowledge=[DCLKnowledge])? ';';
+		@Override public ParserRule getRule() { return rule; }
+
+		//'references' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem] | ',' 'inKnowledge:'
+		//knowledge=[DCLKnowledge])? ';'
+		public Group getGroup() { return cGroup; }
+
+		//'references'
+		public Keyword getReferencesKeyword_0() { return cReferencesKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//(',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem] | ',' 'inKnowledge:' knowledge=[DCLKnowledge])?
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+
+		//',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem]
+		public Group getGroup_2_0() { return cGroup_2_0; }
+
+		//','
+		public Keyword getCommaKeyword_2_0_0() { return cCommaKeyword_2_0_0; }
+
+		//'inManagingSubsystem:'
+		public Keyword getInManagingSubsystemKeyword_2_0_1() { return cInManagingSubsystemKeyword_2_0_1; }
+
+		//managingSubsystem=[DCLManagingSubsystem]
+		public Assignment getManagingSubsystemAssignment_2_0_2() { return cManagingSubsystemAssignment_2_0_2; }
+
+		//[DCLManagingSubsystem]
+		public CrossReference getManagingSubsystemDCLManagingSubsystemCrossReference_2_0_2_0() { return cManagingSubsystemDCLManagingSubsystemCrossReference_2_0_2_0; }
+
+		//ID
+		public RuleCall getManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_0_2_0_1() { return cManagingSubsystemDCLManagingSubsystemIDTerminalRuleCall_2_0_2_0_1; }
+
+		//',' 'inKnowledge:' knowledge=[DCLKnowledge]
+		public Group getGroup_2_1() { return cGroup_2_1; }
+
+		//','
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
+
+		//'inKnowledge:'
+		public Keyword getInKnowledgeKeyword_2_1_1() { return cInKnowledgeKeyword_2_1_1; }
+
+		//knowledge=[DCLKnowledge]
+		public Assignment getKnowledgeAssignment_2_1_2() { return cKnowledgeAssignment_2_1_2; }
+
+		//[DCLKnowledge]
+		public CrossReference getKnowledgeDCLKnowledgeCrossReference_2_1_2_0() { return cKnowledgeDCLKnowledgeCrossReference_2_1_2_0; }
+
+		//ID
+		public RuleCall getKnowledgeDCLKnowledgeIDTerminalRuleCall_2_1_2_0_1() { return cKnowledgeDCLKnowledgeIDTerminalRuleCall_2_1_2_0_1; }
+
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class DCLLayerElements extends AbstractParserRuleElementFinder {
@@ -117,29 +711,29 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_5_0_0 = (Keyword)cGroup_5_0.eContents().get(0);
 		private final Keyword cInLayerKeyword_5_0_1 = (Keyword)cGroup_5_0.eContents().get(1);
 		private final Assignment cLayerAssignment_5_0_2 = (Assignment)cGroup_5_0.eContents().get(2);
-		private final CrossReference cLayerDCLStructureElementCrossReference_5_0_2_0 = (CrossReference)cLayerAssignment_5_0_2.eContents().get(0);
-		private final RuleCall cLayerDCLStructureElementIDTerminalRuleCall_5_0_2_0_1 = (RuleCall)cLayerDCLStructureElementCrossReference_5_0_2_0.eContents().get(1);
+		private final CrossReference cLayerDCLLayerCrossReference_5_0_2_0 = (CrossReference)cLayerAssignment_5_0_2.eContents().get(0);
+		private final RuleCall cLayerDCLLayerIDTerminalRuleCall_5_0_2_0_1 = (RuleCall)cLayerDCLLayerCrossReference_5_0_2_0.eContents().get(1);
 		private final Group cGroup_5_1 = (Group)cAlternatives_5.eContents().get(1);
 		private final Keyword cCommaKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
 		private final Keyword cInSubSystemKeyword_5_1_1 = (Keyword)cGroup_5_1.eContents().get(1);
 		private final Assignment cSubSystemAssignment_5_1_2 = (Assignment)cGroup_5_1.eContents().get(2);
-		private final CrossReference cSubSystemDCLStructureElementCrossReference_5_1_2_0 = (CrossReference)cSubSystemAssignment_5_1_2.eContents().get(0);
-		private final RuleCall cSubSystemDCLStructureElementIDTerminalRuleCall_5_1_2_0_1 = (RuleCall)cSubSystemDCLStructureElementCrossReference_5_1_2_0.eContents().get(1);
+		private final CrossReference cSubSystemDCLSubSystemCrossReference_5_1_2_0 = (CrossReference)cSubSystemAssignment_5_1_2.eContents().get(0);
+		private final RuleCall cSubSystemDCLSubSystemIDTerminalRuleCall_5_1_2_0_1 = (RuleCall)cSubSystemDCLSubSystemCrossReference_5_1_2_0.eContents().get(1);
 		private final Group cGroup_5_2 = (Group)cAlternatives_5.eContents().get(2);
 		private final Keyword cCommaKeyword_5_2_0 = (Keyword)cGroup_5_2.eContents().get(0);
 		private final Keyword cInComponentKeyword_5_2_1 = (Keyword)cGroup_5_2.eContents().get(1);
 		private final Assignment cComponentAssignment_5_2_2 = (Assignment)cGroup_5_2.eContents().get(2);
-		private final CrossReference cComponentDCLStructureElementCrossReference_5_2_2_0 = (CrossReference)cComponentAssignment_5_2_2.eContents().get(0);
-		private final RuleCall cComponentDCLStructureElementIDTerminalRuleCall_5_2_2_0_1 = (RuleCall)cComponentDCLStructureElementCrossReference_5_2_2_0.eContents().get(1);
+		private final CrossReference cComponentDCLComponentCrossReference_5_2_2_0 = (CrossReference)cComponentAssignment_5_2_2.eContents().get(0);
+		private final RuleCall cComponentDCLComponentIDTerminalRuleCall_5_2_2_0_1 = (RuleCall)cComponentDCLComponentCrossReference_5_2_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DCLLayer:
-		//	'layer' name=ID ',' 'level' level=INT (',' 'inLayer: ' layer=[DCLStructureElement] | ',' 'inSubSystem: '
-		//	subSystem=[DCLStructureElement] | ',' 'inComponent: ' component=[DCLStructureElement])? ';';
+		//	'layer' name=ID ',' 'level' level=INT (',' 'inLayer:' layer=[DCLLayer] | ',' 'inSubSystem:' subSystem=[DCLSubSystem] |
+		//	',' 'inComponent:' component=[DCLComponent])? ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'layer' name=ID ',' 'level' level=INT (',' 'inLayer: ' layer=[DCLStructureElement] | ',' 'inSubSystem: '
-		//subSystem=[DCLStructureElement] | ',' 'inComponent: ' component=[DCLStructureElement])? ';'
+		//'layer' name=ID ',' 'level' level=INT (',' 'inLayer:' layer=[DCLLayer] | ',' 'inSubSystem:' subSystem=[DCLSubSystem] |
+		//',' 'inComponent:' component=[DCLComponent])? ';'
 		public Group getGroup() { return cGroup; }
 
 		//'layer'
@@ -163,63 +757,63 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getLevelINTTerminalRuleCall_4_0() { return cLevelINTTerminalRuleCall_4_0; }
 
-		//(',' 'inLayer: ' layer=[DCLStructureElement] | ',' 'inSubSystem: ' subSystem=[DCLStructureElement] | ',' 'inComponent: '
-		//component=[DCLStructureElement])?
+		//(',' 'inLayer:' layer=[DCLLayer] | ',' 'inSubSystem:' subSystem=[DCLSubSystem] | ',' 'inComponent:'
+		//component=[DCLComponent])?
 		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 
-		//',' 'inLayer: ' layer=[DCLStructureElement]
+		//',' 'inLayer:' layer=[DCLLayer]
 		public Group getGroup_5_0() { return cGroup_5_0; }
 
 		//','
 		public Keyword getCommaKeyword_5_0_0() { return cCommaKeyword_5_0_0; }
 
-		//'inLayer: '
+		//'inLayer:'
 		public Keyword getInLayerKeyword_5_0_1() { return cInLayerKeyword_5_0_1; }
 
-		//layer=[DCLStructureElement]
+		//layer=[DCLLayer]
 		public Assignment getLayerAssignment_5_0_2() { return cLayerAssignment_5_0_2; }
 
-		//[DCLStructureElement]
-		public CrossReference getLayerDCLStructureElementCrossReference_5_0_2_0() { return cLayerDCLStructureElementCrossReference_5_0_2_0; }
+		//[DCLLayer]
+		public CrossReference getLayerDCLLayerCrossReference_5_0_2_0() { return cLayerDCLLayerCrossReference_5_0_2_0; }
 
 		//ID
-		public RuleCall getLayerDCLStructureElementIDTerminalRuleCall_5_0_2_0_1() { return cLayerDCLStructureElementIDTerminalRuleCall_5_0_2_0_1; }
+		public RuleCall getLayerDCLLayerIDTerminalRuleCall_5_0_2_0_1() { return cLayerDCLLayerIDTerminalRuleCall_5_0_2_0_1; }
 
-		//',' 'inSubSystem: ' subSystem=[DCLStructureElement]
+		//',' 'inSubSystem:' subSystem=[DCLSubSystem]
 		public Group getGroup_5_1() { return cGroup_5_1; }
 
 		//','
 		public Keyword getCommaKeyword_5_1_0() { return cCommaKeyword_5_1_0; }
 
-		//'inSubSystem: '
+		//'inSubSystem:'
 		public Keyword getInSubSystemKeyword_5_1_1() { return cInSubSystemKeyword_5_1_1; }
 
-		//subSystem=[DCLStructureElement]
+		//subSystem=[DCLSubSystem]
 		public Assignment getSubSystemAssignment_5_1_2() { return cSubSystemAssignment_5_1_2; }
 
-		//[DCLStructureElement]
-		public CrossReference getSubSystemDCLStructureElementCrossReference_5_1_2_0() { return cSubSystemDCLStructureElementCrossReference_5_1_2_0; }
+		//[DCLSubSystem]
+		public CrossReference getSubSystemDCLSubSystemCrossReference_5_1_2_0() { return cSubSystemDCLSubSystemCrossReference_5_1_2_0; }
 
 		//ID
-		public RuleCall getSubSystemDCLStructureElementIDTerminalRuleCall_5_1_2_0_1() { return cSubSystemDCLStructureElementIDTerminalRuleCall_5_1_2_0_1; }
+		public RuleCall getSubSystemDCLSubSystemIDTerminalRuleCall_5_1_2_0_1() { return cSubSystemDCLSubSystemIDTerminalRuleCall_5_1_2_0_1; }
 
-		//',' 'inComponent: ' component=[DCLStructureElement]
+		//',' 'inComponent:' component=[DCLComponent]
 		public Group getGroup_5_2() { return cGroup_5_2; }
 
 		//','
 		public Keyword getCommaKeyword_5_2_0() { return cCommaKeyword_5_2_0; }
 
-		//'inComponent: '
+		//'inComponent:'
 		public Keyword getInComponentKeyword_5_2_1() { return cInComponentKeyword_5_2_1; }
 
-		//component=[DCLStructureElement]
+		//component=[DCLComponent]
 		public Assignment getComponentAssignment_5_2_2() { return cComponentAssignment_5_2_2; }
 
-		//[DCLStructureElement]
-		public CrossReference getComponentDCLStructureElementCrossReference_5_2_2_0() { return cComponentDCLStructureElementCrossReference_5_2_2_0; }
+		//[DCLComponent]
+		public CrossReference getComponentDCLComponentCrossReference_5_2_2_0() { return cComponentDCLComponentCrossReference_5_2_2_0; }
 
 		//ID
-		public RuleCall getComponentDCLStructureElementIDTerminalRuleCall_5_2_2_0_1() { return cComponentDCLStructureElementIDTerminalRuleCall_5_2_2_0_1; }
+		public RuleCall getComponentDCLComponentIDTerminalRuleCall_5_2_2_0_1() { return cComponentDCLComponentIDTerminalRuleCall_5_2_2_0_1; }
 
 		//';'
 		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
@@ -236,23 +830,21 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
 		private final Keyword cInLayerKeyword_2_0_1 = (Keyword)cGroup_2_0.eContents().get(1);
 		private final Assignment cLayerAssignment_2_0_2 = (Assignment)cGroup_2_0.eContents().get(2);
-		private final CrossReference cLayerDCLStructureElementCrossReference_2_0_2_0 = (CrossReference)cLayerAssignment_2_0_2.eContents().get(0);
-		private final RuleCall cLayerDCLStructureElementIDTerminalRuleCall_2_0_2_0_1 = (RuleCall)cLayerDCLStructureElementCrossReference_2_0_2_0.eContents().get(1);
+		private final CrossReference cLayerDCLLayerCrossReference_2_0_2_0 = (CrossReference)cLayerAssignment_2_0_2.eContents().get(0);
+		private final RuleCall cLayerDCLLayerIDTerminalRuleCall_2_0_2_0_1 = (RuleCall)cLayerDCLLayerCrossReference_2_0_2_0.eContents().get(1);
 		private final Group cGroup_2_1 = (Group)cAlternatives_2.eContents().get(1);
 		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
 		private final Keyword cInSubSystemKeyword_2_1_1 = (Keyword)cGroup_2_1.eContents().get(1);
 		private final Assignment cSubSystemAssignment_2_1_2 = (Assignment)cGroup_2_1.eContents().get(2);
-		private final CrossReference cSubSystemDCLStructureElementCrossReference_2_1_2_0 = (CrossReference)cSubSystemAssignment_2_1_2.eContents().get(0);
-		private final RuleCall cSubSystemDCLStructureElementIDTerminalRuleCall_2_1_2_0_1 = (RuleCall)cSubSystemDCLStructureElementCrossReference_2_1_2_0.eContents().get(1);
+		private final CrossReference cSubSystemDCLSubSystemCrossReference_2_1_2_0 = (CrossReference)cSubSystemAssignment_2_1_2.eContents().get(0);
+		private final RuleCall cSubSystemDCLSubSystemIDTerminalRuleCall_2_1_2_0_1 = (RuleCall)cSubSystemDCLSubSystemCrossReference_2_1_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//DCLComponent:
-		//	'component' name=ID (',' 'inLayer: ' layer=[DCLStructureElement] | ',' 'inSubSystem: '
-		//	subSystem=[DCLStructureElement])? ';';
+		//	'component' name=ID (',' 'inLayer:' layer=[DCLLayer] | ',' 'inSubSystem:' subSystem=[DCLSubSystem])? ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'component' name=ID (',' 'inLayer: ' layer=[DCLStructureElement] | ',' 'inSubSystem: ' subSystem=[DCLStructureElement])?
-		//';'
+		//'component' name=ID (',' 'inLayer:' layer=[DCLLayer] | ',' 'inSubSystem:' subSystem=[DCLSubSystem])? ';'
 		public Group getGroup() { return cGroup; }
 
 		//'component'
@@ -264,44 +856,44 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//(',' 'inLayer: ' layer=[DCLStructureElement] | ',' 'inSubSystem: ' subSystem=[DCLStructureElement])?
+		//(',' 'inLayer:' layer=[DCLLayer] | ',' 'inSubSystem:' subSystem=[DCLSubSystem])?
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
-		//',' 'inLayer: ' layer=[DCLStructureElement]
+		//',' 'inLayer:' layer=[DCLLayer]
 		public Group getGroup_2_0() { return cGroup_2_0; }
 
 		//','
 		public Keyword getCommaKeyword_2_0_0() { return cCommaKeyword_2_0_0; }
 
-		//'inLayer: '
+		//'inLayer:'
 		public Keyword getInLayerKeyword_2_0_1() { return cInLayerKeyword_2_0_1; }
 
-		//layer=[DCLStructureElement]
+		//layer=[DCLLayer]
 		public Assignment getLayerAssignment_2_0_2() { return cLayerAssignment_2_0_2; }
 
-		//[DCLStructureElement]
-		public CrossReference getLayerDCLStructureElementCrossReference_2_0_2_0() { return cLayerDCLStructureElementCrossReference_2_0_2_0; }
+		//[DCLLayer]
+		public CrossReference getLayerDCLLayerCrossReference_2_0_2_0() { return cLayerDCLLayerCrossReference_2_0_2_0; }
 
 		//ID
-		public RuleCall getLayerDCLStructureElementIDTerminalRuleCall_2_0_2_0_1() { return cLayerDCLStructureElementIDTerminalRuleCall_2_0_2_0_1; }
+		public RuleCall getLayerDCLLayerIDTerminalRuleCall_2_0_2_0_1() { return cLayerDCLLayerIDTerminalRuleCall_2_0_2_0_1; }
 
-		//',' 'inSubSystem: ' subSystem=[DCLStructureElement]
+		//',' 'inSubSystem:' subSystem=[DCLSubSystem]
 		public Group getGroup_2_1() { return cGroup_2_1; }
 
 		//','
 		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
 
-		//'inSubSystem: '
+		//'inSubSystem:'
 		public Keyword getInSubSystemKeyword_2_1_1() { return cInSubSystemKeyword_2_1_1; }
 
-		//subSystem=[DCLStructureElement]
+		//subSystem=[DCLSubSystem]
 		public Assignment getSubSystemAssignment_2_1_2() { return cSubSystemAssignment_2_1_2; }
 
-		//[DCLStructureElement]
-		public CrossReference getSubSystemDCLStructureElementCrossReference_2_1_2_0() { return cSubSystemDCLStructureElementCrossReference_2_1_2_0; }
+		//[DCLSubSystem]
+		public CrossReference getSubSystemDCLSubSystemCrossReference_2_1_2_0() { return cSubSystemDCLSubSystemCrossReference_2_1_2_0; }
 
 		//ID
-		public RuleCall getSubSystemDCLStructureElementIDTerminalRuleCall_2_1_2_0_1() { return cSubSystemDCLStructureElementIDTerminalRuleCall_2_1_2_0_1; }
+		public RuleCall getSubSystemDCLSubSystemIDTerminalRuleCall_2_1_2_0_1() { return cSubSystemDCLSubSystemIDTerminalRuleCall_2_1_2_0_1; }
 
 		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
@@ -325,10 +917,10 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//DCLComponentInterface:
-		//	'interface' name=ID 'ofComponent ' component=[DCLStructureElement] (',' 'type: ' interfaceType=InterfaceType) ';';
+		//	'interface' name=ID 'ofComponent' component=[DCLStructureElement] (',' 'type:' interfaceType=InterfaceType) ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'interface' name=ID 'ofComponent ' component=[DCLStructureElement] (',' 'type: ' interfaceType=InterfaceType) ';'
+		//'interface' name=ID 'ofComponent' component=[DCLStructureElement] (',' 'type:' interfaceType=InterfaceType) ';'
 		public Group getGroup() { return cGroup; }
 
 		//'interface'
@@ -340,7 +932,7 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//'ofComponent '
+		//'ofComponent'
 		public Keyword getOfComponentKeyword_2() { return cOfComponentKeyword_2; }
 
 		//component=[DCLStructureElement]
@@ -352,13 +944,13 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getComponentDCLStructureElementIDTerminalRuleCall_3_0_1() { return cComponentDCLStructureElementIDTerminalRuleCall_3_0_1; }
 
-		//(',' 'type: ' interfaceType=InterfaceType)
+		//',' 'type:' interfaceType=InterfaceType
 		public Group getGroup_4() { return cGroup_4; }
 
 		//','
 		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
 
-		//'type: '
+		//'type:'
 		public Keyword getTypeKeyword_4_1() { return cTypeKeyword_4_1; }
 
 		//interfaceType=InterfaceType
@@ -405,15 +997,15 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Keyword cInSubSystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
 		private final Assignment cSubSystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final CrossReference cSubSystemDCLStructureElementCrossReference_2_2_0 = (CrossReference)cSubSystemAssignment_2_2.eContents().get(0);
-		private final RuleCall cSubSystemDCLStructureElementIDTerminalRuleCall_2_2_0_1 = (RuleCall)cSubSystemDCLStructureElementCrossReference_2_2_0.eContents().get(1);
+		private final CrossReference cSubSystemDCLSubSystemCrossReference_2_2_0 = (CrossReference)cSubSystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cSubSystemDCLSubSystemIDTerminalRuleCall_2_2_0_1 = (RuleCall)cSubSystemDCLSubSystemCrossReference_2_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//DCLSubSystem:
-		//	'subSystem' name=ID (',' 'inSubSystem: ' subSystem=[DCLStructureElement])? ';';
+		//	'subSystem' name=ID (',' 'inSubSystem:' subSystem=[DCLSubSystem])? ';';
 		@Override public ParserRule getRule() { return rule; }
 
-		//'subSystem' name=ID (',' 'inSubSystem: ' subSystem=[DCLStructureElement])? ';'
+		//'subSystem' name=ID (',' 'inSubSystem:' subSystem=[DCLSubSystem])? ';'
 		public Group getGroup() { return cGroup; }
 
 		//'subSystem'
@@ -425,23 +1017,23 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//(',' 'inSubSystem: ' subSystem=[DCLStructureElement])?
+		//(',' 'inSubSystem:' subSystem=[DCLSubSystem])?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//','
 		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
 
-		//'inSubSystem: '
+		//'inSubSystem:'
 		public Keyword getInSubSystemKeyword_2_1() { return cInSubSystemKeyword_2_1; }
 
-		//subSystem=[DCLStructureElement]
+		//subSystem=[DCLSubSystem]
 		public Assignment getSubSystemAssignment_2_2() { return cSubSystemAssignment_2_2; }
 
-		//[DCLStructureElement]
-		public CrossReference getSubSystemDCLStructureElementCrossReference_2_2_0() { return cSubSystemDCLStructureElementCrossReference_2_2_0; }
+		//[DCLSubSystem]
+		public CrossReference getSubSystemDCLSubSystemCrossReference_2_2_0() { return cSubSystemDCLSubSystemCrossReference_2_2_0; }
 
 		//ID
-		public RuleCall getSubSystemDCLStructureElementIDTerminalRuleCall_2_2_0_1() { return cSubSystemDCLStructureElementIDTerminalRuleCall_2_2_0_1; }
+		public RuleCall getSubSystemDCLSubSystemIDTerminalRuleCall_2_2_0_1() { return cSubSystemDCLSubSystemIDTerminalRuleCall_2_2_0_1; }
 
 		//';'
 		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
@@ -545,9 +1137,9 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//DCDecl:
 		//	only=Only t=[DCLStructureElement] can=Can elementType=ElementType type=[DCLStructureElement] ';' |
-		//	t=[DCLStructureElement] cannot=Cannot elementType=ElementType type=[DCLStructureElement] ';' |
-		//	t=[DCLStructureElement] can=Can elementType=ElementType type=[DCLStructureElement] ';' | t=[DCLStructureElement]
-		//	can=Can elementType=ElementType only2=Only2 type=[DCLStructureElement] ';' | t=[DCLStructureElement] must=Must
+		//	t=[DCLStructureElement] cannot=Cannot elementType=ElementType type=[DCLStructureElement] ';' | t=[DCLStructureElement]
+		//	can=Can elementType=ElementType type=[DCLStructureElement] ';' | t=[DCLStructureElement] can=Can
+		//	elementType=ElementType only2=Only2 type=[DCLStructureElement] ';' | t=[DCLStructureElement] must=Must
 		//	entityType=EntityType type=[DCLStructureElement] ';';
 		@Override public ParserRule getRule() { return rule; }
 
@@ -926,6 +1518,16 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private final ModelElements pModel;
 	private final DCLStructureElementElements pDCLStructureElement;
+	private final DCLManagedSubsystemElements pDCLManagedSubsystem;
+	private final DCLManagingSubsystemElements pDCLManagingSubsystem;
+	private final DCLMonitorElements pDCLMonitor;
+	private final DCLPlannerElements pDCLPlanner;
+	private final DCLAnalyzerElements pDCLAnalyzer;
+	private final DCLExecutorElements pDCLExecutor;
+	private final DCLSensorElements pDCLSensor;
+	private final DCLActuatorElements pDCLActuator;
+	private final DCLKnowledgeElements pDCLKnowledge;
+	private final DCLReferencesElements pDCLReferences;
 	private final DCLLayerElements pDCLLayer;
 	private final DCLComponentElements pDCLComponent;
 	private final DCLComponentInterfaceElements pDCLComponentInterface;
@@ -953,6 +1555,16 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
 		this.pDCLStructureElement = new DCLStructureElementElements();
+		this.pDCLManagedSubsystem = new DCLManagedSubsystemElements();
+		this.pDCLManagingSubsystem = new DCLManagingSubsystemElements();
+		this.pDCLMonitor = new DCLMonitorElements();
+		this.pDCLPlanner = new DCLPlannerElements();
+		this.pDCLAnalyzer = new DCLAnalyzerElements();
+		this.pDCLExecutor = new DCLExecutorElements();
+		this.pDCLSensor = new DCLSensorElements();
+		this.pDCLActuator = new DCLActuatorElements();
+		this.pDCLKnowledge = new DCLKnowledgeElements();
+		this.pDCLReferences = new DCLReferencesElements();
 		this.pDCLLayer = new DCLLayerElements();
 		this.pDCLComponent = new DCLComponentElements();
 		this.pDCLComponentInterface = new DCLComponentInterfaceElements();
@@ -998,7 +1610,8 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	'architeturalElements' '{' structureElements+=DCLStructureElement+ '}' 'restrictions' '{' dCDecl+=DCDecl* '}';
+	//	'architecturalElements' '{' structureElements+=DCLStructureElement+ '}'
+	//	'restrictions' '{' dCDecl+=DCDecl* '}';
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -1008,7 +1621,9 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DCLStructureElement:
-	//	DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface;
+	//	DCLManagedSubsystem | DCLManagingSubsystem | DCLMonitor | DCLPlanner | DCLAnalyzer | DCLExecutor | DCLSensor |
+	//	DCLActuator | DCLKnowledge | DCLReferences | DCLLayer | DCLComponent | DCLSubSystem | DCLModule |
+	//	DCLComponentInterface;
 	public DCLStructureElementElements getDCLStructureElementAccess() {
 		return pDCLStructureElement;
 	}
@@ -1017,9 +1632,110 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		return getDCLStructureElementAccess().getRule();
 	}
 
+	//DCLManagedSubsystem:
+	//	'managedSubsystem' name=ID (',' 'inManagedSubsystem:' managedSubsystem=[DCLManagedSubsystem])? ';';
+	public DCLManagedSubsystemElements getDCLManagedSubsystemAccess() {
+		return pDCLManagedSubsystem;
+	}
+	
+	public ParserRule getDCLManagedSubsystemRule() {
+		return getDCLManagedSubsystemAccess().getRule();
+	}
+
+	//DCLManagingSubsystem:
+	//	'managingSubsystem' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+	public DCLManagingSubsystemElements getDCLManagingSubsystemAccess() {
+		return pDCLManagingSubsystem;
+	}
+	
+	public ParserRule getDCLManagingSubsystemRule() {
+		return getDCLManagingSubsystemAccess().getRule();
+	}
+
+	//DCLMonitor:
+	//	'monitor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+	public DCLMonitorElements getDCLMonitorAccess() {
+		return pDCLMonitor;
+	}
+	
+	public ParserRule getDCLMonitorRule() {
+		return getDCLMonitorAccess().getRule();
+	}
+
+	//DCLPlanner:
+	//	'planner' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+	public DCLPlannerElements getDCLPlannerAccess() {
+		return pDCLPlanner;
+	}
+	
+	public ParserRule getDCLPlannerRule() {
+		return getDCLPlannerAccess().getRule();
+	}
+
+	//DCLAnalyzer:
+	//	'analyzer' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+	public DCLAnalyzerElements getDCLAnalyzerAccess() {
+		return pDCLAnalyzer;
+	}
+	
+	public ParserRule getDCLAnalyzerRule() {
+		return getDCLAnalyzerAccess().getRule();
+	}
+
+	//DCLExecutor:
+	//	'executor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+	public DCLExecutorElements getDCLExecutorAccess() {
+		return pDCLExecutor;
+	}
+	
+	public ParserRule getDCLExecutorRule() {
+		return getDCLExecutorAccess().getRule();
+	}
+
+	//DCLSensor:
+	//	'sensor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+	public DCLSensorElements getDCLSensorAccess() {
+		return pDCLSensor;
+	}
+	
+	public ParserRule getDCLSensorRule() {
+		return getDCLSensorAccess().getRule();
+	}
+
+	//DCLActuator:
+	//	'actuator' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+	public DCLActuatorElements getDCLActuatorAccess() {
+		return pDCLActuator;
+	}
+	
+	public ParserRule getDCLActuatorRule() {
+		return getDCLActuatorAccess().getRule();
+	}
+
+	//DCLKnowledge:
+	//	'knowledge' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';';
+	public DCLKnowledgeElements getDCLKnowledgeAccess() {
+		return pDCLKnowledge;
+	}
+	
+	public ParserRule getDCLKnowledgeRule() {
+		return getDCLKnowledgeAccess().getRule();
+	}
+
+	//DCLReferences:
+	//	'references' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem] | ',' 'inKnowledge:'
+	//	knowledge=[DCLKnowledge])? ';';
+	public DCLReferencesElements getDCLReferencesAccess() {
+		return pDCLReferences;
+	}
+	
+	public ParserRule getDCLReferencesRule() {
+		return getDCLReferencesAccess().getRule();
+	}
+
 	//DCLLayer:
-	//	'layer' name=ID ',' 'level' level=INT (',' 'inLayer: ' layer=[DCLStructureElement] | ',' 'inSubSystem: '
-	//	subSystem=[DCLStructureElement] | ',' 'inComponent: ' component=[DCLStructureElement])? ';';
+	//	'layer' name=ID ',' 'level' level=INT (',' 'inLayer:' layer=[DCLLayer] | ',' 'inSubSystem:' subSystem=[DCLSubSystem] |
+	//	',' 'inComponent:' component=[DCLComponent])? ';';
 	public DCLLayerElements getDCLLayerAccess() {
 		return pDCLLayer;
 	}
@@ -1029,8 +1745,7 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DCLComponent:
-	//	'component' name=ID (',' 'inLayer: ' layer=[DCLStructureElement] | ',' 'inSubSystem: '
-	//	subSystem=[DCLStructureElement])? ';';
+	//	'component' name=ID (',' 'inLayer:' layer=[DCLLayer] | ',' 'inSubSystem:' subSystem=[DCLSubSystem])? ';';
 	public DCLComponentElements getDCLComponentAccess() {
 		return pDCLComponent;
 	}
@@ -1040,7 +1755,7 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DCLComponentInterface:
-	//	'interface' name=ID 'ofComponent ' component=[DCLStructureElement] (',' 'type: ' interfaceType=InterfaceType) ';';
+	//	'interface' name=ID 'ofComponent' component=[DCLStructureElement] (',' 'type:' interfaceType=InterfaceType) ';';
 	public DCLComponentInterfaceElements getDCLComponentInterfaceAccess() {
 		return pDCLComponentInterface;
 	}
@@ -1060,7 +1775,7 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DCLSubSystem:
-	//	'subSystem' name=ID (',' 'inSubSystem: ' subSystem=[DCLStructureElement])? ';';
+	//	'subSystem' name=ID (',' 'inSubSystem:' subSystem=[DCLSubSystem])? ';';
 	public DCLSubSystemElements getDCLSubSystemAccess() {
 		return pDCLSubSystem;
 	}
@@ -1081,9 +1796,9 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 
 	//DCDecl:
 	//	only=Only t=[DCLStructureElement] can=Can elementType=ElementType type=[DCLStructureElement] ';' |
-	//	t=[DCLStructureElement] cannot=Cannot elementType=ElementType type=[DCLStructureElement] ';' |
-	//	t=[DCLStructureElement] can=Can elementType=ElementType type=[DCLStructureElement] ';' | t=[DCLStructureElement]
-	//	can=Can elementType=ElementType only2=Only2 type=[DCLStructureElement] ';' | t=[DCLStructureElement] must=Must
+	//	t=[DCLStructureElement] cannot=Cannot elementType=ElementType type=[DCLStructureElement] ';' | t=[DCLStructureElement]
+	//	can=Can elementType=ElementType type=[DCLStructureElement] ';' | t=[DCLStructureElement] can=Can
+	//	elementType=ElementType only2=Only2 type=[DCLStructureElement] ';' | t=[DCLStructureElement] must=Must
 	//	entityType=EntityType type=[DCLStructureElement] ';';
 	public DCDeclElements getDCDeclAccess() {
 		return pDCDecl;
@@ -1186,13 +1901,14 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
+	//	'"' ('\\' . | !('\\' | '"'))* '"' |
+	//	"'" ('\\' . | !('\\' | "'"))* "'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//	'/ *'->'* /';
+	//	'/*'->'*/';
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 

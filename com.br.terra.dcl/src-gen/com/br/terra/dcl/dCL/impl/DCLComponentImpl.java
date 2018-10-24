@@ -3,8 +3,9 @@
 package com.br.terra.dcl.dCL.impl;
 
 import com.br.terra.dcl.dCL.DCLComponent;
+import com.br.terra.dcl.dCL.DCLLayer;
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.DCLStructureElement;
+import com.br.terra.dcl.dCL.DCLSubSystem;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -37,7 +38,7 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
    * @generated
    * @ordered
    */
-  protected DCLStructureElement layer;
+  protected DCLLayer layer;
 
   /**
    * The cached value of the '{@link #getSubSystem() <em>Sub System</em>}' reference.
@@ -47,7 +48,7 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
    * @generated
    * @ordered
    */
-  protected DCLStructureElement subSystem;
+  protected DCLSubSystem subSystem;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,12 +76,12 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement getLayer()
+  public DCLLayer getLayer()
   {
     if (layer != null && layer.eIsProxy())
     {
       InternalEObject oldLayer = (InternalEObject)layer;
-      layer = (DCLStructureElement)eResolveProxy(oldLayer);
+      layer = (DCLLayer)eResolveProxy(oldLayer);
       if (layer != oldLayer)
       {
         if (eNotificationRequired())
@@ -95,7 +96,7 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement basicGetLayer()
+  public DCLLayer basicGetLayer()
   {
     return layer;
   }
@@ -105,9 +106,9 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLayer(DCLStructureElement newLayer)
+  public void setLayer(DCLLayer newLayer)
   {
-    DCLStructureElement oldLayer = layer;
+    DCLLayer oldLayer = layer;
     layer = newLayer;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DCL_COMPONENT__LAYER, oldLayer, layer));
@@ -118,12 +119,12 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement getSubSystem()
+  public DCLSubSystem getSubSystem()
   {
     if (subSystem != null && subSystem.eIsProxy())
     {
       InternalEObject oldSubSystem = (InternalEObject)subSystem;
-      subSystem = (DCLStructureElement)eResolveProxy(oldSubSystem);
+      subSystem = (DCLSubSystem)eResolveProxy(oldSubSystem);
       if (subSystem != oldSubSystem)
       {
         if (eNotificationRequired())
@@ -138,7 +139,7 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLStructureElement basicGetSubSystem()
+  public DCLSubSystem basicGetSubSystem()
   {
     return subSystem;
   }
@@ -148,9 +149,9 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSubSystem(DCLStructureElement newSubSystem)
+  public void setSubSystem(DCLSubSystem newSubSystem)
   {
-    DCLStructureElement oldSubSystem = subSystem;
+    DCLSubSystem oldSubSystem = subSystem;
     subSystem = newSubSystem;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DCL_COMPONENT__SUB_SYSTEM, oldSubSystem, subSystem));
@@ -187,10 +188,10 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
     switch (featureID)
     {
       case DCLPackage.DCL_COMPONENT__LAYER:
-        setLayer((DCLStructureElement)newValue);
+        setLayer((DCLLayer)newValue);
         return;
       case DCLPackage.DCL_COMPONENT__SUB_SYSTEM:
-        setSubSystem((DCLStructureElement)newValue);
+        setSubSystem((DCLSubSystem)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -207,10 +208,10 @@ public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComp
     switch (featureID)
     {
       case DCLPackage.DCL_COMPONENT__LAYER:
-        setLayer((DCLStructureElement)null);
+        setLayer((DCLLayer)null);
         return;
       case DCLPackage.DCL_COMPONENT__SUB_SYSTEM:
-        setSubSystem((DCLStructureElement)null);
+        setSubSystem((DCLSubSystem)null);
         return;
     }
     super.eUnset(featureID);

@@ -3,63 +3,109 @@ grammar com.br.terra.dcl.DCL with org.eclipse.xtext.common.Terminals
 generate dCL "http://www.br.com/terra/dcl/DCL"
 
 Model:
-	  'architeturalElements' '{' structureElements += DCLStructureElement+ '}'
-	  'restrictions' '{' (dCDecl += DCDecl*) '}';
+	'architecturalElements' '{' structureElements += DCLStructureElement+ '}'
+	'restrictions' '{' (dCDecl += DCDecl*) '}'
+;
  
- DCLStructureElement: DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface;
+DCLStructureElement: 
+	DCLManagedSubsystem | DCLManagingSubsystem | DCLMonitor | DCLPlanner |  DCLAnalyzer | DCLExecutor | DCLSensor | DCLActuator | DCLKnowledge | DCLReferences | DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface
+;
+
+DCLManagedSubsystem:
+	'managedSubsystem' name=ID (',' 'inManagedSubsystem:' managedSubsystem=[DCLManagedSubsystem])? ';'	
+;
+
+DCLManagingSubsystem:
+	'managingSubsystem' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+;
+
+DCLMonitor:
+ 	'monitor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+;
+
+DCLPlanner:
+	'planner' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+;
+
+DCLAnalyzer:
+	'analyzer' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+;
+
+DCLExecutor:
+	'executor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+;
+
+DCLSensor:
+	'sensor' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+;
+
+DCLActuator:
+	'actuator' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+;
+
+DCLKnowledge:
+	'knowledge' name=ID (',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem])? ';'
+;
+
+DCLReferences:
+	'references' name=ID ((',' 'inManagingSubsystem:' managingSubsystem=[DCLManagingSubsystem]) | (',' 'inKnowledge:' knowledge=[DCLKnowledge]))? ';'
+;
  
- DCLLayer:
- 	'layer' name=ID ',' 'level' level=INT ((',' 'inLayer: ' layer=[DCLStructureElement]) | (',''inSubSystem: ' subSystem=[DCLStructureElement])| (',''inComponent: ' component=[DCLStructureElement]))? ';';
+DCLLayer:
+	'layer' name=ID ',' 'level' level=INT ((',' 'inLayer:' layer=[DCLLayer]) | (',' 'inSubSystem:' subSystem=[DCLSubSystem])| (',' 'inComponent:' component=[DCLComponent]))? ';'
+;
  
- DCLComponent:
-'component' name=ID ((',' 'inLayer: ' layer=[DCLStructureElement]) | (',''inSubSystem: ' subSystem=[DCLStructureElement]))? ';';
+DCLComponent:
+	'component' name=ID ((',' 'inLayer:' layer=[DCLLayer]) | (',''inSubSystem:' subSystem=[DCLSubSystem]))? ';'
+;
  	
- DCLComponentInterface:
- 	'interface' name=ID 'ofComponent ' component=[DCLStructureElement] (',' 'type: ' interfaceType=InterfaceType ) ';'
- ;
+DCLComponentInterface:
+	'interface' name=ID 'ofComponent' component=[DCLStructureElement] (',' 'type:' interfaceType=InterfaceType ) ';'
+;
  
- InterfaceType:
- 	interfaceTypeName = ('provided' | 'required')
- ;
+InterfaceType:
+	interfaceTypeName = ('provided' | 'required')
+;
  
- DCLSubSystem:
- 	'subSystem' name=ID (',' 'inSubSystem: ' subSystem=[DCLStructureElement])? ';' ;
- 
- 
- DCLModule:
- 	'module' name=ID ';'
- ;
- 
- DCDecl: (only=Only t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') | 
- 	     (t=[DCLStructureElement] cannot=Cannot elementType=ElementType type = [DCLStructureElement] ';') |
- 	     (t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') |
- 	     (t=[DCLStructureElement] can=Can elementType=ElementType only2=Only2 type = [DCLStructureElement] ';') |
- 	     (t=[DCLStructureElement] must=Must entityType=EntityType type = [DCLStructureElement] ';');
- 
- Only:
- 	only='only'
- ;
- 
- Can:
- 	can='can-'
- ;
- 
- Cannot:
- 	cannot='cannot-'
- ;
+DCLSubSystem:
+	'subSystem' name=ID (',' 'inSubSystem:' subSystem=[DCLSubSystem])? ';'
+;
 
- Only2:
- 	only2='-only'
- ;	
+ 
+DCLModule:
+	'module' name=ID ';'
+;
+ 
+DCDecl: 
+	(only=Only t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') | 
+	(t=[DCLStructureElement] cannot=Cannot elementType=ElementType type = [DCLStructureElement] ';') |
+	(t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') |
+	(t=[DCLStructureElement] can=Can elementType=ElementType only2=Only2 type = [DCLStructureElement] ';') |
+	(t=[DCLStructureElement] must=Must entityType=EntityType type = [DCLStructureElement] ';')
+;
+ 
+Only:
+	only='only'
+;
+ 
+Can:
+	can='can-'
+;
+ 
+Cannot:
+	cannot='cannot-'
+;
 
-  Must:
-  	must='must-'
-  ;
+Only2:
+	only2='-only'
+;	
 
- ElementType:
-         BasicType | EntityType;
+Must:
+	must='must-'
+;
+
+ElementType: BasicType | EntityType;
    
- BasicType:
-     	typeName= ('access' | 'declare' | 'handle' | 'create' | 'depend');
-     
+BasicType: typeName= ('access' | 'declare' | 'handle' | 'create' | 'depend');
+ 
 EntityType: entity=('extend' | 'implement' | 'derive' | 'throw' | 'useannotation');

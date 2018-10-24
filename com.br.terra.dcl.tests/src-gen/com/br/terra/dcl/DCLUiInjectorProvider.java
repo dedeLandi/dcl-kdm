@@ -8,10 +8,10 @@ import org.eclipse.xtext.junit4.IInjectorProvider;
 import com.google.inject.Injector;
 
 public class DCLUiInjectorProvider implements IInjectorProvider {
-	
+
 	@Override
 	public Injector getInjector() {
 		return com.br.terra.dcl.ui.internal.DCLActivator.getInstance().getInjector("com.br.terra.dcl.DCL");
 	}
-	
+
 }
